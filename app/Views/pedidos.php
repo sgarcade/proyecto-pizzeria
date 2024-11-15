@@ -158,7 +158,8 @@
 					<li class="nav-item"><a href="<?= base_url('blog'); ?>" class="nav-link">Blog</a></li>
 					<li class="nav-item"><a href="<?= base_url('about'); ?>" class="nav-link">About Us</a></li>
 					<li class="nav-item"><a href="<?= base_url('contact'); ?>" class="nav-link">Contact</a></li>
-					<li class="nav-item"><a href="<?= base_url('login'); ?>" class="nav-link">Login</a></li>
+					<li class="nav-item"><a href="<?= base_url('perfil'); ?>" class="nav-link">Perfil</a></li>
+          <li class="nav-item"><a href="<?= base_url('gestion'); ?>" class="nav-link">Gestion de productos</a></li>
 				</ul>
 			</div>
 		</div>
