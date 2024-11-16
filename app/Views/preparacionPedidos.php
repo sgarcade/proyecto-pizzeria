@@ -144,22 +144,25 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
-		<div class="container">
-			<a class="navbar-brand" href="<?= base_url('/'); ?>"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Pedidos
-			</button>
-			<?php include("includes/header.php")?>
-		</div>
-	</nav>
+    <div class="container">
+        <a class="navbar-brand" href="<?= base_url('/'); ?>"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Order Reception
+        </button>
+        <?php include("includes/header.php")?>
+    </div>
+</nav>
 
 <div class="container mt-5">
-    <h2>Estado de pedidos</h2>
+    <h2>Órdenes a Preparar</h2>
     <table class="table table-striped">
         <thead class="table-header">
             <tr>
                 <th># Pedido</th>
-                <th>Cliente</th>                
+                <th>Cliente</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Notas</th>
                 <th>Productos</th> <!-- New column added -->
                 <th>Estado</th>
             </tr>
@@ -167,27 +170,67 @@
         <tbody>
         <tr>
                 <td>1026</td>
-                <td>Daniel Lopez</td>                
+                <td>Ana Gómez</td>
+                <td>Carrera 15, Bogotá</td>
+                <td>3001234567</td>
+                <td>Sin mayonesa en la ensalada</td>
                 <td>Pizza BBQ, Ensalada Mixta</td> <!-- Product details added -->
-                <td>Preparado</td>
+                <td>
+                    <select class="status-select" onchange="updateOrderStatus(1028, this.value)">
+                        <option value="">Seleccionar Estado</option>
+                        <option value="cocina">En cola</option>
+                        <option value="entregado">En preparación</option>
+                        <option value="cancelado">Preparado</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>1027</td>
-                <td>Luisa Vasquez</td>                
+                <td>Luis Martínez</td>
+                <td>Avenida 30, Cartagena</td>
+                <td>3107654321</td>
+                <td>Pizza sin champiñones</td>
                 <td>Pizza Margarita, Bebida</td> <!-- Product details added -->
-                <td>Preparado</td>
+                <td>
+                    <select class="status-select" onchange="updateOrderStatus(1027, this.value)">
+                        <option value="">Seleccionar Estado</option>
+                        <option value="cocina">En cola</option>
+                        <option value="entregado">En preparación</option>
+                        <option value="cancelado">Preparado</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>1028</td>
-                <td>Juan Moreno</td>                
+                <td>María López</td>
+                <td>Calle 45, Bogotá</td>
+                <td>3101234567</td>
+                <td>Sin cebolla</td>
                 <td>Pizza Hawaiana, Postre</td> <!-- Product details added -->
-                <td>Entregado</td>
+                <td>
+                    <select class="status-select" onchange="updateOrderStatus(1028, this.value)">
+                        <option value="">Seleccionar Estado</option>
+                        <option value="cocina">En cola</option>
+                        <option value="entregado">En preparación</option>
+                        <option value="cancelado">Preparado</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>1029</td>
-                <td>David Diaz</td>                
+                <td>Sofía Rodríguez</td>
+                <td>Calle 8, Cartagena</td>
+                <td>3212345678</td>
+                <td>Sin cebolla en la pizza</td>
                 <td>Pizza Pepperoni, ensalada de frutas</td> <!-- Product details added -->
-                <td>Cocinandose</td>
+                <td>
+                    <select class="status-select" onchange="updateOrderStatus(1027, this.value)">
+                        <option value="">Seleccionar Estado</option>
+                        <option value="cocina">En cola</option>
+                        <option value="entregado">En preparación</option>
+                        <option value="cancelado">Preparado</option>
+                    </select>
+                </td>
             </tr>
             
         </tbody>
