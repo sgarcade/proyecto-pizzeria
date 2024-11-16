@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Productos - Pizza Nostra</title>
+    <title>Pizza Nostra</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- CSS Styles -->
     <link rel="stylesheet" href="<?php echo base_url('css/open-iconic-bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/animate.css'); ?>">
@@ -23,16 +25,16 @@
     <link rel="stylesheet" href="<?php echo base_url('css/icomoon.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
 
-    <style>
+    <style>        
         body {
             color: #fff;
         }
         nav {
-            background-color: #343a40;
+            background-color: #343a40; /* Dark navigation background */
         }
 
         h2 {
-            color: #ffc107;
+            color: #ffc107; /* Amber color for headings */
             margin-bottom: 30px;
             text-align: center;
             font-size: 2.5em;
@@ -45,203 +47,306 @@
             padding: 20px;
         }
 
-        .product-card {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-card h3 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #343a40;
-        }
-
-        .product-card .form-group {
-            margin-bottom: 20px;
-        }
-
-        .product-card label {
-            font-weight: 500;
-            color: #343a40;
-        }
-
-        .product-card input, .product-card select, .product-card textarea {
+        table {
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff; /* White table background */
+            border-radius: 8px; /* Rounded corners for the table */
+            overflow: hidden; /* Hide overflow for rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #ffc107; /* Amber header background */
+            color: #fff; /* White text for header */
+            font-weight: 500;
+            text-transform: uppercase; /* Uppercase for better visibility */
+        }
+
+        .status-select {
+            padding: 5px;
             border-radius: 4px;
             background-color: #fff;
-        }
-
-        .product-card input:focus, .product-card select:focus, .product-card textarea:focus {
-            border-color: #ffc107;
-        }
-
-        .product-card button {
-            background-color: #ffc107;
-            border: none;
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 5px;
             cursor: pointer;
-            font-size: 1em;
+            transition: border-color 0.3s ease;
+            width: 100%;
+        }
+
+        .status-select:hover {
+            border-color: #ffc107; /* Highlight border on hover */
+        }
+
+        .btn {
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
             font-weight: 500;
             text-transform: uppercase;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-right: 10px; /* Add margin between buttons */
         }
 
-        .product-card button:hover {
-            background-color: #e0a800;
-        }
-
-        .table {
-            width: 100%;
-            margin-top: 30px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .table th, .table td {
-            padding: 12px 15px;
-            text-align: center;
-        }
-
-        .table th {
-            background-color: #343a40;
+        .btn-view {
+            background-color: #007bff; /* Blue for view */
             color: #fff;
         }
 
-        .btn-danger {
-            background-color: #dc3545;
+        .btn-view:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .btn-edit {
+            background-color: #28a745; /* Green for edit */
+            color: #fff;
+        }
+
+        .btn-edit:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .btn-delete {
+            background-color: #dc3545; /* Red for delete */
+            color: #fff;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #343a40; /* Dark background for pagination */
+            color: #fff; /* White text for pagination */
             border: none;
-            color: #fff;
-            padding: 8px 16px;
+            padding: 12px 20px;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        .btn-danger:hover {
-            background-color: #c82333;
+        .pagination button:hover {
+            background-color: #495057; /* Darker shade on hover */
+            transform: translateY(-2px); /* Slight lift effect */
         }
 
         footer {
-            background-color: #343a40;
-            color: #fff;
+            background-color: #343a40; /* Dark footer background */
+            color: #fff; /* White text in footer */
             padding: 40px 0;
         }
 
         footer h2 {
-            color: #ffc107;
+            color: #ffc107; /* Amber color for footer heading */
         }
 
         footer a {
-            color: #ffc107;
+            color: #ffc107; /* Amber color for footer links */
             transition: color 0.3s ease;
         }
 
         footer a:hover {
-            color: #e0a800;
+            color: #e0a800; /* Darker amber on hover */
         }
+
+        .actions-btn-container {
+            display: flex;
+            justify-content: flex-start; /* Align buttons horizontally */
+            gap: 10px; /* Add spacing between buttons */
+        }
+        /* Estilo para texto e inputs del modal */
+    #addProductModal .modal-body label {
+        color: #333; /* Color gris oscuro para etiquetas */
+    }
+
+    #addProductModal .modal-body input,
+    #addProductModal .modal-body textarea {
+        background-color: #f8f9fa; /* Color de fondo gris claro */
+        color: #000; /* Texto negro */
+        border: 1px solid #ced4da; /* Borde gris */
+        border-radius: 4px;
+        padding: 10px;
+        transition: border-color 0.3s ease;
+    }
+
+    #addProductModal .modal-body input:focus,
+    #addProductModal .modal-body textarea:focus {
+        border-color: #ffc107; /* Resalta borde en ámbar al enfocar */
+        outline: none;
+    }
+
+    #addProductModal .modal-footer button {
+        color: #fff; /* Texto blanco para botones */
+    }
+
+    #addProductModal .btn-primary {
+        background-color: #ffc107; /* Color ámbar para el botón Guardar */
+        border-color: #ffc107;
+    }
+
+    #addProductModal .btn-primary:hover {
+        background-color: #e0a800; /* Ámbar más oscuro al pasar el mouse */
+    }
+
+    #addProductModal .btn-secondary {
+        background-color: #6c757d; /* Gris para botón Cerrar */
+        border-color: #6c757d;
+    }
+
+    #addProductModal .btn-secondary:hover {
+        background-color: #5a6268; /* Gris más oscuro al pasar el mouse */
+    }
+    .modal-body label {
+        color: #343a40; /* Texto gris oscuro para etiquetas */
+    }
+
+    .modal-body input,
+    .modal-body textarea {
+        color: #343a40; /* Texto negro para inputs */
+        background-color: #f8f9fa; /* Fondo gris claro para inputs */
+        border: 1px solid #ced4da; /* Borde gris estándar */
+        border-radius: 4px;
+        padding: 10px;
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .modal-body input:focus,
+    .modal-body textarea:focus {
+        border-color: #ffc107; /* Cambiar el color del borde al enfocar */
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 193, 7, 0.5); /* Agregar un sombreado suave */
+    }
     </style>
+
 </head>
 <body>
 <?php include("includes/header.php")?>
 
 <div class="container mt-5">
-    <h2>Gestión de Productos</h2>
-    
-    <!-- Formulario para agregar o editar productos -->
-    <div class="product-card">
-        <h3>Agregar Nuevo Producto</h3>
-        <form action="<?= base_url('productos/guardar'); ?>" method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="nombre_producto">Nombre del Producto:</label>
-                <input type="text" id="nombre_producto" name="nombre_producto" required>
-            </div>
-            <div class="form-group">
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="precio">Precio (USD):</label>
-                <input type="number" id="precio" name="precio" required>
-            </div>
-            <div class="form-group">
-                <label for="categoria">Categoría:</label>
-                <select id="categoria" name="categoria" required>
-                    <option value="Pizza">Pizza</option>
-                    <option value="Bebidas">Bebidas</option>
-                    <option value="Postres">Postres</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="imagen">Imagen del Producto:</label>
-                <input type="file" id="imagen" name="imagen" required>
-            </div>
+    <h2>Gestion de productos</h2>
+    <!-- Botón para abrir el modal -->
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addProductModal">
+        Agregar Producto
+    </button>
 
-            <button type="submit">Guardar Producto</button>
-        </form>
-    </div>
-
-    <!-- Tabla de productos -->
-    <h3 class="mt-5">Productos Existentes</h3>
-    <table class="table">
-        <thead>
+    <table class="table table-striped">
+        <thead class="table-header">
             <tr>
-                <th>Imagen</th>
-                <th>Nombre</th>
+                <th>ID Producto</th>
+                <th>Nombre Producto</th>
                 <th>Descripción</th>
-                <th>Precio</th>
-                <th>Categoría</th>
+                <th>Sabor</th>
+                <th>Precio Base</th>
+                <th>Stock</th>
+                <th>ID Tamaño</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Ejemplo de fila de producto -->
-            <tr>
-                <td><img src="path_to_image.jpg" alt="Producto" width="100"></td>
-                <td>Pizza Margherita</td>
-                <td>Pizza clásica con tomate, mozzarella y albahaca.</td>
-                <td>$12.99</td>
-                <td>Pizza</td>
-                <td>
-                    <a href="<?= base_url('productos/editar/1'); ?>" class="btn btn-warning">Editar</a>
-                    <button class="btn-danger">Eliminar</button>
-                </td>
-            </tr>
+            <?php foreach ($productos as $producto): ?>
+                <tr>
+                    <td><?= $producto['id_producto'] ?></td>
+                    <td><?= $producto['nombre_producto'] ?></td>
+                    <td><?= $producto['descripcion'] ?></td>
+                    <td><?= $producto['sabor'] ?></td>
+                    <td><?= $producto['precio_base'] ?></td>
+                    <td><?= $producto['stock'] ?></td>
+                    <td><?= $producto['id_tamaño'] ?></td>
+                    <td>
+                        <div class="actions-btn-container">
+                            <button class="btn btn-view" onclick="viewProduct(<?= $producto['id_producto'] ?>)">Ver</button>
+                            <button class="btn btn-edit" onclick="editProduct(<?= $producto['id_producto'] ?>)">Editar</button>
+                            <button class="btn btn-delete" onclick="deleteProduct(<?= $producto['id_producto'] ?>)">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
+
+    <div class="pagination">
+        <button onclick="prevPage()">Anterior</button>
+        <button onclick="nextPage()">Siguiente</button>
+    </div>
 </div>
 
-<footer class="ftco-footer ftco-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-6">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Contact Us</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="tel://123456789" class="py-2 d-block">+1 234 567 89</a></li>
-                        <li><a href="mailto:info@example.com" class="py-2 d-block">info@example.com</a></li>
-                        <li><a href="#" class="py-2 d-block">1234 Example St.</a></li>
-                    </ul>
-                </div>
+<!-- Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProductModalLabel">Agregar Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="col-md-6 col-lg-6">
+            <div class="modal-body">
+                <form action="ruta_para_guardar_producto.php" method="POST">
+                    <div class="mb-3">
+                        <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="nombreProducto" name="nombre_producto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sabor" class="form-label">Sabor</label>
+                        <input type="text" class="form-control" id="sabor" name="sabor" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="precioBase" class="form-label">Precio Base</label>
+                        <input type="number" class="form-control" id="precioBase" name="precio_base" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="stock" class="form-label">Stock</label>
+                        <input type="number" class="form-control" id="stock" name="stock" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idTamaño" class="form-label">ID Tamaño</label>
+                        <input type="text" class="form-control" id="idTamaño" name="id_tamaño" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="ftco-footer ftco-section img">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Follow Us</h2>
-                    <ul class="ftco-footer-social list-unstyled">
-                        <li><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-google"></span></a></li>
-                        <li><a href="#"><span class="icon-instagram"></span></a></li>
+                    <h2 class="ftco-heading-2">About Us</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                    <ul class="ftco-footer-social list-unstyled mt-4">
+                        <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+                        <li><a href="#" class="p-2"><span class="icon-facebook"></span></a></li>
+                        <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+                        <li><a href="#" class="p-2"><span class="icon-youtube"></span></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+
 </body>
 </html>

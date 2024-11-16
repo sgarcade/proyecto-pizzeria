@@ -59,7 +59,7 @@
 					<li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de producto</a></li>
                     <li class="nav-item"><a href="<?= base_url('recepcionPedidos'); ?>" class="nav-link">Recepción de pedidos</a></li>
                     <li class="nav-item"><a href="<?= base_url('preparacionPedidos'); ?>" class="nav-link">Preparación de ordenes</a></li>
-                    <li class="nav-item"><a href="<?= base_url('productos'); ?>" class="nav-link">Listado de productos</a></li>
+                    <!--<li class="nav-item"><a href="<?= base_url('productos'); ?>" class="nav-link">Listado de productos</a></li>-->
                     <li class="nav-item"><a href="<?= base_url('paymentGetaway'); ?>" class="nav-link">Pasarela de pago</a></li>
 				</ul>
 			</div>

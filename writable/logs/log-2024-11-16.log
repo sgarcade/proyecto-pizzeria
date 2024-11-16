@@ -327,3 +327,18 @@ in SYSTEMPATH\Database\BaseConnection.php on line 467.
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
 12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 13:31:48 --> ErrorException: Undefined variable $productos
+[Method: GET, Route: gestion]
+in APPPATH\Views\gestion.php on line 259.
+ 1 APPPATH\Views\gestion.php(259): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\gestion.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Gestion.php(9): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Gestion->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
