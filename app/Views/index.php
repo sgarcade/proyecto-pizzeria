@@ -41,6 +41,10 @@
 					<li class="nav-item"><a href="<?= base_url('contact'); ?>" class="nav-link">Contact</a></li>
 					<li class="nav-item"><a href="<?= base_url('perfil'); ?>" class="nav-link">Perfil</a></li>
 					<li class="nav-item"><a href="<?= base_url('gestion'); ?>" class="nav-link">Gestion de productos</a></li>
+					<li class="nav-item"><a href="<?= base_url('shopcar'); ?>" class="nav-link">Carrito de compra</a></li>
+					<li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de productos</a></li>
+
+
 				</ul>
 			</div>
 		</div>

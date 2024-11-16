@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pizza Nostra</title>
+    <title>Pizza - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -29,15 +29,15 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
-		<div class="container">
-			<a class="navbar-brand" href="<?= base_url('/'); ?>"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Contact
-			</button>
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="<?= base_url('/'); ?>" class="nav-link">Home</a></li>
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicous</small></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="<?= base_url('/'); ?>" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="<?= base_url('menu'); ?>" class="nav-link">Menu</a></li>
 					<li class="nav-item"><a href="<?= base_url('services'); ?>" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="<?= base_url('pedidos'); ?>" class="nav-link">Pedidos</a></li>					
@@ -48,83 +48,94 @@
           <li class="nav-item"><a href="<?= base_url('gestion'); ?>" class="nav-link">Gestion de productos</a></li>
           <li class="nav-item"><a href="<?= base_url('shopcar'); ?>" class="nav-link">Carrito de compra</a></li>
 					<li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de producto</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-    <!-- END nav -->
 
-    <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+   
 
-      <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text justify-content-center align-items-center">
-
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Contact Us</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section contact-section">
-      <div class="container mt-5">
-        <div class="row block-9">
-					<div class="col-md-4 contact-info ftco-animate">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-	              <h2 class="h4">Contact Information</h2>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Website:</span> <a href="#">yoursite.com</a></p>
-	            </div>
-						</div>
-					</div>
-					<div class="col-md-1"></div>
-          <div class="col-md-6 ftco-animate">
-            <form action="#" class="contact-form">
-            	<div class="row">
-            		<div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Your Name">
-	                </div>
-                </div>
-                <div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Your Email">
-	                </div>
-	                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div id="map"></div>
     
+    
+
+	<section class="product-selection" style="padding: 2rem; background-color: #222; color: #fff; border: 1px solid #444; border-radius: 8px; max-width: 700px; margin: 0 auto; text-align: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.3);">
+    <h2 style="text-align: center; font-size: 1.8rem; color: #ffcc00;">🛍️ Selección de Productos</h2>
+    
+    <div class="product-items" style="margin-top: 1.5rem;">
+        
+        
+        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+            <div class="item-details" style="text-align: left;">
+                <p style="margin: 0; font-size: 1.2rem;">🍕 Pizza pollo con champiñones</p>
+                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Masa fina, salsa de tomate, queso doble crema</p>
+                <p style="margin: 0.5rem 0 0; color: #ffcc00;">Desde $15.000</p>
+            </div>
+            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
+        </div>
+
+        
+        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+            <div class="item-details" style="text-align: left;">
+                <p style="margin: 0; font-size: 1.2rem;">🍕 Pizza Pepperoni</p>
+                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Salsa de tomate, mozzarella, pepperoni</p>
+                <p style="margin: 0.5rem 0 0; color: #ffcc00;">Desde $15.000</p>
+            </div>
+            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
+        </div>
+
+        
+        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+            <div class="item-details" style="text-align: left;">
+                <p style="margin: 0; font-size: 1.2rem;">🍕 Pizza Vegetariana</p>
+                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Tomates frescos, champiñones, pimientos, aceitunas</p>
+                <p style="margin: 0.5rem 0 0; color: #ffcc00;">Desde $15.000</p>
+            </div>
+            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
+        </div>
+
+       
+        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+            <div class="item-details" style="text-align: left;">
+                <p style="margin: 0; font-size: 1.2rem;">🥤 Gaseosa</p>
+                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">500 ml</p>
+                <p style="margin: 0.5rem 0 0; color: #ffcc00;">$7.000</p>
+            </div>
+            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
+        </div>
+
+                   
+        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+            <div class="item-details" style="text-align: left;">
+                <p style="margin: 0; font-size: 1.2rem;">🍰 Cheesecake de Fresa</p>
+                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Porción individual, con topping de fresas frescas</p>
+                <p style="margin: 0.5rem 0 0; color: #ffcc00;">$9.000</p>
+            </div>
+            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
+        </div>
+
+        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+            <div class="item-details" style="text-align: left;">
+                <p style="margin: 0; font-size: 1.2rem;">🍟 Papas a la francesa</p>
+                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Porción individual, con topping de fresas frescas</p>
+                <p style="margin: 0.5rem 0 0; color: #ffcc00;">$5.000</p>
+            </div>
+            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
+        </div>
+        
+       
+
+    </div>
+    
+    
+    <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">
+        Ver Carrito
+    </button>
+</section>
+
+
+
+
+
 
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>

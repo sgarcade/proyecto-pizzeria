@@ -18,3 +18,5 @@ $routes->get('about', 'About::index');
 $routes->get('pedidos', 'Pedidos::index');
 $routes->get('perfil', 'Perfil::index');
 $routes->get('gestion', 'Gestion::index');
+$routes->get('shopcar', 'Shopcar::index');
+
