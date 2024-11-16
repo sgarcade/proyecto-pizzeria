@@ -1,0 +1,266 @@
+CRITICAL - 2024-11-16 04:45:05 --> Error: Class "CodeIgniter\Database\MySQL\Connection" not found
+[Method: GET, Route: database_test]
+in SYSTEMPATH\Database\Database.php on line 143.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 3 APPPATH\Controllers\DatabaseTest.php(12): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 04:45:06 --> Error: Class "CodeIgniter\Database\MySQL\Connection" not found
+[Method: GET, Route: database_test]
+in SYSTEMPATH\Database\Database.php on line 143.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 3 APPPATH\Controllers\DatabaseTest.php(12): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 04:45:06 --> Error: Class "CodeIgniter\Database\MySQL\Connection" not found
+[Method: GET, Route: database_test]
+in SYSTEMPATH\Database\Database.php on line 143.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 3 APPPATH\Controllers\DatabaseTest.php(12): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 04:45:06 --> Error: Class "CodeIgniter\Database\MySQL\Connection" not found
+[Method: GET, Route: database_test]
+in SYSTEMPATH\Database\Database.php on line 143.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 3 APPPATH\Controllers\DatabaseTest.php(12): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 04:45:07 --> Error: Class "CodeIgniter\Database\MySQL\Connection" not found
+[Method: GET, Route: database_test]
+in SYSTEMPATH\Database\Database.php on line 143.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 3 APPPATH\Controllers\DatabaseTest.php(12): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 04:45:07 --> Error: Class "CodeIgniter\Database\MySQL\Connection" not found
+[Method: GET, Route: database_test]
+in SYSTEMPATH\Database\Database.php on line 143.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 3 APPPATH\Controllers\DatabaseTest.php(12): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 04:45:07 --> Error: Class "CodeIgniter\Database\MySQL\Connection" not found
+[Method: GET, Route: database_test]
+in SYSTEMPATH\Database\Database.php on line 143.
+ 1 SYSTEMPATH\Database\Database.php(61): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load()
+ 3 APPPATH\Controllers\DatabaseTest.php(12): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 05:44:09 --> mysqli_sql_exception: Unknown column 'SERIAL' in 'field list'
+[Method: GET, Route: database_test]
+in APPPATH\Views\database_test.php on line 17.
+ 1 APPPATH\Views\database_test.php(17): mysqli->query()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\database_test.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\DatabaseTest.php(24): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 05:44:10 --> mysqli_sql_exception: Unknown column 'SERIAL' in 'field list'
+[Method: GET, Route: database_test]
+in APPPATH\Views\database_test.php on line 17.
+ 1 APPPATH\Views\database_test.php(17): mysqli->query()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\database_test.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\DatabaseTest.php(24): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 05:44:10 --> mysqli_sql_exception: Unknown column 'SERIAL' in 'field list'
+[Method: GET, Route: database_test]
+in APPPATH\Views\database_test.php on line 17.
+ 1 APPPATH\Views\database_test.php(17): mysqli->query()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\database_test.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\DatabaseTest.php(24): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 05:44:10 --> mysqli_sql_exception: Unknown column 'SERIAL' in 'field list'
+[Method: GET, Route: database_test]
+in APPPATH\Views\database_test.php on line 17.
+ 1 APPPATH\Views\database_test.php(17): mysqli->query()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\database_test.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\DatabaseTest.php(24): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 05:44:11 --> mysqli_sql_exception: Unknown column 'SERIAL' in 'field list'
+[Method: GET, Route: database_test]
+in APPPATH\Views\database_test.php on line 17.
+ 1 APPPATH\Views\database_test.php(17): mysqli->query()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\database_test.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\DatabaseTest.php(24): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\DatabaseTest->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+ERROR - 2024-11-16 05:49:47 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\ProductoController.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\ProductoController->index()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\ProductoController.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\ProductoController->index()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-11-16 05:49:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Controllers\ProductoController.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+ERROR - 2024-11-16 05:52:21 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\ProductoController.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\ProductoController->index()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\ProductoController.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\ProductoController->index()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#13 {main}
+CRITICAL - 2024-11-16 05:52:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: GET, Route: productos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Controllers\ProductoController.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProductoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')

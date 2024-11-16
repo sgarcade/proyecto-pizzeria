@@ -28,17 +28,8 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
-		<div class="container">
-			<a class="navbar-brand" href="<?= base_url('/'); ?>"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Blog Single
-			</button>
+  <body>  
 			<?php include("includes/header.php")?>
-		</div>
-	</nav>
-    <!-- END nav -->
 
     <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
 

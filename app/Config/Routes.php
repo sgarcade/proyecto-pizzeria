@@ -22,4 +22,8 @@ $routes->get('shopcar', 'Shopcar::index');
 $routes->get('searchproducts', 'SearchProducts::index');
 $routes->get('recepcionPedidos', 'RecepcionPedidos::index');
 $routes->get('preparacionPedidos', 'PreparacionPedidos::index');
+$routes->get('database_test', 'DatabaseTest::index');
+$routes->get('productos', 'ProductoController::index');
+
+
 

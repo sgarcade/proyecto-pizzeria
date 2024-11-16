@@ -52,19 +52,12 @@ app.baseURL = 'pizza-nostra-app/index'
 
 #--------------------------------------------------------------------
 
-# database.default.hostname = localhost
-
-# database.default.database = ci4
-
-# database.default.username = root
-
-# database.default.password = root
-
-# database.default.DBDriver = MySQLi
-
-# database.default.DBPrefix =
-
-# database.default.port = 3306
+database.default.hostname = "localhost"
+database.default.database = "nostra_pizza"
+database.default.username = "root"
+database.default.password = ""
+database.default.DBDriver = "MySQLi"
+database.default.port = 3306
 
 # If you use MySQLi as tests, first update the values of Config\Database::$tests.
 
