@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- CSS Styles -->
     <link rel="stylesheet" href="<?php echo base_url('css/open-iconic-bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/animate.css'); ?>">
@@ -165,6 +166,69 @@
             justify-content: flex-start; /* Align buttons horizontally */
             gap: 10px; /* Add spacing between buttons */
         }
+        /* Estilo para texto e inputs del modal */
+    #addProductModal .modal-body label {
+        color: #333; /* Color gris oscuro para etiquetas */
+    }
+
+    #addProductModal .modal-body input,
+    #addProductModal .modal-body textarea {
+        background-color: #f8f9fa; /* Color de fondo gris claro */
+        color: #000; /* Texto negro */
+        border: 1px solid #ced4da; /* Borde gris */
+        border-radius: 4px;
+        padding: 10px;
+        transition: border-color 0.3s ease;
+    }
+
+    #addProductModal .modal-body input:focus,
+    #addProductModal .modal-body textarea:focus {
+        border-color: #ffc107; /* Resalta borde en ámbar al enfocar */
+        outline: none;
+    }
+
+    #addProductModal .modal-footer button {
+        color: #fff; /* Texto blanco para botones */
+    }
+
+    #addProductModal .btn-primary {
+        background-color: #ffc107; /* Color ámbar para el botón Guardar */
+        border-color: #ffc107;
+    }
+
+    #addProductModal .btn-primary:hover {
+        background-color: #e0a800; /* Ámbar más oscuro al pasar el mouse */
+    }
+
+    #addProductModal .btn-secondary {
+        background-color: #6c757d; /* Gris para botón Cerrar */
+        border-color: #6c757d;
+    }
+
+    #addProductModal .btn-secondary:hover {
+        background-color: #5a6268; /* Gris más oscuro al pasar el mouse */
+    }
+    .modal-body label {
+        color: #343a40; /* Texto gris oscuro para etiquetas */
+    }
+
+    .modal-body input,
+    .modal-body textarea {
+        color: #343a40; /* Texto negro para inputs */
+        background-color: #f8f9fa; /* Fondo gris claro para inputs */
+        border: 1px solid #ced4da; /* Borde gris estándar */
+        border-radius: 4px;
+        padding: 10px;
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .modal-body input:focus,
+    .modal-body textarea:focus {
+        border-color: #ffc107; /* Cambiar el color del borde al enfocar */
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 193, 7, 0.5); /* Agregar un sombreado suave */
+    }
     </style>
 
 </head>
@@ -173,6 +237,11 @@
 
 <div class="container mt-5">
     <h2>Lista de Productos</h2>
+    <!-- Botón para abrir el modal -->
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addProductModal">
+        Agregar Producto
+    </button>
+
     <table class="table table-striped">
         <thead class="table-header">
             <tr>
@@ -213,6 +282,51 @@
         <button onclick="nextPage()">Siguiente</button>
     </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProductModalLabel">Agregar Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="ruta_para_guardar_producto.php" method="POST">
+                    <div class="mb-3">
+                        <label for="nombreProducto" class="form-label">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="nombreProducto" name="nombre_producto" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sabor" class="form-label">Sabor</label>
+                        <input type="text" class="form-control" id="sabor" name="sabor" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="precioBase" class="form-label">Precio Base</label>
+                        <input type="number" class="form-control" id="precioBase" name="precio_base" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="stock" class="form-label">Stock</label>
+                        <input type="number" class="form-control" id="stock" name="stock" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idTamaño" class="form-label">ID Tamaño</label>
+                        <input type="text" class="form-control" id="idTamaño" name="id_tamaño" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <footer class="ftco-footer ftco-section img">
     <div class="overlay"></div>
