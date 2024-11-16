@@ -264,3 +264,16 @@ in SYSTEMPATH\Database\BaseConnection.php on line 467.
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
 12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-16 06:58:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "payymentGetaway.php"
+[Method: GET, Route: paymentGetaway]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('payymentGetaway.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('payymentGetaway', [], true)
+ 3 APPPATH\Controllers\PaymentGetaway.php(12): view('payymentGetaway')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PaymentGetaway->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentGetaway))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\public\\index.php')
