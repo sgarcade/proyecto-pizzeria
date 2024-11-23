@@ -1195,3 +1195,61 @@ in APPPATH\Controllers\Home.php on line 5.
  9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
 10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
 11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 13:56:40 --> ErrorException: Undefined variable $cartItems
+[Method: GET, Route: shopcar]
+in APPPATH\Views\shopcar.php on line 47.
+ 1 APPPATH\Views\shopcar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cartItems', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Views\\shopcar.php', 47)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Views\\shopcar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shopcar', [], true)
+ 5 APPPATH\Controllers\Shopcar.php(12): view('shopcar')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 14:00:44 --> ErrorException: Undefined variable $cartItems
+[Method: GET, Route: shopcar]
+in APPPATH\Views\shopcar.php on line 47.
+ 1 APPPATH\Views\shopcar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cartItems', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Views\\shopcar.php', 47)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Views\\shopcar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shopcar', [], true)
+ 5 APPPATH\Controllers\Shopcar.php(12): view('shopcar')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 14:01:00 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: menu]
+in APPPATH\Controllers\Menu.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Controllers\\Menu.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Menu')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Menu')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Menu', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 14:01:58 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Controllers\\Home.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\public\\index.php')
