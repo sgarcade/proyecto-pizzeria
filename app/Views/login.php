@@ -99,19 +99,19 @@
         .forgot-password a {
             color: #ffc107;
             text-decoration: none;
-            font-weight: bold; /* Aumenta el peso de la fuente */
-            padding: 10px 15px; /* Espaciado alrededor del enlace */
-            border-radius: 5px; /* Bordes redondeados */
-            transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+            font-weight: bold; 
+            padding: 10px 15px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s, color 0.3s; 
         }
         
         .forgot-password a.iniciar-sesion {
-            background-color: transparent; /* Fondo transparente */
-            border: 1px solid #ffc107; /* Borde amarillo */
+            background-color: transparent;
+            border: 1px solid #ffc107; 
         }
         .forgot-password a.iniciar-sesion:hover {
-            background-color: #ffc107; /* Fondo amarillo al pasar el mouse */
-            color: #343a40; /* Color del texto al pasar el mouse */
+            background-color: #ffc107; 
+            color: #343a40; 
         }
         @media (max-width: 768px) {
             .container {
@@ -132,7 +132,12 @@
                 Iniciar sesión
             </div>
             <div class="card-body">
-                <form method="POST" action="" onsubmit="return validateForm();">
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger">
+                        <?= session()->getFlashdata('error') ?>
+                    </div>
+                <?php endif; ?>
+                <form method="POST" action="<?= base_url('login/authenticate'); ?>" onsubmit="return validateForm();">
                     <div class="form-group">
                         <label for="email">Correo Electrónico</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu correo" required>
@@ -163,9 +168,9 @@
     
     <script>
         function validateForm() {
-            const password = document.getElementById('password').value; // Ensure the correct ID is used
-            // Additional validation can be added here if needed
-            return true; // Allow form submission
+            const password = document.getElementById('password').value;
+            
+            return true; 
         }
     </script>
 </body>
