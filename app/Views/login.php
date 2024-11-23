@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,6 +124,11 @@
 <body>
 
     <div class="container">
+        <?php if (session()->get('error')): ?>
+            <div class="alert alert-danger" role="alert">
+                <?= session()->get('error'); ?>
+            </div>
+        <?php endif; ?>
         <h2 class="text-center">
             <span class="flaticon-pizza-1 mr-1"></span>Pizza Nostra<br>
         </h2>
@@ -140,11 +146,11 @@
                 <form method="POST" action="<?= base_url('login/authenticate'); ?>" onsubmit="return validateForm();">
                     <div class="form-group">
                         <label for="email">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu correo" required>
+                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Introduce tu correo" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Contraseña</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Introduce tu contraseña" required>
+                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Introduce tu contraseña" required>
                     </div>
                     <div class="forgot-password">
                         <br>
@@ -168,9 +174,21 @@
     
     <script>
         function validateForm() {
+            const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             
-            return true; 
+            if (email === "" || password === "") {
+                alert("Por favor, completa todos los campos.");
+                return false;
+            }
+            // Validar formato del email
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Por favor, introduce un correo electrónico válido.");
+                return false;
+            }
+            
+            return true;
         }
     </script>
 </body>
