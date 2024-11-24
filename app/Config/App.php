@@ -7,9 +7,8 @@ use CodeIgniter\Config\BaseConfig;
 class App extends BaseConfig
 {
 
-    public $sessionDriver = 'CodeIgniter\Session\Handlers\FileHandler';
-    public $sessionSavePath = WRITEPATH . 'session';
-
+    public $sessionDriver = 'CodeIgniter\Session\Handlers\DatabaseHandler';  // Usualmente 'DatabaseHandler' o 'FileHandler'
+    public $sessionCookieName = 'ci_session';
     /**
      * --------------------------------------------------------------------------
      * Base Site URL
@@ -203,7 +202,4 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
-
-    public $CIEnvironment = 'development'; // Establece el entorno como desarrollo
-
 }

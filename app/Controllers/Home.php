@@ -1,18 +1,11 @@
-<?php namespace App\Controllers;
+<?php
 
-use CodeIgniter\HTTP\RedirectResponse;
+namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): RedirectResponse
+    public function index(): string
     {
-        // Check if the user is logged in (session)
-        if ($this->session->get('isLoggedIn')) {
-            return redirect()->to(base_url('home'));
-        }
-
-        // Render the home page for logged-in users
-        return redirect()->to(base_url('home'));
+        return view('index');
     }
 }
-

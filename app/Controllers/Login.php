@@ -1,63 +1,48 @@
-<?php namespace App\Controllers;
+<?php
 
-use CodeIgniter\Controller;
-use App\Models\UserModel;
+namespace App\Controllers;
 
-class Login extends Controller
+use App\Models\LoginModel;
+
+class Login extends BaseController
 {
-    protected $session;
-    protected $request;
-
-    public function __construct()
+    public function index(): string
     {
-        $this->session = \Config\Services::session();
-    // Inicializar el servicio de solicitud
-        $this->request = \Config\Services::request();
-    }
-
-    public function index()
-    {
-        // Verifica si el usuario ya está logueado
-        if ($this->session->get('isLoggedIn')) {
-            return redirect()->to(base_url('home'));
-        }
-
-        // Mostrar vista de login
+        
         return view('login');
     }
 
-    public function authenticate()
+    public function authenticate(): object
     {
-        $userModel = new UserModel();
+        $loginModel = new LoginModel();
 
-        // Obtener correo y contraseña del formulario
-        $correo = $this->request->getPost('correo');
+        
+        $nombre = $this->request->getPost('correo');
         $contrasena = $this->request->getPost('contrasena');
+        
+        $usuario = $loginModel->where('correo', $nombre)->first();
 
-        // Verificar si el correo existe en la base de datos
-        $query = $userModel->where('correo', $correo)->first();
+        if ($usuario && $contrasena === $usuario['contrasena']) {
+  
+            session()->set([
+                'usuario' => [
+                    'id_usuario' => $usuario['id_usuario'],
+                    'nombre' => $usuario['nombre'],
+                    'id_rol' => $usuario['id_rol']
+                ],
+                'is_logged_in' => true 
+            ]);
 
-        if (!$query) {
-            // Si el correo no existe, mostrar un mensaje de error
-            return redirect()->back()->with('error', 'Correo no registrado.');
+            return redirect()->to(base_url('home'));
+        } else {
+            return redirect()->back()->with('error', 'Usuario o contraseña incorrectos');
         }
-
-        // Verificar si la contraseña es correcta
-        if (!password_verify($contrasena, $query->contrasena)) {
-            // Si la contraseña es incorrecta
-            return redirect()->back()->with('error', 'Contraseña incorrecta.');
-        }
-
-        // Si todo es correcto, iniciar sesión
-        $this->session->set('usuario', $query);
-        $this->session->set('isLoggedIn', true);
-
-        return view('home', session('usuario'));
     }
 
-    public function logout()
+    public function logout(): object
     {
-        $this->session->destroy();
+        
+        session()->destroy();
         return redirect()->to(base_url('login'));
     }
 }

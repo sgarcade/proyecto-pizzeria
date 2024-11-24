@@ -35,53 +35,62 @@
     
     
 
-    <section class="shopping-cart" style="max-width: 900px; margin: 2rem auto; padding: 1.5rem; background-color: #222; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); color: #fff;">
-    <h2 style="text-align: center; font-size: 2rem; color: #ffcc00;">🛒 Carrito de Compras</h2>
+	<section class="shopping-cart" style="padding: 2rem; background-color: #222; color: #fff; border: 1px solid #444; border-radius: 8px; max-width: 600px; margin: 0 auto; text-align: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.3);">
+    <h2 style="text-align: center; font-size: 1.8rem; color: #ffcc00;">🛒 Carrito de Compras</h2>
     
-    <div class="cart-items" style="margin-top: 2rem;">
-        <?php
-        // Iniciamos el total
-        $total = 0;
-        
-        // Verificamos si el carrito tiene productos
-        if ($cartItems) {
-            foreach ($cartItems as $item) {
-                // Acumulamos el subtotal
-                $total += $item['subtotal'];
-        ?>
-        <div class="cart-item" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 1rem; border-bottom: 1px solid #444;">
-            <div class="item-details" style="flex: 1; text-align: left; min-width: 200px;">
-                <p style="margin: 0; font-size: 1.2rem; font-weight: bold; color: #ffcc00;">🍕 <?= htmlspecialchars($item['producto']) ?></p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;"><?= htmlspecialchars($item['descripcion']) ?></p>
-                <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: <?= htmlspecialchars($item['cantidad']) ?></p>
+    <div class="cart-items" style="margin-top: 1.5rem;">
+        <!-- Product 1 -->
+        <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+            <div class="item-details" style="text-align: left;">
+                <p style="margin: 0; font-size: 1.2rem;">🍕 Pizza pollo con champiñones</p>
+                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Masa fina, salsa de tomate, queso doble crema</p>
+                <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: 2</p>
             </div>
-            <div class="item-price" style="text-align: right; min-width: 120px;">
-                <p style="font-size: 1rem; color: #ffcc00;">$<?= number_format($item['precio'], 2) ?></p>
-                <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $<?= number_format($item['subtotal'], 2) ?></p>
+            <div class="item-price">
+                <p style="font-size: 1rem; color: #ffcc00;">$10.00</p>
+                <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $20.00</p>
             </div>
         </div>
-        <?php
-            }
-        } else {
-            echo "<p>No hay productos en el carrito.</p>";
-        }
-        ?>
         
-        <div class="total" style="margin-top: 1.5rem; font-size: 1.2rem; text-align: right;">
-            <p style="color: #ffcc00;">Subtotal: $<?= number_format($total, 2) ?></p>
+        <!-- Product 2 -->
+        <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+            <div class="item-details" style="text-align: left;">
+                <p style="margin: 0; font-size: 1.2rem;">🥤 Gaseosa</p>
+                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">500ml</p>
+                <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: 1</p>
+            </div>
+            <div class="item-price">
+                <p style="font-size: 1rem; color: #ffcc00;">$3.00</p>
+                <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $3.00</p>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+            <div class="item-details" style="text-align: left;">
+                <p style="margin: 0; font-size: 1.2rem;">🍟 Papas a la francesa</p>
+                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Porción mediana</p>
+                <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: 1</p>
+            </div>
+            <div class="item-price">
+                <p style="font-size: 1rem; color: #ffcc00;">$5.00</p>
+                <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $5.00</p>
+            </div>
+        </div>
+        
+        <!-- Total Section -->
+        <div class="total" style="margin-top: 1.5rem; font-size: 1.2rem;">
+            <p style="color: #ffcc00;">Subtotal: $28.00</p>
             <p style="margin-top: 0.5rem; color: #ccc;">Envío: $2.00</p>
-            <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $<?= number_format($total + 2.00, 2) ?></p>
+            <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $30.00</p>
         </div>
     </div>
     
-    <div class="checkout">
-        <button onclick="window.location.href='<?= $checkoutUrl ?>'" style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">
-            Proceder al Pago
-        </button>
-    </div>
+    <!-- Checkout Button -->
+    <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">
+        Proceder al Pago
+    </button>
 </section>
-
-
 
 
 
