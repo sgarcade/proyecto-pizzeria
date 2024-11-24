@@ -1,0 +1,1255 @@
+CRITICAL - 2024-11-23 04:00:19 --> ParseError: syntax error, unexpected identifier "session", expecting variable
+[Method: GET, Route: /]
+in APPPATH\Config\Database.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\app\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(796): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('toolbar')
+13 SYSTEMPATH\Filters\DebugToolbar.php(43): service('toolbar')
+14 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+15 SYSTEMPATH\Filters\Filters.php(291): CodeIgniter\Filters\Filters->runAfter([...])
+16 SYSTEMPATH\CodeIgniter.php(409): CodeIgniter\Filters\Filters->runRequired('after')
+17 SYSTEMPATH\CodeIgniter.php(372): CodeIgniter\CodeIgniter->runRequiredAfterFilters(Object(CodeIgniter\Filters\Filters))
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 04:00:24 --> ParseError: syntax error, unexpected identifier "session", expecting variable
+[Method: GET, Route: login]
+in APPPATH\Config\Database.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\app\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(796): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('toolbar')
+13 SYSTEMPATH\Filters\DebugToolbar.php(43): service('toolbar')
+14 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+15 SYSTEMPATH\Filters\Filters.php(291): CodeIgniter\Filters\Filters->runAfter([...])
+16 SYSTEMPATH\CodeIgniter.php(409): CodeIgniter\Filters\Filters->runRequired('after')
+17 SYSTEMPATH\CodeIgniter.php(372): CodeIgniter\CodeIgniter->runRequiredAfterFilters(Object(CodeIgniter\Filters\Filters))
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 04:00:40 --> ParseError: syntax error, unexpected identifier "session", expecting variable
+[Method: GET, Route: login]
+in APPPATH\Config\Database.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\app\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(796): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('toolbar')
+13 SYSTEMPATH\Filters\DebugToolbar.php(43): service('toolbar')
+14 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+15 SYSTEMPATH\Filters\Filters.php(291): CodeIgniter\Filters\Filters->runAfter([...])
+16 SYSTEMPATH\CodeIgniter.php(409): CodeIgniter\Filters\Filters->runRequired('after')
+17 SYSTEMPATH\CodeIgniter.php(372): CodeIgniter\CodeIgniter->runRequiredAfterFilters(Object(CodeIgniter\Filters\Filters))
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 04:00:56 --> ParseError: syntax error, unexpected identifier "session", expecting variable
+[Method: GET, Route: /]
+in APPPATH\Config\Database.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\app\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(796): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('toolbar')
+13 SYSTEMPATH\Filters\DebugToolbar.php(43): service('toolbar')
+14 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+15 SYSTEMPATH\Filters\Filters.php(291): CodeIgniter\Filters\Filters->runAfter([...])
+16 SYSTEMPATH\CodeIgniter.php(409): CodeIgniter\Filters\Filters->runRequired('after')
+17 SYSTEMPATH\CodeIgniter.php(372): CodeIgniter\CodeIgniter->runRequiredAfterFilters(Object(CodeIgniter\Filters\Filters))
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 04:01:01 --> ParseError: syntax error, unexpected identifier "session", expecting variable
+[Method: GET, Route: /]
+in APPPATH\Config\Database.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\app\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(796): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('toolbar')
+13 SYSTEMPATH\Filters\DebugToolbar.php(43): service('toolbar')
+14 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+15 SYSTEMPATH\Filters\Filters.php(291): CodeIgniter\Filters\Filters->runAfter([...])
+16 SYSTEMPATH\CodeIgniter.php(409): CodeIgniter\Filters\Filters->runRequired('after')
+17 SYSTEMPATH\CodeIgniter.php(372): CodeIgniter\CodeIgniter->runRequiredAfterFilters(Object(CodeIgniter\Filters\Filters))
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 04:01:02 --> ParseError: syntax error, unexpected identifier "session", expecting variable
+[Method: GET, Route: /]
+in APPPATH\Config\Database.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\app\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(796): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('toolbar')
+13 SYSTEMPATH\Filters\DebugToolbar.php(43): service('toolbar')
+14 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+15 SYSTEMPATH\Filters\Filters.php(291): CodeIgniter\Filters\Filters->runAfter([...])
+16 SYSTEMPATH\CodeIgniter.php(409): CodeIgniter\Filters\Filters->runRequired('after')
+17 SYSTEMPATH\CodeIgniter.php(372): CodeIgniter\CodeIgniter->runRequiredAfterFilters(Object(CodeIgniter\Filters\Filters))
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 04:04:01 --> ParseError: syntax error, unexpected identifier "session", expecting variable
+[Method: GET, Route: /]
+in APPPATH\Config\Database.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\app\\Config\\Database.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
+ 3 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(258): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Database')
+ 4 SYSTEMPATH\Debug\Toolbar\Collectors\Database.php(75): CodeIgniter\Debug\Toolbar\Collectors\Database->getConnections()
+ 5 SYSTEMPATH\Debug\Toolbar.php(68): CodeIgniter\Debug\Toolbar\Collectors\Database->__construct()
+ 6 SYSTEMPATH\Config\Services.php(796): CodeIgniter\Debug\Toolbar->__construct(Object(Config\Toolbar))
+ 7 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::toolbar(Object(Config\Toolbar), false)
+ 8 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('toolbar', [...])
+ 9 SYSTEMPATH\Config\Services.php(791): CodeIgniter\Config\BaseService::getSharedInstance('toolbar', null)
+10 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::toolbar()
+11 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('toolbar', [])
+12 SYSTEMPATH\Common.php(998): CodeIgniter\Config\BaseService::get('toolbar')
+13 SYSTEMPATH\Filters\DebugToolbar.php(43): service('toolbar')
+14 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+15 SYSTEMPATH\Filters\Filters.php(291): CodeIgniter\Filters\Filters->runAfter([...])
+16 SYSTEMPATH\CodeIgniter.php(409): CodeIgniter\Filters\Filters->runRequired('after')
+17 SYSTEMPATH\CodeIgniter.php(372): CodeIgniter\CodeIgniter->runRequiredAfterFilters(Object(CodeIgniter\Filters\Filters))
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto pizza\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 05:28:06 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: /]
+in APPPATH\Views\login.php on line 192.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Login.php(15): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 05:28:07 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: /]
+in APPPATH\Views\login.php on line 192.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Login.php(15): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 05:28:08 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: /]
+in APPPATH\Views\login.php on line 192.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Login.php(15): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 05:28:08 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: /]
+in APPPATH\Views\login.php on line 192.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Login.php(15): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 05:28:08 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: /]
+in APPPATH\Views\login.php on line 192.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Login.php(15): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 05:28:09 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: /]
+in APPPATH\Views\login.php on line 192.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\Login.php(15): view()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 05:38:18 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: signup]
+in APPPATH\Controllers\SignUp.php on line 17.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+ERROR - 2024-11-23 06:04:12 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(35): CodeIgniter\Model->insert()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(35): CodeIgniter\Model->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2024-11-23 06:04:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 5 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 6 APPPATH\Controllers\SignUp.php(35): CodeIgniter\Model->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUp->register()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+ERROR - 2024-11-23 06:04:31 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(35): CodeIgniter\Model->insert()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(35): CodeIgniter\Model->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2024-11-23 06:04:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 5 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 6 APPPATH\Controllers\SignUp.php(35): CodeIgniter\Model->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUp->register()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+ERROR - 2024-11-23 06:05:53 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(42): CodeIgniter\Model->insert()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(42): CodeIgniter\Model->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2024-11-23 06:05:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 5 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 6 APPPATH\Controllers\SignUp.php(42): CodeIgniter\Model->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUp->register()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+ERROR - 2024-11-23 06:06:57 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(42): CodeIgniter\Model->insert()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(42): CodeIgniter\Model->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2024-11-23 06:06:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert()
+ 5 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert()
+ 6 APPPATH\Controllers\SignUp.php(42): CodeIgniter\Model->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUp->register()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+ERROR - 2024-11-23 06:22:54 --> mysqli_sql_exception: Duplicate entry 'daniel@gmail.com' for key 'usuario.correo' in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(43): CodeIgniter\Model->insert()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#15 {main}
+ERROR - 2024-11-23 06:24:57 --> mysqli_sql_exception: Duplicate entry 'daniel@gmail.com' for key 'usuario.correo' in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(43): CodeIgniter\Model->insert()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#15 {main}
+ERROR - 2024-11-23 06:25:40 --> mysqli_sql_exception: Duplicate entry 'daniel@gmail.com' for key 'usuario.correo' in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(840): CodeIgniter\Model->doInsert()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(802): CodeIgniter\BaseModel->insert()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\SignUp.php(43): CodeIgniter\Model->insert()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\SignUp->register()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2024-11-23 06:54:33 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 06:55:50 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:02:09 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:02:10 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:02:10 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:02:10 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:02:11 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:02:19 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:03:19 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:04:40 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:04:41 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:04:41 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:04:42 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:04:42 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:04:42 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:04:54 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:06:11 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:06:12 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:06:12 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:06:12 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:06:12 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:06:13 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:06:13 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:06:28 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:15 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:16 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:16 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:16 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:16 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:16 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:16 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:17 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:17 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:07:17 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:08:35 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:12:03 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:20 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:21 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:21 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:21 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:26 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:49 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:50 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:51 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:51 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:51 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:51 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 07:13:51 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists()
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 13:56:40 --> ErrorException: Undefined variable $cartItems
+[Method: GET, Route: shopcar]
+in APPPATH\Views\shopcar.php on line 47.
+ 1 APPPATH\Views\shopcar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cartItems', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Views\\shopcar.php', 47)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Views\\shopcar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shopcar', [], true)
+ 5 APPPATH\Controllers\Shopcar.php(12): view('shopcar')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 14:00:44 --> ErrorException: Undefined variable $cartItems
+[Method: GET, Route: shopcar]
+in APPPATH\Views\shopcar.php on line 47.
+ 1 APPPATH\Views\shopcar.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cartItems', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Views\\shopcar.php', 47)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Views\\shopcar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('shopcar', [], true)
+ 5 APPPATH\Controllers\Shopcar.php(12): view('shopcar')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 14:01:00 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: menu]
+in APPPATH\Controllers\Menu.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Controllers\\Menu.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Menu')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Menu')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Menu', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-23 14:01:58 --> Error: Class "App\Controllers\BaseController" not found
+[Method: GET, Route: home]
+in APPPATH\Controllers\Home.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\app\\Controllers\\Home.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Home', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza este si es 2.0\\proyecto-pizzeria\\public\\index.php')
