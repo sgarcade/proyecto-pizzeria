@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
     <style>
         body {
-            padding-top: 450px;
             background-color: #2c3e50;
             color: #ecf0f1;
             display: flex;
@@ -30,27 +29,20 @@
             height: 100vh;
             margin: 0;
         }
-
         .container {
+            max-width: 400px;
             width: 100%;
-            max-width: 450px;
-            padding: 15px;
-            margin: 0 auto;
         }
-
         .card {
             background-color: #343a40;
             border: none;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
-            padding: 20px;
         }
-
         .card:hover {
             transform: translateY(-5px);
         }
-
         .card-header {
             background-color: #ffc107;
             color: #fff;
@@ -62,7 +54,6 @@
             letter-spacing: 1px;
             font-size: 1.2em;
         }
-
         .btn-primary {
             background-color: #ffc107;
             border: none;
@@ -72,21 +63,17 @@
             border-radius: 25px;
             color: #343a40;
         }
-
         .btn-primary:hover {
             background-color: #343a40;
             color: #ffc107;
         }
-
         .flaticon {
             font-size: 60px;
             color: #ffc107;
         }
-
         .form-group label {
             font-weight: bold;
         }
-
         .form-control {
             border-radius: 25px;
             border: 1px solid #ffc107;
@@ -95,143 +82,88 @@
             padding: 10px 15px;
             transition: border-color 0.3s;
         }
-
         .form-control:focus {
             border-color: #ffc107;
             box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
         }
-
         .text-center {
             text-align: center;
         }
-
         .forgot-password {
             margin-top: 10px;
             text-align: center;
             color: #fff;
         }
-
         .forgot-password a {
             color: #ffc107;
             text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            font-weight: bold; /* Aumenta el peso de la fuente */
+            padding: 10px 15px; /* Espaciado alrededor del enlace */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
         }
-
+        
         .forgot-password a.iniciar-sesion {
-            background-color: transparent;
-            border: 1px solid #ffc107;
+            background-color: transparent; /* Fondo transparente */
+            border: 1px solid #ffc107; /* Borde amarillo */
         }
-
         .forgot-password a.iniciar-sesion:hover {
-            background-color: #ffc107;
-            color: #343a40;
+            background-color: #ffc107; /* Fondo amarillo al pasar el mouse */
+            color: #343a40; /* Color del texto al pasar el mouse */
         }
-
-        @media (max-width: 576px) {
-            .container {
-                padding: 10px;
-                width: 90%;
-            }
-
-            .card-header {
-                font-size: 1.1em;
-            }
-
-            .form-control {
-                padding: 8px 10px;
-            }
-
-            .btn-primary {
-                width: 100%;
-            }
-        }
-
+        
         @media (max-width: 768px) {
             .container {
-                width: 80%;
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Alertas -->
-    
 
-
-    <!-- Formulario de Registro -->
     <div class="container">
-        <?php if (isset($success)): ?>
-        <div class="alert alert-success text-center" role="alert">
-            <?= $success; ?>
-        </div>
-        <?php endif; ?>
-
-        <?php if (isset($error)): ?>
-            <div class="alert alert-danger text-center" role="alert">
-                <?= $error; ?>
-            </div>
-        <?php endif; ?>
         <h2 class="text-center">
             <span class="flaticon-pizza-1 mr-1"></span>Pizza Nostra<br>
         </h2>
+
+        <!-- Login Form -->
         <div class="card mb-4">
             <div class="card-header">
                 Registrarse
             </div>
             <div class="card-body">
-                <form method="POST" action="<?= base_url('register'); ?>"> 
+                <form method="POST" action="<?= base_url('home'); ?>"> <!-- Specify your login handling script here -->
                     <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required>
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu correo" required>
                     </div>
                     <div class="form-group">
-                        <label for="direccion">Dirección</label>
-                        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Introduce tu dirección" required>
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Introduce tu contraseña" required>
                     </div>
                     <div class="form-group">
-                        <label for="ciudad">Ciudad</label>
-                        <input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Introduce tu ciudad" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="correo">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Introduce tu correo electrónico" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="celular">Celular</label>
-                        <input type="tel" class="form-control" id="celular" name="celular" placeholder="Introduce tu número de celular" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="rol">Rol</label>
-                        <select class="form-control" id="id_rol" name="id_rol" required readonly>
-                            <option value="1" selected>Cliente</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="contrasena">Contraseña</label>
-                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Introduce tu contraseña" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm_password">Confirmar Contraseña</label>
-                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirma tu contraseña" required>
-                    </div>
-                    <div class="forgot-password">
-                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                        <label for="password">Confirmar Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Introduce tu contraseña" required>
                     </div>
                     <div class="forgot-password">
                         <br>
+                        <a href="<?= base_url('login'); ?>" class="iniciar-sesion">Registrarse</a>                        
+                    </div>                    
+                    <div class="forgot-password">
+                    <br>
                         <a href="<?= base_url('login'); ?>">¿Ya tienes cuenta? Inicia sesión</a>
                     </div>
                 </form>
             </div>
         </div>
+
+        <!-- Optional Sign-Up Form -->
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </body>
-
 </html>

@@ -6,9 +6,6 @@ use CodeIgniter\Config\BaseConfig;
 
 class App extends BaseConfig
 {
-
-    public $sessionDriver = 'CodeIgniter\Session\Handlers\DatabaseHandler';  // Usualmente 'DatabaseHandler' o 'FileHandler'
-    public $sessionCookieName = 'ci_session';
     /**
      * --------------------------------------------------------------------------
      * Base Site URL
@@ -20,6 +17,8 @@ class App extends BaseConfig
      * E.g., http://example.com/
      */
     public string $baseURL = 'http://localhost:8080/';
+    public $CI_ENVIRONMENT = 'development';
+
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

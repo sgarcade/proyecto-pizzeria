@@ -12,8 +12,6 @@ class Database extends Config
     /**
      * The directory that holds the Migrations and Seeds directories.
      */
-
-
     public string $filesPath = APPPATH . 'Database' . DIRECTORY_SEPARATOR;
 
     /**
@@ -35,7 +33,7 @@ class Database extends Config
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
-        'DBDebug'  => true,
+        'DBDebug'  => (ENVIRONMENT !== 'production'),
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
         'swapPre'  => '',
@@ -44,7 +42,6 @@ class Database extends Config
         'strictOn' => false,
         'failover' => [],
         'port'     => 3306,
-        
     ];
     
     

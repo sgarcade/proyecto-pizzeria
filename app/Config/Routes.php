@@ -5,19 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-
-
 $routes->get('/', 'Login::index');
-
-
-$routes->group('home', ['filter' => 'auth'], function($routes) {
-    $routes->get('/', 'Home::index');
-});
-$routes->group('perfil', ['filter' => 'auth'], function($routes) {
-    $routes->get('perfil', 'Perfil::index');
-});
-
-
+$routes->get('home', 'Home::index');
 $routes->get('menu', 'Menu::index');
 $routes->get('login', 'Login::index');
 $routes->get('signup', 'SignUp::index');
@@ -39,6 +28,8 @@ $routes->get('paymentGetaway', 'PaymentGetaway::index');
 
 
 
+// Ruta al controlador del carrito
+$routes->get('/shopcar', 'CarritoController::index');
 
-$routes->post('register', 'SignUp::register');
-$routes->post('login/authenticate', 'Login::authenticate');
+
+

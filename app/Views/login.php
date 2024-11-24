@@ -99,18 +99,19 @@
         .forgot-password a {
             color: #ffc107;
             text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            font-weight: bold; /* Aumenta el peso de la fuente */
+            padding: 10px 15px; /* Espaciado alrededor del enlace */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
         }
+        
         .forgot-password a.iniciar-sesion {
-            background-color: transparent;
-            border: 1px solid #ffc107;
+            background-color: transparent; /* Fondo transparente */
+            border: 1px solid #ffc107; /* Borde amarillo */
         }
         .forgot-password a.iniciar-sesion:hover {
-            background-color: #ffc107;
-            color: #343a40;
+            background-color: #ffc107; /* Fondo amarillo al pasar el mouse */
+            color: #343a40; /* Color del texto al pasar el mouse */
         }
         @media (max-width: 768px) {
             .container {
@@ -125,45 +126,33 @@
         <h2 class="text-center">
             <span class="flaticon-pizza-1 mr-1"></span>Pizza Nostra<br>
         </h2>
-        
+        <!-- Login Form -->
         <div class="card mb-4">
             <div class="card-header">
                 Iniciar sesión
             </div>
             <div class="card-body">
-                
-                <?php if(session()->getFlashdata('error')): ?>
-                    <div class="alert alert-danger text-center">
-                        <?= session()->getFlashdata('error'); ?>
-                    </div>
-                <?php endif; ?>
-
-
-                
-                <form method="POST" action="<?= base_url('login/authenticate'); ?>">
-                   
+                <form method="POST" action="" onsubmit="return validateForm();">
                     <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu correo" required>
                     </div>
-                   
                     <div class="form-group">
                         <label for="password">Contraseña</label>
-                        <input type="password" class="form-control" id="password" name="contrasena" placeholder="Introduce tu contraseña" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Introduce tu contraseña" required>
                     </div>
-                 
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    <div class="forgot-password">
+                        <br>
+                        <a href="<?= base_url('home'); ?>" class="iniciar-sesion">Iniciar sesión</a>                        
+                    </div>                    
+                    <div class="forgot-password">
+                    <br>
+                        <a href="<?= base_url('olvidoContrasena'); ?>">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="<?= base_url('signup'); ?>">¿No tienes cuenta? Créala</a>
                     </div>
                 </form>
-            
-                <div class="forgot-password">
-                    <br>
-                    <a href="<?= base_url('olvidoContrasena'); ?>">¿Olvidaste tu contraseña?</a>
-                </div>
-                <div class="forgot-password">
-                    <a href="<?= base_url('signup'); ?>">¿No tienes cuenta? Créala</a>
-                </div>
             </div>
         </div>
     </div>
@@ -171,5 +160,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        function validateForm() {
+            const password = document.getElementById('password').value; // Ensure the correct ID is used
+            // Additional validation can be added here if needed
+            return true; // Allow form submission
+        }
+    </script>
 </body>
 </html>

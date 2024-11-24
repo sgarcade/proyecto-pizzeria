@@ -21,13 +21,6 @@ use Psr\Log\LoggerInterface;
  */
 abstract class BaseController extends Controller
 {
-
-    protected function checkAuth()
-    {
-        if (!session()->has('usuario')) {            
-            return redirect()->to(base_url('login'))->with('error', 'Por favor, inicia sesión');
-        }
-    }
     /**
      * Instance of the main Request object.
      *
