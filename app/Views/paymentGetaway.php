@@ -73,7 +73,7 @@
     </form>
 
     <!-- Información de seguridad -->
-    <p style="margin-top: 1rem; font-size: 0.9rem; color: #bbb;">🔒 Tus datos no estan seguros, probablemente te van a clonar la tarjeta</p>
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: #bbb;">🔒 Tus datos estan seguros</p>
 </section>
 
 

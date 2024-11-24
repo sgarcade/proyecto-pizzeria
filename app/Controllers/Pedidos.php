@@ -2,10 +2,44 @@
 
 namespace App\Controllers;
 
-class Pedidos extends BaseController
+use App\Models\PedidoModel;
+use CodeIgniter\Controller;
+
+class Pedidos extends Controller
 {
-    public function index(): string
+    public function misPedidos()
     {
-        return view('pedidos');
+        $pedidoModel = new PedidoModel();
+
+        // Obtener todos los pedidos con detalles del cliente
+        $pedidos = $pedidoModel->getPedidosPorCliente(1);  // Cambiar el ID según sea necesario
+
+        // Pasar los datos a la vista
+        return view('pedidos', [
+            'pedidos' => $pedidos
+        ]);
     }
+
+    // Controlador Pedidos
+
+    public function cancelarPedido($idPedido)
+    {
+        $pedidoModel = new PedidoModel();
+
+        // Intentar cancelar el pedido
+        $resultado = $pedidoModel->cancelarPedido($idPedido);
+
+        if ($resultado) {
+            return $this->response->setJSON([
+                'status' => 'success',
+                'message' => 'Pedido cancelado exitosamente.'
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'No se pudo cancelar el pedido.'
+            ]);
+        }
+    }
+
 }
