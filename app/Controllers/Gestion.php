@@ -9,7 +9,7 @@ class Gestion extends BaseController
         $productoModel = new ProductoModel();
 
         // Obtener productos con stock mayor a 10
-        $productos = $productoModel->where('stock >', 10)->findAll();
+        $productos = $productoModel->where('stock >', 0)->findAll();
 
         return view('gestion', ['productos' => $productos]);
     }

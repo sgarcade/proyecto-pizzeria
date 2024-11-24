@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,19 +99,18 @@
         .forgot-password a {
             color: #ffc107;
             text-decoration: none;
-            font-weight: bold; 
-            padding: 10px 15px; 
-            border-radius: 5px; 
-            transition: background-color 0.3s, color 0.3s; 
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
-        
         .forgot-password a.iniciar-sesion {
             background-color: transparent;
-            border: 1px solid #ffc107; 
+            border: 1px solid #ffc107;
         }
         .forgot-password a.iniciar-sesion:hover {
-            background-color: #ffc107; 
-            color: #343a40; 
+            background-color: #ffc107;
+            color: #343a40;
         }
         @media (max-width: 768px) {
             .container {
@@ -124,46 +122,48 @@
 <body>
 
     <div class="container">
-        <?php if (session()->get('error')): ?>
-            <div class="alert alert-danger" role="alert">
-                <?= session()->get('error'); ?>
-            </div>
-        <?php endif; ?>
         <h2 class="text-center">
             <span class="flaticon-pizza-1 mr-1"></span>Pizza Nostra<br>
         </h2>
-        <!-- Login Form -->
+        
         <div class="card mb-4">
             <div class="card-header">
                 Iniciar sesión
             </div>
             <div class="card-body">
-                <?php if (session()->getFlashdata('error')): ?>
-                    <div class="alert alert-danger">
-                        <?= session()->getFlashdata('error') ?>
+                
+                <?php if(session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger text-center">
+                        <?= session()->getFlashdata('error'); ?>
                     </div>
                 <?php endif; ?>
-                <form method="POST" action="<?= base_url('login/authenticate'); ?>" onsubmit="return validateForm();">
+
+
+                
+                <form method="POST" action="<?= base_url('login/authenticate'); ?>">
+                   
                     <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Introduce tu correo" required>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
                     </div>
+                   
                     <div class="form-group">
                         <label for="password">Contraseña</label>
-                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Introduce tu contraseña" required>
+                        <input type="password" class="form-control" id="password" name="contrasena" placeholder="Introduce tu contraseña" required>
                     </div>
-                    <div class="forgot-password">
-                        <br>
-                        <a href="<?= base_url('home'); ?>" class="iniciar-sesion">Iniciar sesión</a>                        
-                    </div>                    
-                    <div class="forgot-password">
-                    <br>
-                        <a href="<?= base_url('olvidoContrasena'); ?>">¿Olvidaste tu contraseña?</a>
-                    </div>
-                    <div class="forgot-password">
-                        <a href="<?= base_url('signup'); ?>">¿No tienes cuenta? Créala</a>
+                 
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                     </div>
                 </form>
+            
+                <div class="forgot-password">
+                    <br>
+                    <a href="<?= base_url('olvidoContrasena'); ?>">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="forgot-password">
+                    <a href="<?= base_url('signup'); ?>">¿No tienes cuenta? Créala</a>
+                </div>
             </div>
         </div>
     </div>
@@ -171,25 +171,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <script>
-        function validateForm() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            
-            if (email === "" || password === "") {
-                alert("Por favor, completa todos los campos.");
-                return false;
-            }
-            // Validar formato del email
-            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!emailPattern.test(email)) {
-                alert("Por favor, introduce un correo electrónico válido.");
-                return false;
-            }
-            
-            return true;
-        }
-    </script>
 </body>
 </html>
