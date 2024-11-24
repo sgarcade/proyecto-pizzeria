@@ -9,11 +9,11 @@ use CodeIgniter\Database\Config;
  */
 class Database extends Config
 {
-
-    public bool $session = False;
     /**
      * The directory that holds the Migrations and Seeds directories.
      */
+
+
     public string $filesPath = APPPATH . 'Database' . DIRECTORY_SEPARATOR;
 
     /**
@@ -30,12 +30,12 @@ class Database extends Config
         'DSN'      => '',
         'hostname' => 'localhost',
         'username' => 'root',
-        'password' => 'admin',
+        'password' => '',
         'database' => 'nostra_pizza',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
-        'DBDebug'  => (ENVIRONMENT !== 'production'),
+        'DBDebug'  => true,
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
         'swapPre'  => '',
@@ -43,7 +43,8 @@ class Database extends Config
         'compress' => false,
         'strictOn' => false,
         'failover' => [],
-        'port'     => 3307,
+        'port'     => 3306,
+        
     ];
     
     

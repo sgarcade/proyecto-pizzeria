@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 
-use CodeIgniter\Controller; // Asegúrate de tener esta línea
+use CodeIgniter\Controller; 
 use App\Models\UserModel;
 
 class SignUp extends Controller
@@ -14,6 +14,7 @@ class SignUp extends Controller
     }
     public function register(): string
     {
+
         try {
             $userModel = new UserModel();
             $nombre = $this->request->getPost('nombre');
