@@ -28,28 +28,34 @@
     <section class="product-selection" style="padding: 2rem; background-color: #222; color: #fff; border: 1px solid #444; border-radius: 8px; max-width: 700px; margin: 0 auto; text-align: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.3);">
       <h2 style="font-size: 1.8rem; color: #ffcc00;">🛍️ Selección de Productos</h2>
 
-      <form method="POST" action="/searchproducts" style="margin-top: 1rem;">
-        <input type="text" name="search" placeholder="Buscar productos..." style="padding: 0.7rem; width: 80%; border-radius: 5px; border: 1px solid #ccc;">
-        <button type="submit" style="padding: 0.7rem 1rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-left: 0.5rem;">Buscar</button>
-      </form>
+      <form action="/searchproducts" method="POST">
+        <input type="text" name="search" placeholder="Buscar productos" value="<?= esc($searchTerm ?? '') ?>">
+        <button type="submit">Buscar</button>
+    </form>
 
-      <div class="product-items" style="margin-top: 1.5rem;">
-        <?php if (!empty($productos)): ?>
-          <?php foreach ($productos as $producto): ?>
-            <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-              <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem; color: #ffcc00;">🍕 <?= htmlspecialchars($producto['nombre_producto']); ?></p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;"><?= htmlspecialchars($producto['descripcion']); ?></p>
-                <p style="margin: 0.5rem 0 0; color: #ffcc00;">Desde $<?= number_format($producto['precio_base'], 0, ',', '.'); ?></p>
-              </div>
-              <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">
-                Agregar
-              </button>
-            </div>
-          <?php endforeach; ?>
-        <?php else: ?>
-          <p style="color: #ffcc00;">No se encontraron productos.</p>
-        <?php endif; ?>
+    <?php if (session()->getFlashdata('message')): ?>
+        <p style="color: green;"><?= esc(session()->getFlashdata('message')) ?></p>
+    <?php elseif (session()->getFlashdata('error')): ?>
+        <p style="color: red;"><?= esc(session()->getFlashdata('error')) ?></p>
+    <?php endif; ?>
+
+    <?php if (!empty($productos)): ?>
+        <ul>
+            <?php foreach ($productos as $producto): ?>
+                <li>
+                    <h2><?= esc($producto['nombre_producto']) ?></h2>
+                    <p><?= esc($producto['descripcion']) ?></p>
+                    <p>Precio: $<?= esc($producto['precio_base']) ?></p>
+
+                    <form action="/addToCart/<?= esc($producto['id_producto']) ?>" method="POST">
+                        <button type="submit">Agregar al carrito</button>
+                    </form>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p>No se encontraron productos.</p>
+    <?php endif; ?>
       </div>
 
       <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">

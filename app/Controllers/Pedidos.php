@@ -13,9 +13,9 @@ class Pedidos extends Controller
         $pedidoModel = new PedidoModel();
 
 
-        $pedidos = $pedidoModel->getPedidosPorCliente(1);  // Cambiar el ID según sea necesario
+        $pedidos = $pedidoModel->getPedidosPorCliente(1);  
 
-        // Pasar los datos a la vista
+
         return view('pedidos', [
             'pedidos' => $pedidos
         ]);
@@ -27,7 +27,7 @@ class Pedidos extends Controller
     {
         $pedidoModel = new PedidoModel();
 
-        // Intentar cancelar el pedido
+     
         $resultado = $pedidoModel->cancelarPedido($idPedido);
 
         if ($resultado) {
