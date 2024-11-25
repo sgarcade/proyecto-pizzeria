@@ -45,3 +45,5 @@ $routes->post('login/authenticate', 'Login::authenticate');
 $routes->get('/restablecer-contrasena/(:any)', 'RestablecerContrasena::index/$1'); 
 $routes->post('/restablecer-contrasena/(:any)', 'RestablecerContrasena::guardarNuevaContrasena/$1'); 
 $routes->post('/restaurar-contrasena', 'OlvidoContrasena::restaurarContrasena');
+$routes->post('/addToCart/(:num)', 'SearchProduct::addToCart/$1');
+

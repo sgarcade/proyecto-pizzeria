@@ -8,22 +8,12 @@ class CarritoModel extends Model
 {
     protected $table = 'carrito';
     protected $primaryKey = 'id_carrito';
-    protected $allowedFields = ['id_carrito', 'id_cliente', 'total', 'fecha'];
+    protected $allowedFields = ['id_cliente', 'total', 'fecha'];
 
-    public function getProductosCarrito($usuarioId)
+    public function getProductosCarrito($id_carrito)
     {
-                
-        return $this->where('id_cliente', $usuarioId)->findAll();
+        $db = \Config\Database::connect();
+        $builder = $db->table('carrito_producto');
+        return $builder->where('id_carrito', $id_carrito)->get()->getResultArray();
     }
-
-    public function getTotalCarrito($usuarioId)
-    {
-        $productosCarrito = $this->where('id_cliente', $usuarioId)->findAll();
-        $total = 0;
-        foreach ($productosCarrito as $producto) {
-            $total += $producto['total'] * 2;//* $producto['cantidad'];
-        }
-        return $total;
-    }
-
 }
