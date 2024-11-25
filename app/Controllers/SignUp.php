@@ -39,7 +39,7 @@ class SignUp extends Controller
                 'correo' => $correo,
                 'celular' => $celular,
                 'id_rol' => $id_rol,
-                'contrasena' => password_hash($contrasena, PASSWORD_DEFAULT),
+                'contrasena' => $contrasena,
             ];
 
             $query = $userModel->insert($data);
