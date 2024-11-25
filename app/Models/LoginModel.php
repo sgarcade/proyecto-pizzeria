@@ -10,6 +10,6 @@ class LoginModel extends Model
     protected $primaryKey = 'id_usuario';
     protected $allowedFields = [
         'nombre', 'direccion', 'ciudad', 'celular', 
-        'contrasena', 'id_rol'
+        'contrasena', 'id_rol', 'correo'
     ];
 }
