@@ -31,7 +31,7 @@ class SignUp extends Controller
                 $data['error'] = 'Las contraseñas no coinciden.';
                 return view('signup', $data);
             }
-
+            
             $data = [
                 'nombre' => $nombre,
                 'direccion' => $direccion,
