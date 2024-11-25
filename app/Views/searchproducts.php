@@ -39,7 +39,7 @@
     <h2 style="text-align: center; font-size: 1.8rem; color: #ffcc00;">🛍️ Selección de Productos</h2>
     
     <div class="product-items" style="margin-top: 1.5rem;">
-        <!-- Inicia bucle para mostrar productos -->
+
         <?php if (!empty($productos)): ?>
             <?php foreach ($productos as $producto): ?>
                 <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
@@ -56,7 +56,6 @@
         <?php else: ?>
             <p style="color: #ffcc00;">No hay productos disponibles.</p>
         <?php endif; ?>
-        <!-- Termina bucle -->
     </div>
     
     <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">
@@ -139,9 +138,9 @@
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p>
   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+  </p>
           </div>
         </div>
       </div>
@@ -149,7 +148,7 @@
     
   
 
-  <!-- loader -->
+  
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
