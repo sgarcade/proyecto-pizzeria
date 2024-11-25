@@ -61,3 +61,69 @@ INFO - 2024-11-25 00:38:36 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-11-25 01:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-25 01:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-25 01:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 01:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 01:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-25 01:44:02 --> mysqli_sql_exception: Unknown column 'correo' in 'where clause' in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\Login.php(23): CodeIgniter\BaseModel->first()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2024-11-25 01:44:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'correo' in 'where clause'
+[Method: POST, Route: login/authenticate]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Login.php(23): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 01:44:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'correo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Login.php(23): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 01:44:02 --> [Caused by] mysqli_sql_exception: Unknown column 'correo' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Login.php(23): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->authenticate()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 01:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 01:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

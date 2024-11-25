@@ -7,6 +7,7 @@ use CodeIgniter\Controller;
 
 class Pedidos extends Controller
 {
+
     public function misPedidos()
     {
         $pedidoModel = new PedidoModel();
