@@ -8,20 +8,20 @@ class CarritoModel extends Model
 {
     protected $table = 'carrito';
     protected $primaryKey = 'id_carrito';
-    protected $allowedFields = ['id_carrito', 'producto_id', 'usuario_id', 'cantidad', 'precio'];
+    protected $allowedFields = ['id_carrito', 'id_cliente', 'total', 'fecha'];
 
     public function getProductosCarrito($usuarioId)
     {
                 
-        return $this->where('usuario_id', $usuarioId)->findAll();
+        return $this->where('id_cliente', $usuarioId)->findAll();
     }
 
     public function getTotalCarrito($usuarioId)
     {
-        $productosCarrito = $this->where('usuario_id', $usuarioId)->findAll();
+        $productosCarrito = $this->where('id_cliente', $usuarioId)->findAll();
         $total = 0;
         foreach ($productosCarrito as $producto) {
-            $total += $producto['precio'] * $producto['cantidad'];
+            $total += $producto['total'] * 2;//* $producto['cantidad'];
         }
         return $total;
     }
