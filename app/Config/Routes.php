@@ -39,7 +39,7 @@ $routes->get('productos', 'ProductoController::index');
 $routes->get('paymentGetaway', 'PaymentGetaway::index');
 $routes->get('/restablecer-contrasena/(:any)', 'RestablecerContrasena::index/$1'); 
 
-
+//POST
 $routes->post('/restablecer-contrasena/(:any)', 'RestablecerContrasena::guardarNuevaContrasena/$1'); 
 $routes->post('/restaurar-contrasena', 'OlvidoContrasena::restaurarContrasena');
 $routes->post('register', 'SignUp::register');
