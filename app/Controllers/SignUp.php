@@ -43,11 +43,12 @@ class SignUp extends Controller
             ];
 
             $query = $userModel->insert($data);
-
             if ($query) {
+                $clienteData = ['id_usuario' => $userModel->getInsertID()];
+                $userModel->insert($clienteData);
                 $data['success'] = 'Usuario creado con éxito. Ahora puedes iniciar sesión.';
                 return view('signup', $data);
-            } else {
+            }else {
                 $data['error'] = 'Error al crear el usuario. Intenta nuevamente.';
                 return view('signup', $data);
             }
