@@ -8,15 +8,20 @@ class Shopcar extends Controller
 {
     public function index()
     {
+
         
         $usuarioId = session()->get('usuario')['id_usuario'];
-                
+        
+        
         $carritoModel = new CarritoModel();
-                
+        
+        
         $carrito = $carritoModel->getProductosCarrito($usuarioId);
-                
+        
+        
         $total = $carritoModel->getTotalCarrito($usuarioId);
         
+
         return view('shopcar', ['shopcar' => $carrito, 'total' => $total]);
     }
 
@@ -32,5 +37,5 @@ class Shopcar extends Controller
         $carritoModel->agregarAlCarrito($usuarioId, $productoId, $cantidad, $precio);
 
         return redirect()->to('/carrito');
-    }
+    }
 }
