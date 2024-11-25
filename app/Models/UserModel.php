@@ -12,7 +12,7 @@ class UserModel extends Model
     protected $useAutoIncrement = true;
     protected $returnType= 'object';
     protected $useSoftDeletes = true;
-    protected $allowedFields = ['nombre', 'direccion', 'ciudad', 'correo', 'celular', 'id_rol', 'contrasena'];
+    protected $allowedFields = ['nombre', 'direccion', 'ciudad', 'celular','contrasena', 'id_rol', 'correo'];
     protected $useTimestamps = false;
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';

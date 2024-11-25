@@ -140,41 +140,4 @@ in APPPATH\Controllers\Shopcar.php on line 35.
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
-INFO - 2024-11-25 02:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2024-11-25 02:16:53 --> ErrorException: Trying to access array offset on null
-[Method: GET, Route: shopcar]
-in APPPATH\Controllers\Shopcar.php on line 13.
- 1 APPPATH\Controllers\Shopcar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 13)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
- 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
-INFO - 2024-11-25 02:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2024-11-25 02:17:31 --> ErrorException: Trying to access array offset on null
-[Method: GET, Route: shopcar]
-in APPPATH\Controllers\Shopcar.php on line 13.
- 1 APPPATH\Controllers\Shopcar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 13)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
- 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
-CRITICAL - 2024-11-25 02:33:44 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "mysqli" is not loaded. Install and enable it to use "MySQLi" driver.
-[Method: GET, Route: misPedidos]
-in SYSTEMPATH\Database\Database.php on line 182.
- 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('MySQLi')
- 2 SYSTEMPATH\Database\Config.php(84): CodeIgniter\Database\Database->load([...], 'default')
- 3 SYSTEMPATH\Model.php(155): CodeIgniter\Database\Config::connect('default')
- 4 APPPATH\Controllers\Pedidos.php(13): CodeIgniter\Model->__construct()
- 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pedidos->misPedidos()
- 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pedidos))
- 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+
