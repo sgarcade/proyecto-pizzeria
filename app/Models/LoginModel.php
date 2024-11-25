@@ -11,5 +11,6 @@ class LoginModel extends Model
     protected $allowedFields = [
         'nombre', 'direccion', 'ciudad', 'celular', 
         'contrasena', 'id_rol', 'correo'
+        
     ];
 }
