@@ -79,8 +79,6 @@ class OlvidoContrasena extends Controller
         
         if (!$correo->send()) {
             log_message('error', 'No se pudo enviar el correo de restablecimiento.');
-            var_dump($correo->printDebugger());
-            exit;
         }
     }
     
