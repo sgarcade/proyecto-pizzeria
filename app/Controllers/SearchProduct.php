@@ -4,16 +4,24 @@ namespace App\Controllers;
 
 use App\Models\CarritoModel;
 use App\Models\ProductoModel;
+use CodeIgniter\Controller;
 
-class CarritoController extends BaseController
+class SearchProduct extends BaseController
 {
+    public function index(): string
+    {
+        
+        return view('searchproducts');
+    }
+
     public function searchProducts()
     {
+        
         if ($this->request->getMethod() === 'post') {
             $searchTerm = $this->request->getPost('search'); 
 
             if (empty($searchTerm)) {
-                return view('searchProducts', [
+                return view('searchproducts', [
                     'producto' => [],
                     'error' => 'Por favor, ingresa un término para buscar.'
                 ]);
@@ -29,13 +37,13 @@ class CarritoController extends BaseController
                 ->findAll();
 
            
-            return view('searchProducts', [
+            return view('searchproducts', [
                 'productos' => $productos,
                 'searchTerm' => $searchTerm
             ]);
         }
 
         
-        return view('searchProducts', ['productos' => []]);
+        return view('searchproducts', ['productos' => []]);
     }
 }
