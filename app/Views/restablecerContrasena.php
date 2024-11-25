@@ -129,12 +129,13 @@
                 Olvidaste tu Contraseña
             </div>
             <div class="card-body">
-            <form method="post" action="<?= base_url('restaurar-contrasena') ?>">
-            <label for="correo">Correo electrónico</label>
-            <input type="correo" name="correo" id="correo" required placeholder="Ingresa tu correo electrónico">
-            
-            <button type="submit">Restaurar contraseña</button>
-            </form>
+            <form method="post" action="<?= base_url('restablecer-contrasena/' . $token) ?>">
+    <label for="nueva_contrasena">Nueva contraseña</label>
+    <input type="password" name="nueva_contrasena" id="nueva_contrasena" required placeholder="Ingresa tu nueva contraseña">
+    
+    <button type="submit">Restablecer contraseña</button>
+</form>
+
 
             </div>
         </div>
