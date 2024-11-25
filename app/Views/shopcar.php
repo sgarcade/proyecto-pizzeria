@@ -35,54 +35,33 @@
     
     
 
-	<section class="shopping-cart" style="padding: 2rem; background-color: #222; color: #fff; border: 1px solid #444; border-radius: 8px; max-width: 600px; margin: 0 auto; text-align: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.3);">
+    <section class="shopping-cart" style="padding: 2rem; background-color: #222; color: #fff; border: 1px solid #444; border-radius: 8px; max-width: 600px; margin: 0 auto; text-align: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.3);">
     <h2 style="text-align: center; font-size: 1.8rem; color: #ffcc00;">🛒 Carrito de Compras</h2>
     
     <div class="cart-items" style="margin-top: 1.5rem;">
-        <!-- Product 1 -->
-        <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-            <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🍕 Pizza pollo con champiñones</p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Masa fina, salsa de tomate, queso doble crema</p>
-                <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: 2</p>
-            </div>
-            <div class="item-price">
-                <p style="font-size: 1rem; color: #ffcc00;">$10.00</p>
-                <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $20.00</p>
-            </div>
-        </div>
-        
-        <!-- Product 2 -->
-        <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-            <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🥤 Gaseosa</p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">500ml</p>
-                <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: 1</p>
-            </div>
-            <div class="item-price">
-                <p style="font-size: 1rem; color: #ffcc00;">$3.00</p>
-                <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $3.00</p>
-            </div>
-        </div>
-        
-        <!-- Product 3 -->
-        <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-            <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🍟 Papas a la francesa</p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Porción mediana</p>
-                <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: 1</p>
-            </div>
-            <div class="item-price">
-                <p style="font-size: 1rem; color: #ffcc00;">$5.00</p>
-                <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $5.00</p>
-            </div>
-        </div>
+        <?php if (!empty($carrito)): ?>
+            <?php foreach ($carrito as $item): ?>
+                <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+                    <div class="item-details" style="text-align: left;">
+                        <p style="margin: 0; font-size: 1.2rem;">🍕 <?= $item->nombre_producto ?></p>
+                        <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Masa fina, salsa de tomate, queso doble crema</p> <!-- Puedes ajustar esta descripción si tienes un campo de descripción para los productos -->
+                        <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: <?= $item->cantidad ?></p>
+                    </div>
+                    <div class="item-price">
+                        <p style="font-size: 1rem; color: #ffcc00;">$<?= number_format($item->precio_unitario, 2) ?></p>
+                        <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $<?= number_format($item->cantidad * $item->precio_unitario, 2) ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>El carrito está vacío.</p>
+        <?php endif; ?>
         
         <!-- Total Section -->
         <div class="total" style="margin-top: 1.5rem; font-size: 1.2rem;">
-            <p style="color: #ffcc00;">Subtotal: $28.00</p>
-            <p style="margin-top: 0.5rem; color: #ccc;">Envío: $2.00</p>
-            <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $30.00</p>
+            <p style="color: #ffcc00;">Subtotal: $<?= number_format($total, 2) ?></p>
+            <p style="margin-top: 0.5rem; color: #ccc;">Envío: $2.00</p> <!-- Este valor se puede calcular o modificar según corresponda -->
+            <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $<?= number_format($total + 2, 2) ?></p> <!-- Añadido el costo de envío aquí -->
         </div>
     </div>
     
@@ -91,6 +70,7 @@
         Proceder al Pago
     </button>
 </section>
+
 
 
 

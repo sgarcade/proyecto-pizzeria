@@ -16,11 +16,11 @@ class Login extends BaseController
     {
         $loginModel = new LoginModel();
 
-        
-        $nombre = $this->request->getPost('correo');
+        $correo = $this->request->getPost('correo');
+
         $contrasena = $this->request->getPost('contrasena');
         
-        $usuario = $loginModel->where('correo', $nombre)->first();
+        $usuario = $loginModel->where('correo', $correo)->first();
 
         if ($usuario && $contrasena === $usuario['contrasena']) {
   

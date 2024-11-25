@@ -141,10 +141,10 @@
 
                 
                 <form method="POST" action="<?= base_url('login/authenticate'); ?>">
-                   
+                   <!-- comentario -->
                     <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+                        <label for="correo">Correo</label>
+                        <input type="text" class="form-control" id="correo" name="correo" placeholder="Introduce tu correo" required>
                     </div>
                    
                     <div class="form-group">
