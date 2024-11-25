@@ -31,7 +31,7 @@ $routes->post('misPedidos/cancelarPedido/(:num)', 'Pedidos::cancelarPedido/$1');
 $routes->get('perfil', 'Perfil::index');
 $routes->get('gestion', 'Gestion::index');
 $routes->get('shopcar', 'Shopcar::index');
-$routes->get('searchproducts', 'SearchProduct::index');
+$routes->match(['GET', 'POST'], 'searchproducts', 'SearchProduct::searchProducts');
 $routes->get('recepcionPedidos', 'RecepcionPedidos::listarPedidos');
 $routes->get('preparacionPedidos', 'PreparacionPedidos::index');
 $routes->get('database_test', 'DatabaseTest::index');
