@@ -39,75 +39,31 @@
     <h2 style="text-align: center; font-size: 1.8rem; color: #ffcc00;">🛍️ Selección de Productos</h2>
     
     <div class="product-items" style="margin-top: 1.5rem;">
-        
-        
-        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-            <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🍕 Pizza pollo con champiñones</p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Masa fina, salsa de tomate, queso doble crema</p>
-                <p style="margin: 0.5rem 0 0; color: #ffcc00;">Desde $15.000</p>
-            </div>
-            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
-        </div>
-
-        
-        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-            <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🍕 Pizza Pepperoni</p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Salsa de tomate, mozzarella, pepperoni</p>
-                <p style="margin: 0.5rem 0 0; color: #ffcc00;">Desde $15.000</p>
-            </div>
-            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
-        </div>
-
-        
-        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-            <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🍕 Pizza Vegetariana</p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Tomates frescos, champiñones, pimientos, aceitunas</p>
-                <p style="margin: 0.5rem 0 0; color: #ffcc00;">Desde $15.000</p>
-            </div>
-            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
-        </div>
-
-       
-        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-            <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🥤 Gaseosa</p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">500 ml</p>
-                <p style="margin: 0.5rem 0 0; color: #ffcc00;">$7.000</p>
-            </div>
-            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
-        </div>
-
-                   
-        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-            <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🍰 Cheesecake de Fresa</p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Porción individual, con topping de fresas frescas</p>
-                <p style="margin: 0.5rem 0 0; color: #ffcc00;">$9.000</p>
-            </div>
-            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
-        </div>
-
-        <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-            <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🍟 Papas a la francesa</p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Porción individual, con topping de fresas frescas</p>
-                <p style="margin: 0.5rem 0 0; color: #ffcc00;">$5.000</p>
-            </div>
-            <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">Agregar</button>
-        </div>
-        
-       
-
+        <!-- Inicia bucle para mostrar productos -->
+        <?php if (!empty($productos)): ?>
+            <?php foreach ($productos as $producto): ?>
+                <div class="product-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+                    <div class="item-details" style="text-align: left;">
+                        <p style="margin: 0; font-size: 1.2rem;">🍕 <?= htmlspecialchars($producto['nombre']); ?></p>
+                        <p style="margin: 0; color: #bbb; font-size: 0.9rem;"><?= htmlspecialchars($producto['descripcion']); ?></p>
+                        <p style="margin: 0.5rem 0 0; color: #ffcc00;">Desde $<?= number_format($producto['precio'], 0, ',', '.'); ?></p>
+                    </div>
+                    <button style="padding: 0.3rem 0.8rem; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">
+                        Agregar
+                    </button>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p style="color: #ffcc00;">No hay productos disponibles.</p>
+        <?php endif; ?>
+        <!-- Termina bucle -->
     </div>
-    
     
     <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">
         Ver Carrito
     </button>
 </section>
+
 
 
 

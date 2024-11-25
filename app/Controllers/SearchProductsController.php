@@ -1,24 +1,41 @@
 <?php
-require_once 'models/ProductModel.php';
 
-class ProductController {
-    private $model;
+namespace App\Controllers;
 
-    public function __construct($db) {
-        $this->model = new ProductModel($db);
-    }
+use App\Models\CarritoModel;
+use App\Models\ProductoModel;
 
-    
-    public function search($searchTerm = '') {
-       
-        if (!empty($searchTerm)) {
-            $products = $this->model->searchProducts($searchTerm);
-        } else {
-            $products = []; 
+class CarritoController extends BaseController
+{
+    public function searchProducts()
+    {
+        if ($this->request->getMethod() === 'post') {
+            $searchTerm = $this->request->getPost('search'); 
+
+            if (empty($searchTerm)) {
+                return view('searchProducts', [
+                    'producto' => [],
+                    'error' => 'Por favor, ingresa un término para buscar.'
+                ]);
+            }
+
+           
+            $productoModel = new ProductoModel();
+
+           
+            $productos = $productoModel
+                ->like('nombre_producto', $searchTerm)
+                ->orLike('descripcion', $searchTerm)
+                ->findAll();
+
+           
+            return view('searchProducts', [
+                'productos' => $productos,
+                'searchTerm' => $searchTerm
+            ]);
         }
 
         
-        require_once 'views/productSearchView.php';
+        return view('searchProducts', ['productos' => []]);
     }
 }
-?>
