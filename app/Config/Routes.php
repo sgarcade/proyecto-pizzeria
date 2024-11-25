@@ -32,15 +32,16 @@ $routes->get('perfil', 'Perfil::index');
 $routes->get('gestion', 'Gestion::index');
 $routes->get('shopcar', 'Shopcar::index');
 $routes->get('searchproducts', 'SearchProducts::index');
-$routes->get('recepcionPedidos', 'RecepcionPedidos::index');
+$routes->get('recepcionPedidos', 'RecepcionPedidos::listarPedidos');
 $routes->get('preparacionPedidos', 'PreparacionPedidos::index');
 $routes->get('database_test', 'DatabaseTest::index');
 $routes->get('productos', 'ProductoController::index');
 $routes->get('paymentGetaway', 'PaymentGetaway::index');
-$routes->get('/restablecer-contrasena/(:any)', 'RestablecerContrasena::index/$1'); 
-
-//POST
-$routes->post('/restablecer-contrasena/(:any)', 'RestablecerContrasena::guardarNuevaContrasena/$1'); 
-$routes->post('/restaurar-contrasena', 'OlvidoContrasena::restaurarContrasena');
+$routes->get('empleados', 'Employee::index');
+$routes->post('empleados/register', 'Employee::register');
+$routes->get('empleados/lista', 'Employee::listaEmpleados');
 $routes->post('register', 'SignUp::register');
 $routes->post('login/authenticate', 'Login::authenticate');
+$routes->get('/restablecer-contrasena/(:any)', 'RestablecerContrasena::index/$1'); 
+$routes->post('/restablecer-contrasena/(:any)', 'RestablecerContrasena::guardarNuevaContrasena/$1'); 
+$routes->post('/restaurar-contrasena', 'OlvidoContrasena::restaurarContrasena');

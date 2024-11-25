@@ -56,11 +56,12 @@
 					<li class="nav-item"><a href="<?= base_url('gestion'); ?>" class="nav-link">Gestion de productos</a></li>
 					<li class="nav-item"><a href="<?= base_url('shopcar'); ?>" class="nav-link">Carrito de compra</a></li>
 					<li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de producto</a></li>
-                    <li class="nav-item"><a href="<?= base_url('misPedidos'); ?>" class="nav-link">misPedidos</a></li>
+                    <li class="nav-item"><a href="<?= base_url('misPedidos'); ?>" class="nav-link">Mis Pedidos</a></li>
                     <li class="nav-item"><a href="<?= base_url('recepcionPedidos'); ?>" class="nav-link">Recepción de pedidos</a></li>
                     <li class="nav-item"><a href="<?= base_url('preparacionPedidos'); ?>" class="nav-link">Preparación de ordenes</a></li>
                     <!--<li class="nav-item"><a href="<?= base_url('productos'); ?>" class="nav-link">Listado de productos</a></li>-->
                     <li class="nav-item"><a href="<?= base_url('paymentGetaway'); ?>" class="nav-link">Pasarela de pago</a></li>
+                    <li class="nav-item"><a href="<?= base_url('empleados/lista'); ?>" class="nav-link">Empleados</a></li>
 				</ul>
 			</div>
 		</div>

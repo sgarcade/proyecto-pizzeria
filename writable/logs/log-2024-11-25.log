@@ -141,3 +141,606 @@ in APPPATH\Controllers\Shopcar.php on line 35.
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
 
+INFO - 2024-11-25 02:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 02:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 02:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-25 02:13:30 --> mysqli_sql_exception: Unknown column 'usuario_id' in 'where clause' in C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\MySQLi\Connection.php(312): mysqli->query()
+#1 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Models\CarritoModel.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\app\Controllers\Shopcar.php(19): App\Models\CarritoModel->getProductosCarrito()
+#8 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(933): App\Controllers\Shopcar->index()
+#9 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 C:\Users\usuario\Desktop\Pizza-nostra\proyecto-pizzeria\system\rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2024-11-25 02:13:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuario_id' in 'where clause'
+[Method: GET, Route: shopcar]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 4 APPPATH\Models\CarritoModel.php(16): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Shopcar.php(19): App\Models\CarritoModel->getProductosCarrito()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:13:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'usuario_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 6 APPPATH\Models\CarritoModel.php(16): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Shopcar.php(19): App\Models\CarritoModel->getProductosCarrito()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:13:30 --> [Caused by] mysqli_sql_exception: Unknown column 'usuario_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query()
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 7 APPPATH\Models\CarritoModel.php(16): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Shopcar.php(19): App\Models\CarritoModel->getProductosCarrito()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:43:37 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:44:31 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:44:31 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:44:32 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:44:32 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:44:32 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:44:32 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:49:29 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:49:29 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:49:29 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:49:29 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:49:29 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:49:30 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:49:30 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 02:52:50 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:03:14 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:03:15 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:03:15 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:03:15 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:03:15 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:03:15 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:03:16 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:04:06 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:04:06 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:04:07 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:04:07 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:04:07 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-25 03:04:10 --> Error: Object of class App\Models\PedidoModel could not be converted to string
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Controllers\RecepcionPedidos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 03:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:12:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 03:38:42 --> ErrorException: Undefined variable $chefs
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 315.
+ 1 APPPATH\Views\recepcionPedidos.php(315): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(18): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 03:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 03:39:06 --> ErrorException: Undefined variable $chefs
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 315.
+ 1 APPPATH\Views\recepcionPedidos.php(315): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(18): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 03:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 03:39:06 --> ErrorException: Undefined variable $chefs
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 315.
+ 1 APPPATH\Views\recepcionPedidos.php(315): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(18): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 03:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 03:39:06 --> ErrorException: Undefined variable $chefs
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 315.
+ 1 APPPATH\Views\recepcionPedidos.php(315): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(18): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 03:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 03:39:06 --> ErrorException: Undefined variable $chefs
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 315.
+ 1 APPPATH\Views\recepcionPedidos.php(315): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(18): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 03:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 03:39:06 --> ErrorException: Undefined variable $chefs
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 315.
+ 1 APPPATH\Views\recepcionPedidos.php(315): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(18): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 03:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 03:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 03:40:13 --> ErrorException: Undefined variable $chefs
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 96.
+ 1 APPPATH\Views\recepcionPedidos.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(18): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 04:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 04:05:37 --> ErrorException: Undefined variable $chefs
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 96.
+ 1 APPPATH\Views\recepcionPedidos.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(18): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 04:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 04:14:40 --> ErrorException: Attempt to read property "id_pedido" on array
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 319.
+ 1 APPPATH\Views\recepcionPedidos.php(319): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(21): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 04:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 04:14:41 --> ErrorException: Attempt to read property "id_pedido" on array
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 319.
+ 1 APPPATH\Views\recepcionPedidos.php(319): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(21): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 04:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 04:14:41 --> ErrorException: Attempt to read property "id_pedido" on array
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 319.
+ 1 APPPATH\Views\recepcionPedidos.php(319): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(21): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 04:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-25 04:14:41 --> ErrorException: Attempt to read property "id_pedido" on array
+[Method: GET, Route: recepcionPedidos]
+in APPPATH\Views\recepcionPedidos.php on line 319.
+ 1 APPPATH\Views\recepcionPedidos.php(319): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\app\\Views\\recepcionPedidos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\RecepcionPedidos.php(21): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\RecepcionPedidos->listarPedidos()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\usuario\\Desktop\\Pizza-nostra\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-25 04:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-25 04:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+

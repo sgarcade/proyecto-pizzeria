@@ -9,8 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
-    
-    <!-- Estilos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS Styles -->
     <link rel="stylesheet" href="<?php echo base_url('css/open-iconic-bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/animate.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/owl.carousel.min.css'); ?>">
@@ -24,310 +27,387 @@
     <link rel="stylesheet" href="<?php echo base_url('css/icomoon.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
 
+    <style>
+        
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card-main {
+            background-color: #343a40;
+            color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);            
+        }
+
+        .card-main h2 {
+            color: #e0a800;  /* Color de fondo del filtro */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            background-color: #fff;
+            color: #343a40;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        .card p {
+            font-size: 1em;
+            margin: 5px 0;
+            color: #6c757d;
+        }
+
+        .card strong {
+            font-weight: bold;
+        }
+
+        .btn-card {
+          background-color: red;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          margin-left: auto;  
+          display: block; 
+      }
+
+      .btn-card:hover {
+          background-color: lightcoral;
+          transform: translateY(-2px);
+      }
+
+
+        .filter-container {
+            margin-bottom: 20px;
+            background-color: #e0a800; 
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .filter-container select {
+            padding: 10px;
+            margin-left: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .filter-container label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 380px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            font-size: 1.3em;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-body {
+            padding: 15px;
+            font-size: 0.95em;
+        }
+
+        .pedido-header {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .pedido-details {
+            margin-top: 10px;
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .pedido-details p {
+            margin: 5px 0;
+        }
+
+        .pedido-actions {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn-cancelar {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1.1em;
+        }
+
+        .btn-cancelar:hover {
+            background-color: #d32f2f;
+        }
+
+        .label {
+            font-size: 0.9em;
+            padding: 6px 12px;
+            border-radius: 15px;
+        }
+
+        .label-warning {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        .label-info {
+            background-color: #2196f3;
+            color: white;
+        }
+
+        .pedido-productos {
+            margin-top: 20px;
+            padding-left: 15px;
+        }
+
+        .pedido-productos p {
+            font-size: 1em;
+            margin: 8px 0;
+        }
+
+        .pedido-productos strong {
+            font-weight: 600;
+        }
+
+        .total-acumulado {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        .select-container {
+        margin-bottom: 15px;
+    }
+
+    /* Estilo para las etiquetas */
+    .select-container label {
+        font-size: 1.1em;
+        color: #333;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    /* Estilo para el select */
+    .select-container select {
+        width: 100%;  /* Asegura que el select ocupe el 100% del contenedor */
+        padding: 12px 15px;
+        font-size: 1.1em;
+        color: #333;
+        background-color: #f8f9fa;  /* Color de fondo suave */
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    /* Cambios al hacer foco en el select */
+    .select-container select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Sombra azul suave */
+        background-color: #fff; /* Fondo blanco al tener el foco */
+    }
+
+    /* Estilo para los botones */
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    /* Estilo para los contenedores de los formularios */
+    .pedido-actions {
+        margin-top: 20px;
+        text-align: center;
+    }
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    
+
+    </style>
 
 </head>
 <body>
 <?php include("includes/header.php")?>
 
-<div class="container2">
-    <h1 class="order-header">Recepción de Pedidos</h1>
+    <h1 class="text-center mb-4">Gestión de Pedidos - Recepcionista</h1>
 
-    <!-- Pedido 1 -->
-    <div class="order-card">
-        <div class="order-item">
-            <div class="order-info">
-                <h5>Pedido #1023</h5>
-                <p><strong>Cliente:</strong> Juan Pérez</p>
-                <p><strong>Dirección:</strong> Calle 123, Bogotá</p>
-                <p><strong>Teléfono:</strong> 3101234567</p>
-                <p><strong>Notas:</strong> Sin cebolla en la pizza</p>
-                <p><strong>Estado:</strong> Preparado</p>
-            </div>
-            <div class="order-actions">
-                <button class="btn-process">Asignar Domiciliario</button>
-            </div>
-        </div>
-        
-        <div class="order-item">
-			<div class="order-item-details">
-				<span class="order-item-icon">🍕</span> <!-- Icono personalizado, como emoji o fuente -->
-				<strong>Pizza Pepperoni</strong>
-			</div>
-			<span>Grande - Queso Extra</span>
-		</div>
-		<div class="order-item">
-			<div class="order-item-details">
-				<span class="order-item-icon">🍕</span> <!-- Icono personalizado, como emoji o fuente -->
-				<strong>Pizza Hawaina</strong>
-			</div>
-			<span>Mediana - Masa Delgada</span>
-		</div>
-        <div class="order-item">
-			<div class="order-item-details">
-				<span class="order-item-icon">🥤</span> <!-- Icono de refresco -->
-				<strong>Coca Cola</strong>
-			</div>
-			<span>2 L</span>
-		</div>
+    <?php if (session()->getFlashdata('message')): ?>
+        <p class="alert alert-success"><?= session()->getFlashdata('message') ?></p>
+    <?php elseif (session()->getFlashdata('error')): ?>
+        <p class="alert alert-danger"><?= session()->getFlashdata('error') ?></p>
+    <?php endif; ?>
 
-    </div>
+    <?php 
 
-    <!-- Pedido 2 -->
-    <div class="order-card">
-        <div class="order-item">
-            <div class="order-info">
-                <h5>Pedido #1024</h5>
-                <p><strong>Cliente:</strong> María López</p>
-                <p><strong>Dirección:</strong> Avenida 45, Medellín</p>
-                <p><strong>Teléfono:</strong> 3208765432</p>
-                <p><strong>Notas:</strong> Entregar sin picante</p>
-                <p><strong>Estado:</strong> Preparado</p>
-            </div>           
-            <div class="order-actions">
-                <button class="btn-process">Asignar Domiciliario</button>
-            </div>
-        </div>
-		<div class="order-item">
-			<div class="order-item-details">
-				<span class="order-item-icon">🍕</span> <!-- Icono personalizado, como emoji o fuente -->
-				<strong>Pizza 4 Quesos</strong>
-			</div>
-			<span>Grande - Masa Gruesa</span>
-		</div>
-        <div class="order-item">
-			<div class="order-item-details">
-				<span class="order-item-icon">🥗</span> <!-- Icono de ensalada -->
-				<strong>Ensalada César</strong>
-			</div>
-			<span>Sin crutones</span>
-		</div>
-    </div>
-    <div class="order-card">
-        <div class="order-item">
-            <div class="order-info">
-                <h5>Pedido #1025</h5>
-                <p><strong>Cliente:</strong> Carlos Fernández</p>
-                <p><strong>Dirección:</strong> Calle 10, Cali</p>
-                <p><strong>Teléfono:</strong> 3159876543</p>
-                <p><strong>Notas:</strong> Agregar extra de queso</p>
-                <p><strong>Estado:</strong> Preparado</p>
-            </div>            
-            <div class="order-actions">
-                <button class="btn-process">Asignar Domiciliario</button>
-            </div>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🍕</span> <!-- Icono de pizza -->
-                <strong>Pizza Margarita</strong>
-            </div>
-            <span>Mediana - Masa Delgada</span>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🥤</span> <!-- Icono de refresco -->
-                <strong>Refresco</strong>
-            </div>
-            <span>1.5 L</span>
-        </div>
-    </div>
+        $pedidosAgrupados = [];
+        foreach ($pedidos as $pedido) {
+            $pedidosAgrupados[$pedido['id_pedido']][] = $pedido;
+        }
+    ?>
 
-    <div class="order-card">
-        <div class="order-item">
-            <div class="order-info">
-                <h5>Pedido #1026</h5>
-                <p><strong>Cliente:</strong> Ana Gómez</p>
-                <p><strong>Dirección:</strong> Carrera 15, Bogotá</p>
-                <p><strong>Teléfono:</strong> 3001234567</p>
-                <p><strong>Notas:</strong> Sin mayonesa en la ensalada</p>
-                <p><strong>Estado:</strong> En preparación</p>
-            </div>
-            <div class="order-actions">
-                <button class="btn-process">Enviar a Cocina</button>
-            </div>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🍕</span> <!-- Icono de pizza -->
-                <strong>Pizza BBQ</strong>
-            </div>
-            <span>Grande - Masa Gruesa</span>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🥗</span> <!-- Icono de ensalada -->
-                <strong>Ensalada Mixta</strong>
-            </div>
-            <span>Con aderezo de yogur</span>
-        </div>
-    </div>
-
-    <div class="order-card">
-        <div class="order-item">
-            <div class="order-info">
-                <h5>Pedido #1027</h5>
-                <p><strong>Cliente:</strong> Luis Martínez</p>
-                <p><strong>Dirección:</strong> Avenida 20, Medellín</p>
-                <p><strong>Teléfono:</strong> 3145678901</p>
-                <p><strong>Notas:</strong> Sin picante en la pizza</p>
-                <p><strong>Estado:</strong> En cola</p>
-            </div>
-            <div class="order-actions">
-                <button class="btn-process">Enviar a Cocina</button>
-            </div>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🍕</span> <!-- Icono de pizza -->
-                <strong>Pizza Vegetariana</strong>
-            </div>
-            <span>Mediana - Masa Delgada</span>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🥤</span> <!-- Icono de refresco -->
-                <strong>Jugo Natural</strong>
-            </div>
-            <span>1 L</span>
-        </div>
-    </div>
-
-    <div class="order-card">
-        <div class="order-item">
-            <div class="order-info">
-                <h5>Pedido #1028</h5>
-                <p><strong>Cliente:</strong> Pedro Sánchez</p>
-                <p><strong>Dirección:</strong> Calle 50, Barranquilla</p>
-                <p><strong>Teléfono:</strong> 3187654321</p>
-                <p><strong>Notas:</strong> Con extra de piña en la pizza</p>
-                <p><strong>Estado:</strong> En cola</p>
-            </div>
-            <div class="order-actions">
-                <button class="btn-process">Enviar a Cocina</button>
-            </div>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🍕</span> <!-- Icono de pizza -->
-                <strong>Pizza Hawaiana</strong>
-            </div>
-            <span>Grande - Masa Gruesa</span>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🥗</span> <!-- Icono de ensalada -->
-                <strong>Ensalada César</strong>
-            </div>
-            <span>Con aderezo ranch</span>
-        </div>
-    </div>
-
-    <div class="order-card">
-        <div class="order-item">
-            <div class="order-info">
-                <h5>Pedido #1029</h5>
-                <p><strong>Cliente:</strong> Sofía Rodríguez</p>
-                <p><strong>Dirección:</strong> Calle 8, Cartagena</p>
-                <p><strong>Teléfono:</strong> 3212345678</p>
-                <p><strong>Notas:</strong> Sin cebolla en la pizza</p>
-                <p><strong>Estado:</strong> En cola</p>
-            </div>
-            <div class="order-actions">
-                <button class="btn-process">Enviar a Cocina</button>
-            </div>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🍕</span> <!-- Icono de pizza -->
-                <strong>Pizza Pepperoni</strong>
-            </div>
-            <span>Mediana - Masa Delgada</span>
-        </div>
-        <div class="order-item">
-            <div class="order-item-details">
-                <span class="order-item-icon">🥗</span> <!-- Icono de ensalada -->
-                <strong>Ensalada de Frutas</strong>
-            </div>
-            <span>Con miel</span>
-        </div>
-    </div>
-
-</div>
-<footer class="ftco-footer ftco-section img">
-    	<div class="overlay"></div>
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About Us</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
+    <div class="card-container">
+        <?php foreach ($pedidosAgrupados as $idPedido => $grupoPedidos): ?>
+            <div class="card">
+                <div class="card-header">
+                    <strong>ID Pedido: <?= $idPedido ?></strong>
                 </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
-             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Cooked</a></li>
-                <li><a href="#" class="py-2 d-block">Deliver</a></li>
-                <li><a href="#" class="py-2 d-block">Quality Foods</a></li>
-                <li><a href="#" class="py-2 d-block">Mixed</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+                <div class="card-body">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
+                    <div class="pedido-header">
+                        <strong>Cliente:</strong> <?= $grupoPedidos[0]['nombre_cliente'] ?>
+                    </div>
+
+                    <div class="pedido-details">
+                        <p><strong>Estado:</strong> 
+                            <span class="label <?= $grupoPedidos[0]['estado'] === 'Pendiente' ? 'label-warning' : 'label-info' ?>">
+                                <?= $grupoPedidos[0]['estado'] ?>
+                            </span>
+                        </p>
+                        <p><strong>Fecha:</strong> <?= $grupoPedidos[0]['fecha'] ?></p>
+                    </div>
+
+                    <div class="pedido-productos">
+                        <?php 
+                            $totalPedido = 0;
+                            foreach ($grupoPedidos as $pedido):
+                                $totalPedido += $pedido['total'];
+                        ?>
+                            <p><strong>Producto:</strong> <?= $pedido['nombre_producto'] ?></p>
+                            <p><strong>Cantidad:</strong> <?= $pedido['cantidad'] ?></p>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <div class="total-acumulado">
+                        <strong>Total del Pedido:</strong> $<?= number_format($totalPedido, 2) ?>
+                    </div>
+
+                    <div class="pedido-actions">
+                        <?php if ($grupoPedidos[0]['estado'] === 'Pendiente'): ?>
+                            <form action="<?= base_url('recepcionista/pedido/asignarChef/' . $grupoPedidos[0]['id_pedido']) ?>" method="post">
+                                <label for="chef">Seleccionar Chef:</label>
+                                <select id="chef" name="chef" class="form-control">
+                                    <?php foreach ($chefs as $chef): ?>
+                                        <option value="<?= $chef['id'] ?>"><?= $chef['nombre'] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <button type="submit" class="btn btn-primary mt-3">Asignar Chef</button>
+                            </form>
+                        <?php elseif ($grupoPedidos[0]['estado'] === 'A la espera de un Domiciliario'): ?>
+                            <form action="<?= base_url('recepcionista/pedido/asignarDomiciliario/' . $grupoPedidos[0]['id_pedido']) ?>" method="post">
+                                <label for="domiciliario">Seleccionar Domiciliario:</label>
+                                <select id="domiciliario" name="domiciliario" class="form-control">
+                                    <?php foreach ($domiciliarios as $domiciliario): ?>
+                                        <option value="<?= $domiciliario['id'] ?>"><?= $domiciliario['nombre'] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <button type="submit" class="btn btn-primary mt-3">Asignar Domiciliario</button>
+                            </form>                        
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <footer class="ftco-footer ftco-section img">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row mb-5">
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            </div>
         </div>
-      </div>
     </footer>
 
 </body>

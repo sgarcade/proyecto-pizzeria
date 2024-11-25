@@ -12,7 +12,7 @@ class Pedidos extends Controller
     {
         $pedidoModel = new PedidoModel();
 
-        // Obtener todos los pedidos con detalles del cliente
+
         $pedidos = $pedidoModel->getPedidosPorCliente(1);  // Cambiar el ID según sea necesario
 
         // Pasar los datos a la vista
@@ -21,7 +21,7 @@ class Pedidos extends Controller
         ]);
     }
 
-    // Controlador Pedidos
+
 
     public function cancelarPedido($idPedido)
     {
@@ -42,5 +42,4 @@ class Pedidos extends Controller
             ]);
         }
     }
-
 }
