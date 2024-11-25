@@ -16,8 +16,8 @@ class Login extends BaseController
     {
         $loginModel = new LoginModel();
 
-        
         $correo = $this->request->getPost('correo');
+
         $contrasena = $this->request->getPost('contrasena');
         
         $usuario = $loginModel->where('correo', $correo)->first();

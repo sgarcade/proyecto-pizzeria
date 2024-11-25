@@ -141,7 +141,7 @@
 
                 
                 <form method="POST" action="<?= base_url('login/authenticate'); ?>">
-                   
+                   <!-- comentario -->
                     <div class="form-group">
                         <label for="correo">Correo</label>
                         <input type="text" class="form-control" id="correo" name="correo" placeholder="Introduce tu correo" required>
