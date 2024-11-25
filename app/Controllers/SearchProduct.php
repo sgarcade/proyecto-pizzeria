@@ -8,17 +8,13 @@ use CodeIgniter\Controller;
 
 class SearchProduct extends BaseController
 {
-    public function index(): string
-    {
-        
-        return view('searchproducts');
-    }
+ 
 
     public function searchProducts()
     {
-        
-        if ($this->request->getMethod() === 'post') {
+        if ($this->request->getMethod() === 'POST') {
             $searchTerm = $this->request->getPost('search'); 
+            
 
             if (empty($searchTerm)) {
                 return view('searchproducts', [
@@ -30,17 +26,19 @@ class SearchProduct extends BaseController
            
             $productoModel = new ProductoModel();
 
-           
             $productos = $productoModel
-                ->like('nombre_producto', $searchTerm)
-                ->orLike('descripcion', $searchTerm)
-                ->findAll();
+            ->like('nombre_producto', $searchTerm)
+            ->orLike('descripcion', $searchTerm)
+            ->findAll();
 
-           
+
+            
             return view('searchproducts', [
                 'productos' => $productos,
                 'searchTerm' => $searchTerm
             ]);
+            
+
         }
 
         
