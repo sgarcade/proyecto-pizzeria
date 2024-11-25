@@ -157,11 +157,6 @@
     </style>
 </head>
 <body>
-    <!-- Alertas -->
-    
-
-
-    <!-- Formulario de Registro -->
     <div class="container">
         <?php if (isset($success)): ?>
         <div class="alert alert-success text-center" role="alert">
