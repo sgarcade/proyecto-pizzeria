@@ -16,6 +16,7 @@ class RecepcionPedidos extends BaseController
 
         $domiciliarioModel = new DomiciliarioModel();
         $domiciliarios = $domiciliarioModel->findAll();
+        // Example: Debugging data from the models
 
         // Pasar datos a la vista
         return view('recepcionPedidos', [
