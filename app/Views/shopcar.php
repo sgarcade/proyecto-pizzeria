@@ -46,31 +46,32 @@
             <p style="font-size: 1rem; color: #ffcc00;">$<?= number_format($item['precio_unitario'], 3) ?></p>
             <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $<?= number_format($item['subtotal'], 3) ?></p>
           </div>
+          <!-- Botón de eliminar -->
+          <div class="item-remove" style="text-align: right;">
+            <form action="shopcar" method="POST" style="display: inline-block;">
+              <input type="hidden" name="id_producto" value="<?= esc($item['id_producto']) ?>">
+              <button type="submit" style="background-color: #e74c3c; color: white; border: none; border-radius: 5px; padding: 0.5rem 1rem; cursor: pointer;">Eliminar</button>
+            </form>
+          </div>
         </div>
       <?php endforeach; ?>
     <?php else: ?>
-      <div style="padding: 2rem; text-align: center; color: #ccc;">
-        <h3 style="color: #ffcc00; margin-bottom: 1rem;">Whoops! Tu carrito está vacío. 🛒</h3>
-        <p style="margin-bottom: 1.5rem;">Explora nuestros productos y agrega tus favoritos.</p>
-        <a href="searchproducts" style="text-decoration: none; color: #fff; background-color: #007bff; padding: 0.7rem 1.5rem; border-radius: 8px; transition: background-color 0.3s;">Ir al Catálogo</a>
-      </div>
+      <p>El carrito está vacío.</p>
     <?php endif; ?>
   </div>
 
-  <?php if (!empty($shopcar)): ?>
-    <div class="total" style="margin-top: 1.5rem; font-size: 1.2rem;">
-      <p style="color: #ffcc00;">Subtotal: $<?= number_format($total, 3) ?></p>
-      <p style="margin-top: 0.5rem; color: #ccc;">Envío: Gratis!</p>
-      <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $<?= number_format($total , 3) ?></p>
-      <p style="margin-top: 1rem; color: #bbb;">Cantidad total de productos: <?= esc($cantidad_total) ?></p>
-    </div>
+  <div class="total" style="margin-top: 1.5rem; font-size: 1.2rem;">
+    <p style="color: #ffcc00;">Subtotal: $<?= number_format($total, 3) ?></p>
+    <p style="margin-top: 0.5rem; color: #ccc;">Envío: Gratis!</p>
+    <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $<?= number_format($total , 3) ?></p>
+    <p style="margin-top: 1rem; color: #bbb;">Cantidad total de productos: <?= esc($cantidad_total) ?></p>
+  </div>
 
-    <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;",
-    onclick="window.location.href='paymentGetaway'">
-      Proceder al Pago
-    </button>
-  <?php endif; ?>
+  <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">
+    Proceder al Pago
+  </button>
 </section>
+
 
 
     <footer class="ftco-footer ftco-section img">
