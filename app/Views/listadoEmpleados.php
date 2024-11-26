@@ -102,37 +102,38 @@
 <body>
 <?php include("includes/header.php") ?>
 
-    <div class="table-container">
-        <h1 class="header-title">Lista de Empleados</h1>
+<div class="table-container">
+    <h1 class="header-title">Lista de Empleados</h1>
 
-        <?php if (isset($error)): ?>
-            <p style="color: red;"><?= esc($error); ?></p>
-        <?php endif; ?>
-        <div class="text-end">
-            <a href="<?= base_url('empleados'); ?>" class="btn add-button">
-                <i class="oi oi-plus"></i> Agregar Empleado
-            </a>
-        </div>
-        <!-- Tabla unificada de empleados -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Correo</th>
-                    <th>Rol</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($empleados as $empleado): ?>
-                    <tr>
-                        <td><?= esc($empleado['nombre']); ?></td>
-                        <td><?= esc($empleado['correo']); ?></td>
-                        <td class="role-column"><?= esc($empleado['rol']); ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+    <?php if (isset($error)): ?>
+        <p style="color: red;"><?= esc($error); ?></p>
+    <?php endif; ?>
+    <div class="text-end">
+        <a href="<?= base_url('empleados'); ?>" class="btn add-button">
+            <i class="oi oi-plus"></i> Agregar Empleado
+        </a>
     </div>
+    <!-- Tabla unificada de empleados -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($empleados as $empleado): ?>
+                <tr>
+                    <td><?= esc($empleado['nombre']); ?></td>
+                    <td><?= esc($empleado['correo']); ?></td>
+                    <td class="role-column"><?= esc($empleado['rol']); ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
 
 
 </body>

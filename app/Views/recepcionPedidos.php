@@ -379,7 +379,7 @@
                                 <label for="chef">Seleccionar Chef:</label>
                                 <select id="chef" name="chef" class="form-control">
                                     <?php foreach ($chefs as $chef): ?>
-                                        <option value="<?= $chef['id'] ?>"><?= $chef['nombre'] ?></option>
+                                        <option value="<?= $chef['id_chef'] ?>"><?= $chef['nombre'] ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <button type="submit" class="btn btn-primary mt-3">Asignar Chef</button>
@@ -389,7 +389,7 @@
                                 <label for="domiciliario">Seleccionar Domiciliario:</label>
                                 <select id="domiciliario" name="domiciliario" class="form-control">
                                     <?php foreach ($domiciliarios as $domiciliario): ?>
-                                        <option value="<?= $domiciliario['id'] ?>"><?= $domiciliario['nombre'] ?></option>
+                                        <option value="<?= $domiciliario['id_domiciliario'] ?>"><?= $domiciliario['nombre'] ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <button type="submit" class="btn btn-primary mt-3">Asignar Domiciliario</button>
