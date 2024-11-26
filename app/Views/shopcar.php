@@ -31,38 +31,47 @@
     <?php include("includes/header.php")?>
     
     <section class="shopping-cart" style="padding: 2rem; background-color: #222; color: #fff; border: 1px solid #444; border-radius: 8px; max-width: 600px; margin: 0 auto; text-align: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.3);">
-      <h2 style="text-align: center; font-size: 1.8rem; color: #ffcc00;">🛒 Carrito de Compras</h2>
+  <h2 style="text-align: center; font-size: 1.8rem; color: #ffcc00;">🛒 Carrito de Compras</h2>
 
-      <div class="cart-items" style="margin-top: 1.5rem;">
-        <?php if (!empty($carrito)): ?>
-          <?php foreach ($carrito as $item): ?>
-            <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
-              <div class="item-details" style="text-align: left;">
-                <p style="margin: 0; font-size: 1.2rem;">🍕 <?= $item['nombre_producto'] ?></p>
-                <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Masa fina, salsa de tomate, queso doble crema</p>
-                <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: <?= $item['cantidad'] ?></p>
-              </div>
-              <div class="item-price">
-                <p style="font-size: 1rem; color: #ffcc00;">$<?= number_format($item['precio'], 2) ?></p>
-                <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $<?= number_format($item['cantidad'] * $item['precio'], 2) ?></p>
-              </div>
-            </div>
-          <?php endforeach; ?>
-        <?php else: ?>
-          <p>El carrito está vacío.</p>
-        <?php endif; ?>
-        
-        <div class="total" style="margin-top: 1.5rem; font-size: 1.2rem;">
-          <p style="color: #ffcc00;">Subtotal: $<?= number_format($total, 2) ?></p>
-          <p style="margin-top: 0.5rem; color: #ccc;">Envío: $2.00</p>
-          <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $<?= number_format($total + 2, 2) ?></p>
+  <div class="cart-items" style="margin-top: 1.5rem;">
+    <?php if (!empty($shopcar)): ?>
+      <?php foreach ($shopcar as $item): ?>
+        <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #555;">
+          <div class="item-details" style="text-align: left;">
+            <p style="margin: 0; font-size: 1.2rem;">🍕 <?= esc($item['nombre_producto']) ?></p>
+            <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Descripción: <?= esc($item['descripcion'] ?? 'Sin descripción') ?></p>
+            <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: <?= esc($item['cantidad']) ?></p>
+          </div>
+          <div class="item-price">
+            <p style="font-size: 1rem; color: #ffcc00;">$<?= number_format($item['precio_unitario'], 3) ?></p>
+            <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $<?= number_format($item['subtotal'], 3) ?></p>
+          </div>
         </div>
+      <?php endforeach; ?>
+    <?php else: ?>
+      <div style="padding: 2rem; text-align: center; color: #ccc;">
+        <h3 style="color: #ffcc00; margin-bottom: 1rem;">Whoops! Tu carrito está vacío. 🛒</h3>
+        <p style="margin-bottom: 1.5rem;">Explora nuestros productos y agrega tus favoritos.</p>
+        <a href="searchproducts" style="text-decoration: none; color: #fff; background-color: #007bff; padding: 0.7rem 1.5rem; border-radius: 8px; transition: background-color 0.3s;">Ir al Catálogo</a>
       </div>
-      
-      <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">
-        Proceder al Pago
-      </button>
-    </section>
+    <?php endif; ?>
+  </div>
+
+  <?php if (!empty($shopcar)): ?>
+    <div class="total" style="margin-top: 1.5rem; font-size: 1.2rem;">
+      <p style="color: #ffcc00;">Subtotal: $<?= number_format($total, 3) ?></p>
+      <p style="margin-top: 0.5rem; color: #ccc;">Envío: Gratis!</p>
+      <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $<?= number_format($total , 3) ?></p>
+      <p style="margin-top: 1rem; color: #bbb;">Cantidad total de productos: <?= esc($cantidad_total) ?></p>
+    </div>
+
+    <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;",
+    onclick="window.location.href='paymentGetaway'">
+      Proceder al Pago
+    </button>
+  <?php endif; ?>
+</section>
+
 
     <footer class="ftco-footer ftco-section img">
       <div class="overlay"></div>
