@@ -156,6 +156,7 @@
 
     .modal-body p {
         font-size: 16px;
+        color:black;
     }
 
     /* Estilo para los botones del modal */
@@ -201,6 +202,7 @@
         background-color: #e0a800;
         border-color: #e0a800;
     }
+    
 
 </style>
 

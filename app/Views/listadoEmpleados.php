@@ -85,7 +85,7 @@
             background-color: #e0a800;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 20px 10px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -93,6 +93,9 @@
 
         .btn:hover {
             background-color: #e0a800;
+        }
+        .text-end{
+            padding-bottom: 20px;
         }
     </style>
 </head>
@@ -105,7 +108,11 @@
         <?php if (isset($error)): ?>
             <p style="color: red;"><?= esc($error); ?></p>
         <?php endif; ?>
-
+        <div class="text-end">
+            <a href="<?= base_url('empleados'); ?>" class="btn add-button">
+                <i class="oi oi-plus"></i> Agregar Empleado
+            </a>
+        </div>
         <!-- Tabla unificada de empleados -->
         <table>
             <thead>
@@ -116,39 +123,17 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Mostrar chefs -->
-                <?php foreach ($chefs as $chef): ?>
+                <?php foreach ($empleados as $empleado): ?>
                     <tr>
-                        <td><?= esc($chef['nombre']); ?></td>
-                        <td><?= esc($chef['correo']); ?></td>
-                        <td class="role-column">Chef</td>
-                    </tr>
-                <?php endforeach; ?>
-
-                <!-- Mostrar domiciliarios -->
-                <?php foreach ($domiciliarios as $domiciliario): ?>
-                    <tr>
-                        <td><?= esc($domiciliario['nombre']); ?></td>
-                        <td><?= esc($domiciliario['correo']); ?></td>
-                        <td class="role-column">Domiciliario</td>
-                    </tr>
-                <?php endforeach; ?>
-
-                <!-- Mostrar recepcionistas -->
-                <?php foreach ($recepcionistas as $recepcionista): ?>
-                    <tr>
-                        <td><?= esc($recepcionista['nombre']); ?></td>
-                        <td><?= esc($recepcionista['correo']); ?></td>
-                        <td class="role-column">Recepcionista</td>
+                        <td><?= esc($empleado['nombre']); ?></td>
+                        <td><?= esc($empleado['correo']); ?></td>
+                        <td class="role-column"><?= esc($empleado['rol']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-
-        <!-- <div class="text-center">
-            <button class="btn" onclick="window.location.href='pagina_anterior.php'">Volver</button>
-        </div> -->
     </div>
+
 
 </body>
 </html>
