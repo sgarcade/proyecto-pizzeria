@@ -158,17 +158,8 @@
 </head>
 <body>
     <div class="container">
-        <?php if (isset($success)): ?>
-        <div class="alert alert-success text-center" role="alert">
-            <?= $success; ?>
-        </div>
-        <?php endif; ?>
 
-        <?php if (isset($error)): ?>
-            <div class="alert alert-danger text-center" role="alert">
-                <?= $error; ?>
-            </div>
-        <?php endif; ?>
+
         <h2 class="text-center">
             <span class="flaticon-pizza-1 mr-1"></span>Pizza Nostra<br>
         </h2>
@@ -177,7 +168,7 @@
                 Registrar Empleado
             </div>
             <div class="card-body">
-                <form method="POST" action="<?= base_url('register'); ?>"> 
+                <form method="POST" action="<?= base_url('empleados/register'); ?>"> 
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre completo" required>

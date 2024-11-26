@@ -11,10 +11,10 @@ class AuthFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
     
-        // if (!session()->get('usuario')) {
+        if (!session()->get('usuario')) {
          
-        //     return redirect()->to(base_url('login'))->with('error', 'Por favor, inicia sesión primero.');
-        // }
+            return redirect()->to(base_url('login'))->with('error', 'Por favor, inicia sesión primero.');
+        }
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)

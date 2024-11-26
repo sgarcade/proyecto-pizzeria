@@ -19,6 +19,7 @@ class Employee extends Controller
     public function register(): string
     {
         try {
+            $administradorModel = new AdministradorModel();
             $userModel = new UserModel();
             $chefModel = new ChefModel();
             $recepcionistaModel = new RecepcionistaModel();
@@ -32,94 +33,79 @@ class Employee extends Controller
             $id_rol = $this->request->getPost('id_rol');
             $contrasena = $this->request->getPost('contrasena');
             $confirm_password = $this->request->getPost('confirm_password');
-
             // Validación de contraseñas
             if ($contrasena !== $confirm_password) {
                 $data['error'] = 'Las contraseñas no coinciden.';
                 return view('registroEmpleados', $data);
             }
-
-            // Datos comunes
             $data = [
                 'nombre' => $nombre,
                 'direccion' => $direccion,
                 'ciudad' => $ciudad,
                 'correo' => $correo,
                 'celular' => $celular,
-                'contrasena' => password_hash($contrasena, PASSWORD_DEFAULT),
+                'id_rol' => $id_rol,
+                'contrasena' => $contrasena,
             ];
 
-            // Se crea el usuario en la tabla correspondiente según el rol
-            if ($id_rol == 1) { 
-                $data['id_rol'] = $id_rol;
-                $query = $userModel->insert($data);
-                if ($query) {
-                    $clienteData = ['id_usuario' => $userModel->getInsertID()];
-                    $userModel->insert($clienteData);
-                }
-            } elseif ($id_rol == 2) { 
-                $data['id_rol'] = $id_rol;
-                $query = $userModel->insert($data);
-                if ($query) {
-                    $chefData = ['user_id' => $userModel->getInsertID()];
-                    $chefModel->insert($chefData);
-                }
-            } elseif ($id_rol == 3) { 
-                $data['id_rol'] = $id_rol;
-                $query = $userModel->insert($data);
-                if ($query) {
-                    $domiciliarioData = ['user_id' => $userModel->getInsertID()];
-                    $domiciliarioModel->insert($domiciliarioData);
-                }
-            } elseif ($id_rol == 4) { 
-                $data['id_rol'] = $id_rol;
-                $query = $userModel->insert($data);
-                if ($query) {
-                    $recepcionistaData = ['user_id' => $userModel->getInsertID()];
-                    $recepcionistaModel->insert($recepcionistaData);
-                }
-            }
-
-
+            $query = $userModel->insert($data);
+            
             if ($query) {
-                $data['success'] = 'Usuario creado con éxito. Ahora puedes iniciar sesión.';
-                return view('registroEmpleados', $data);
+                if ($id_rol == 2) {
+                    $adminData = ['id_usuario' => $userModel->getInsertID()];
+                    $administradorModel->insert($adminData);
+                    return view('registroEmpelados');
+                } elseif ($id_rol == 3) {
+                    $recepcionistaData = ['id_usuario' => $userModel->getInsertID()];
+                    $recepcionistaModel->insert($recepcionistaData);
+                    return view('registroEmpelados');
+                } elseif ($id_rol == 4) {
+                    $chefData = ['id_usuario' => $userModel->getInsertID()];
+                    $chefModel->insert($chefData);
+                    return view('registroEmpelados');
+                } elseif ($id_rol == 5) {
+                    $domiciliarioData = ['id_usuario' => $userModel->getInsertID()];
+                    $domiciliarioModel->insert($domiciliarioData);
+                    return view('registroEmpelados');
+                }
             } else {
-                $data['error'] = 'Error al crear el usuario. Intenta nuevamente.';
-                return view('registroEmpleados', $data);
+                return view('registroEmpelados');
             }
         } catch (\Exception $e) {
-            $data['error'] = 'Ocurrió un error: ' . $e->getMessage();
-            return view('registroEmpleados', $data);
+            
+            return view('registroEmpelados');
         }
     }
-    public function listaEmpleados(): string
+    public function listaEmpleados()
     {
-        try {
+        $db = \Config\Database::connect();
+        $query = $db->query("
+            SELECT 
+                u.nombre, 
+                u.correo, 
+                'Chef' AS rol
+            FROM usuario u
+            INNER JOIN chef c ON u.id_usuario = c.id_usuario
+            UNION ALL
+            SELECT 
+                u.nombre, 
+                u.correo, 
+                'Domiciliario' AS rol
+            FROM usuario u
+            INNER JOIN domiciliario d ON u.id_usuario = d.id_usuario
+            UNION ALL
+            SELECT 
+                u.nombre, 
+                u.correo, 
+                'Recepcionista' AS rol
+            FROM usuario u
+            INNER JOIN recepcionista r ON u.id_usuario = r.id_usuario
+        ");
 
-            $chefModel = new ChefModel();
-            $domiciliarioModel = new DomiciliarioModel();
-            $recepcionistaModel = new RecepcionistaModel();
+        $empleados = $query->getResultArray();
 
-
-            $chefs = $chefModel->findAll();  
-            $domiciliarios = $domiciliarioModel->findAll();  
-            $recepcionistas = $recepcionistaModel->findAll();  
-
-
-            $data = [
-                'chefs' => $chefs,
-                'domiciliarios' => $domiciliarios,
-                'recepcionistas' => $recepcionistas
-            ];
-
-
-            return view('listadoEmpleados', $data);
-        } catch (\Exception $e) {
-
-            $data['error'] = 'Ocurrió un error al obtener los empleados: ' . $e->getMessage();
-            return view('listadoEmpleados', $data);
-        }
+        return view('listadoEmpleados', ['empleados' => $empleados]);
     }
+
 
 }
