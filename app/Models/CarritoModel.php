@@ -10,12 +10,6 @@ class CarritoModel extends Model
     protected $primaryKey = 'id_carrito';
     protected $allowedFields = ['id_cliente', 'total', 'fecha'];
 
-    /**
-     * 
-     *
-     * @param int $id_usuario 
-     * @return array 
-     */
     public function getProductosCarrito($id_usuario)
     {
         $db = \Config\Database::connect();
@@ -34,16 +28,10 @@ class CarritoModel extends Model
         return [
             'productos' => $detallesCarrito['productos'], 
             'total' => $detallesCarrito['total'],
-            'cantidad_total' => $detallesCarrito['cantidad_total']  //CORRECION       
+            'cantidad_total' => $detallesCarrito['cantidad_total']
         ];
     }
 
-    /**
-     * 
-     *
-     * @param int $id_carrito 
-     * @return array 
-     */
     public function getTotalCarrito($id_carrito)
     {
         $db = \Config\Database::connect();
@@ -63,7 +51,23 @@ class CarritoModel extends Model
         return [
             'productos' => $productos,       
             'total' => $result['total'] ?? 0,
-             'cantidad_total' => $result['cantidad_total'] ?? 0 //CORRECCION
+            'cantidad_total' => $result['cantidad_total'] ?? 0
         ];
+    }
+
+    public function getCarritoIdByUsuario($id_usuario)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('carrito');
+        $carrito = $builder->where('id_cliente', $id_usuario)->get()->getRowArray();
+        return $carrito ? $carrito['id_carrito'] : null;
+    }
+
+    public function actualizarTotalCarrito($id_carrito, $nuevoTotal)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('carrito');
+        $builder->where('id_carrito', $id_carrito)
+                ->update(['total' => $nuevoTotal]);
     }
 }

@@ -10,7 +10,6 @@ class ProductoController extends BaseController
     {
         $productoModel = new ProductoModel();
 
-        // Obtener productos con stock mayor a 10
         $productos = $productoModel->where('stock >', 10)->findAll();
 
         return view('producto_view', ['productos' => $productos]);
