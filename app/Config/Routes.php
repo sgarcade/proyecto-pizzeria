@@ -53,4 +53,5 @@ $routes->post('gestion', 'Gestion::agregarProducto');
 $routes->post('gestion/eliminarProducto', 'Gestion::eliminarProducto');
 $routes->post('gestion/editarProducto', 'Gestion::editarProducto');
 
+
 $routes->POST('/shopcar', 'Shopcar::eliminar');

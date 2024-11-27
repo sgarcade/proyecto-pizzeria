@@ -17,43 +17,44 @@ class Gestion extends BaseController
     public function verProducto($id_producto)
     {
         $productoModel = new ProductoModel();
-        $producto = $productoModel->find($id_producto);  
+        $producto = $productoModel->find($id_producto); 
+
         return json_encode($producto);  
     }
 
-    
+
     public function editarProducto()
-    {
-        var_dump("e");
+    {    
+        var_dump($this->request->getPost());
         exit;
         $productoModel = new ProductoModel();
-    
+        
         $id = $this->request->getPost('id_producto');
         $nombre = $this->request->getPost('nombre_producto');
         $descripcion = $this->request->getPost('descripcion');
         $precio = $this->request->getPost('precio_base');
         $stock = $this->request->getPost('stock');
-    
+        
         $data = [
             'nombre_producto' => $nombre,
             'descripcion' => $descripcion,
             'precio_base' => $precio,
             'stock' => $stock
         ];
-    
-        $productoModel->update($id, $data);
-    
-        if ($productoModel->update($idata)) {
-            return redirect()->to('/gestion')->with('success', 'Producto eliminado correctamente');
+        
+        if ($productoModel->update($id, $data)) {
+            return redirect()->to('/gestion')->with('success', 'Producto actualizado correctamente');
         } else {
-            return redirect()->to('/gestion')->with('error', 'Error al eliminar el producto');
+            return redirect()->to('/gestion')->with('error', 'Error al actualizar el producto');
         }
     }
+    
     
 
 
     public function eliminarProducto()
     {
+        
         $productoModel = new ProductoModel();
         $id = $this->request->getPost('id_producto');
     
