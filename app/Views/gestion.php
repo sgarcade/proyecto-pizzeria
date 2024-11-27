@@ -226,29 +226,44 @@
             <th>Nombre</th>
             <th>Descripción</th>
             <th>Precio</th>
+            <th>Sabor</th>
             <th>Stock</th>
             <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($productos as $producto): ?>
-            <tr>
-                <td><?= $producto['id_producto'] ?></td>
-                <td><?= $producto['nombre_producto'] ?></td>
-                <td><?= $producto['descripcion'] ?></td>
-                <td><?= $producto['precio_base'] ?></td>
-                <td><?= $producto['stock'] ?></td>
-                <td>
-                    <button class="btn btn-info" onclick="verProducto(<?= $producto['id_producto'] ?>)">Ver</button>
-                    <button class="btn btn-warning btnEditarProducto" data-toggle="modal" data-target="#modalEditarProducto" data-id="<?= $producto['id_producto']; ?>" data-nombre="<?= $producto['nombre_producto']; ?>" data-descripcion="<?= $producto['descripcion']; ?>" data-precio="<?= $producto['precio_base']; ?>" data-stock="<?= $producto['stock']; ?>">
-                    Editar
-                </button>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalEliminarProducto" onclick="document.getElementById('id_producto').value = <?= $producto['id_producto'] ?>;">
+    <?php foreach ($productos as $producto): ?>
+    <tr>
+        <td><?= esc($producto['id_producto']) ?></td>
+        <td><?= esc($producto['nombre_producto']) ?></td>
+        <td><?= esc($producto['descripcion']) ?></td>
+        <td><?= esc($producto['precio_base']) ?></td>
+        <td><?= esc($producto['sabor']) ?></td>
+        <td><?= esc($producto['stock']) ?></td>
+        <td>
+        
+            <button class="btn btn-info" onclick="verProducto(<?= $producto['id_producto'] ?>)">Ver</button>
+            
+        
+            <button class="btn btn-warning btnEditarProducto" data-toggle="modal" data-target="#modalEditarProducto"
+                data-id="<?= esc($producto['id_producto']); ?>"
+                data-nombre="<?= esc($producto['nombre_producto']); ?>"
+                data-descripcion="<?= esc($producto['descripcion']); ?>"
+                data-sabor="<?= esc($producto['sabor']); ?>"
+                data-precio="<?= esc($producto['precio_base']); ?>"
+                data-stock="<?= esc($producto['stock']); ?>">
+                Editar
+            </button>
+            
+        
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalEliminarProducto" 
+                onclick="document.getElementById('id_producto').value = <?= esc($producto['id_producto']) ?>;">
                 Eliminar
             </button>
-                </td>
-            </tr>
-        <?php endforeach; ?>
+        </td>
+    </tr>
+<?php endforeach; ?>
+
     </tbody>
 </table>
 <?php if (session()->get('success')): ?>
@@ -311,7 +326,7 @@
                 </button>
             </div>
             <div class="modal-body">
-            <form id="formEditarProducto" method="POST" action="<?= base_url('/gestion/editarProducto'); ?>">
+            <form id="formEditarProducto" method="POST" action="<?= base_url('gestion/editarProducto'); ?>">
                     <input type="hidden" id="id_producto_editar" name="id_producto">
                     <div class="form-group">
                         <label for="nombre_producto_editar">Nombre:</label>
@@ -320,6 +335,10 @@
                     <div class="form-group">
                         <label for="descripcion_editar">Descripción:</label>
                         <textarea class="form-control" id="descripcion_editar" name="descripcion" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="sabor">Sabor:</label>
+                        <input type="text" class="form-control" id="sabore" name="sabore" required>
                     </div>
                     <div class="form-group">
                         <label for="precio_base_editar">Precio:</label>
@@ -341,19 +360,20 @@
 
         botonesEditar.forEach(boton => {
             boton.addEventListener('click', function () {
-                // Obtén los datos del producto desde los atributos data- del botón
+                
                 const id = this.getAttribute('data-id');
                 const nombre = this.getAttribute('data-nombre');
                 const descripcion = this.getAttribute('data-descripcion');
                 const precio = this.getAttribute('data-precio');
                 const stock = this.getAttribute('data-stock');
-
-                // Asigna los valores a los campos del formulario
+                const sabor = this.getAttribute('data-sabor');
+                
                 document.getElementById('id_producto_editar').value = id;
                 document.getElementById('nombre_producto_editar').value = nombre;
                 document.getElementById('descripcion_editar').value = descripcion;
                 document.getElementById('precio_base_editar').value = precio;
                 document.getElementById('stock_editar').value = stock;
+                document.getElementById('sabore').value = sabor;
             });
         });
     });
