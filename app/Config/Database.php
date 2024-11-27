@@ -30,7 +30,7 @@ class Database extends Config
         'DSN'      => '',
         'hostname' => 'localhost',
         'username' => 'root',
-        'password' => 'admin',
+        'password' => '',
         'database' => 'nostra_pizza',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
@@ -43,7 +43,7 @@ class Database extends Config
         'compress' => false,
         'strictOn' => false,
         'failover' => [],
-        'port'     => 3307,
+        'port'     => 3306,
         
     ];
     
