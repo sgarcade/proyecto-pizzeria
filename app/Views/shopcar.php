@@ -41,6 +41,7 @@
             <p style="margin: 0; font-size: 1.2rem;">🍕 <?= esc($item['nombre_producto']) ?></p>
             <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Descripción: <?= esc($item['descripcion'] ?? 'Sin descripción') ?></p>
             <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: <?= esc($item['cantidad']) ?></p>
+            <input type="number" value="<?= esc($item['cantidad']) ?>" style="width: 50px; height:>
           </div>
           <div class="item-price">
             <p style="font-size: 1rem; color: #ffcc00;"><?= number_format($item['precio_unitario'], 3) ?></p>

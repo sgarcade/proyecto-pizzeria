@@ -1,12 +1,26 @@
 <style>
-	.navbar-nav {
-    display: flex;
-    flex-wrap: nowrap; /* Evita que los elementos se desborden a una nueva línea */
-    justify-content: flex-start; /* Alinea todos los elementos a la izquierda */
-    width: 100%; /* Hace que la lista ocupe todo el espacio horizontal disponible */
-    padding-left: 0; /* Elimina el padding predeterminado */
-    margin-left: 0; /* Elimina el margen predeterminado */
+.navbar {
+    padding-left: 0; /* Elimina el padding por defecto a la izquierda */
+    padding-right: 350px; /* Elimina el padding por defecto a la derecha */
 }
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+    width: 100%;
+    padding-left: 0; /* Elimina el padding */
+    margin-left: 0; /* Elimina el margen */
+}
+
+/* Estilo para los items del navbar */
+.nav-item {
+    flex: none; /* Evita que los elementos se distribuyan de manera equitativa */
+    text-align: center;
+}
+
+/* Asegurar que el contenido dentro de .bienvenido esté alineado correctamente */
+
 
 /* Aseguramos que los elementos li ocupen todo el ancho disponible */
 .nav-item {
@@ -36,19 +50,43 @@
         margin-bottom: 10px; /* Añade espacio entre los elementos */
     }
 }
+.bienvenido {
+    color: #ffcc00;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: none; /* Fondo oscuro */
+ /* Fondo oscuro translúcido */
+    border-radius: 5px;
+    position: relative; /* Posicionamos el div de bienvenida */
+    top: 41px; /* Centrado vertical */
+    left: -120px;
+    right: 0; /* Lo estiramos a lo largo de la barra */
+    transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+    text-align: center; /* Centra el texto dentro del div */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
 </style>
+<!-- Agregar Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
     <div class="container">
+        <?php 
+            $rol = intval(session()->get('usuario')['id_rol']); 
+            $id_usuario = session()->get('usuario')['id_usuario']; 
+            $nombre = session()->get('usuario')['nombre']; 
+        ?>
+        <div class="bienvenido">
+            <p>Bienvenid@ <?php echo $nombre; ?></p>
+        </div>
         <a class="navbar-brand" href="<?= base_url('/'); ?>"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Blog Single
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <?php 
-                $rol = session()->get('usuario')['id_rol']; 
-                ?>
+                
 
                 <li class="nav-item"><a href="<?= base_url('shopcar'); ?>" class="nav-link">Carrito de compra</a></li>
                 <li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de producto</a></li>
@@ -76,6 +114,7 @@
                 <?php endif; ?>
 
                 <li class="nav-item"><a href="<?= base_url('paymentGetaway'); ?>" class="nav-link">Pasarela de pago</a></li>
+                <li class="nav-item"><a href="<?= base_url('logout'); ?>" class="nav-link"><i class="fas fa-sign-out-alt"></i></a> </li>
             </ul>
         </div>
     </div>
