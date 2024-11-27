@@ -39,30 +39,44 @@
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
-		<div class="container">
-			<a class="navbar-brand" href="<?= base_url('/'); ?>"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Blog Single
-			</button>
-		<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
-					<!--<li class="nav-item active"><a href="<?= base_url('/'); ?>" class="nav-link">Inicio</a></li>
-					<li class="nav-item"><a href="<?= base_url('menu'); ?>" class="nav-link">Menu</a></li>
-					<li class="nav-item"><a href="<?= base_url('services'); ?>" class="nav-link">Servicios</a></li>                    					
-					<li class="nav-item"><a href="<?= base_url('blog'); ?>" class="nav-link">Blog</a></li>
-					<li class="nav-item"><a href="<?= base_url('about'); ?>" class="nav-link">Sobre Nosotros</a></li>
-					<li class="nav-item"><a href="<?= base_url('contact'); ?>" class="nav-link">Contactanos</a></li>
-					<li class="nav-item"><a href="<?= base_url('perfil'); ?>" class="nav-link">Perfil</a></li>-->                    
-					<li class="nav-item"><a href="<?= base_url('gestion'); ?>" class="nav-link">Gestion de productos</a></li>
-					<li class="nav-item"><a href="<?= base_url('shopcar'); ?>" class="nav-link">Carrito de compra</a></li>
-					<li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de producto</a></li>
+    <div class="container">
+        <a class="navbar-brand" href="<?= base_url('/'); ?>"><span class="flaticon-pizza-1 mr-1"></span>Pizza<br><small>Delicious</small></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Blog Single
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <?php 
+                $rol = session()->get('usuario')['id_rol']; 
+                ?>
+
+                <li class="nav-item"><a href="<?= base_url('shopcar'); ?>" class="nav-link">Carrito de compra</a></li>
+                <li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de producto</a></li>
+
+                <?php if ($rol === 1): ?>
                     <li class="nav-item"><a href="<?= base_url('misPedidos'); ?>" class="nav-link">Mis Pedidos</a></li>
+                <?php endif; ?>
+
+                <?php if ($rol === 2): ?>
+                    <li class="nav-item"><a href="<?= base_url('gestion'); ?>" class="nav-link">Gestión de productos</a></li>
+                    <li class="nav-item"><a href="<?= base_url('empleados/lista'); ?>" class="nav-link">Empleados</a></li>
+                <?php endif; ?>
+
+                <?php if ($rol === 3): ?>
                     <li class="nav-item"><a href="<?= base_url('recepcionPedidos'); ?>" class="nav-link">Recepción de pedidos</a></li>
                     <li class="nav-item"><a href="<?= base_url('preparacionPedidos'); ?>" class="nav-link">Preparación de ordenes</a></li>
-                    <!--<li class="nav-item"><a href="<?= base_url('productos'); ?>" class="nav-link">Listado de productos</a></li>-->
-                    <li class="nav-item"><a href="<?= base_url('paymentGetaway'); ?>" class="nav-link">Pasarela de pago</a></li>
-                    <li class="nav-item"><a href="<?= base_url('empleados/lista'); ?>" class="nav-link">Empleados</a></li>
-				</ul>
-			</div>
-		</div>
+                <?php endif; ?>
+
+                <?php if ($rol === 4): ?>
+                    <li class="nav-item"><a href="<?= base_url('preparacionPedidos'); ?>" class="nav-link">Preparación de ordenes</a></li>
+                <?php endif; ?>
+
+                <?php if ($rol === 5): ?>
+                    <li class="nav-item"><a href="<?= base_url('misPedidos'); ?>" class="nav-link">Mis Pedidos</a></li>
+                <?php endif; ?>
+
+                <li class="nav-item"><a href="<?= base_url('paymentGetaway'); ?>" class="nav-link">Pasarela de pago</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>

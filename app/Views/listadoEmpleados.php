@@ -113,7 +113,7 @@
             <i class="oi oi-plus"></i> Agregar Empleado
         </a>
     </div>
-    <!-- Tabla unificada de empleados -->
+
     <table>
         <thead>
             <tr>

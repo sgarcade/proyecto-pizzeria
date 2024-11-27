@@ -42,4 +42,6 @@ class Pedidos extends Controller
             ]);
         }
     }
+    
+
 }

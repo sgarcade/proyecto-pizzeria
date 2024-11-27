@@ -17,4 +17,14 @@ class ChefModel extends Model
     {
         return $this->where('id_usuario', $id_usuario)->first();
     }
+    public function getAllChefs()
+    {
+        return $this->db->table('chef')
+        ->select('chef.id_chef, usuario.id_usuario, usuario.nombre')
+        ->join('usuario', 'chef.id_usuario = usuario.id_usuario')
+        ->where('chef.disponibilidad', 'Disponible') 
+        ->get()
+        ->getResultArray();
+    }
+    
 }

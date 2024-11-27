@@ -246,41 +246,11 @@
             margin-top: 15px;
         }
 
-        .select-container {
-        margin-bottom: 15px;
-    }
-
-    /* Estilo para las etiquetas */
-    .select-container label {
-        font-size: 1.1em;
-        color: #333;
-        margin-bottom: 5px;
-        font-weight: 600;
-    }
-
-    /* Estilo para el select */
-    .select-container select {
-        width: 100%;  /* Asegura que el select ocupe el 100% del contenedor */
-        padding: 12px 15px;
-        font-size: 1.1em;
-        color: #333;
-        background-color: #f8f9fa;  /* Color de fondo suave */
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        outline: none;
-        transition: all 0.3s ease;
-    }
-
-    /* Cambios al hacer foco en el select */
-    .select-container select:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Sombra azul suave */
-        background-color: #fff; /* Fondo blanco al tener el foco */
-    }
+        
 
     /* Estilo para los botones */
     .btn-primary {
-        background-color: #007bff;
+        background-color: #e0a800;
         color: white;
         border: none;
         padding: 10px 20px;
@@ -291,7 +261,7 @@
     }
 
     .btn-primary:hover {
-        background-color: #0056b3;
+        background-color: #e0a800;
     }
 
     /* Estilo para los contenedores de los formularios */
@@ -300,7 +270,7 @@
         text-align: center;
     }
         .btn-primary {
-            background-color: #007bff;
+            background-color: #e0a800;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -311,7 +281,47 @@
         }
 
         .btn-primary:hover {
-            background-color: #0056b3;
+            background-color: #e0a800;
+        }
+        label {
+            font-size: 1.1em;
+            color: #343a40;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Estilo para el select */
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 1em;
+            color: #343a40; /* Texto negro */
+            background-color: #f9f9f9; /* Fondo claro */
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Efectos al interactuar */
+        select:focus {
+            border-color: #e0a800; /* Color azul al tener foco */
+            box-shadow: 0 0 8px rgba(185, 150, 2, 0.5); /* Sombra suave */
+            background-color: #fff;
+        }
+
+        /* Estilo para hover */
+        select:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+        option{
+            color: #333;
+        }
+        select:selected{
+            color: #333;
         }
     
 
@@ -375,9 +385,9 @@
 
                     <div class="pedido-actions">
                         <?php if ($grupoPedidos[0]['estado'] === 'Pendiente'): ?>
-                            <form action="<?= base_url('recepcionista/pedido/asignarChef/' . $grupoPedidos[0]['id_pedido']) ?>" method="post">
+                            <form action="<?= base_url('recepcionPedidos/pedido/asignarChef/' . $grupoPedidos[0]['id_pedido']) ?>" method="post">
                                 <label for="chef">Seleccionar Chef:</label>
-                                <select id="chef" name="chef" class="form-control">
+                                <select id="chef" name="chef" class="">
                                     <?php foreach ($chefs as $chef): ?>
                                         <option value="<?= $chef['id_chef'] ?>"><?= $chef['nombre'] ?></option>
                                     <?php endforeach; ?>
@@ -385,9 +395,9 @@
                                 <button type="submit" class="btn btn-primary mt-3">Asignar Chef</button>
                             </form>
                         <?php elseif ($grupoPedidos[0]['estado'] === 'A la espera de un Domiciliario'): ?>
-                            <form action="<?= base_url('recepcionista/pedido/asignarDomiciliario/' . $grupoPedidos[0]['id_pedido']) ?>" method="post">
+                            <form action="<?= base_url('recepcionPedidos/pedido/asignarDomiciliario/' . $grupoPedidos[0]['id_pedido']) ?>" method="post">
                                 <label for="domiciliario">Seleccionar Domiciliario:</label>
-                                <select id="domiciliario" name="domiciliario" class="form-control">
+                                <select id="domiciliario" name="domiciliario" class="">
                                     <?php foreach ($domiciliarios as $domiciliario): ?>
                                         <option value="<?= $domiciliario['id_domiciliario'] ?>"><?= $domiciliario['nombre'] ?></option>
                                     <?php endforeach; ?>
