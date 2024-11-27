@@ -13,69 +13,83 @@ class Gestion extends BaseController
         return view('gestion', ['productos' => $productos]);
     }
 
-    // Mostrar producto en un modal
+    
     public function verProducto($id_producto)
     {
         $productoModel = new ProductoModel();
-        $producto = $productoModel->find($id_producto);  // Suponiendo que tienes un método en el modelo para esto
-        return json_encode($producto);  // Enviar la respuesta como JSON para que el modal lo use
+        $producto = $productoModel->find($id_producto);  
+        return json_encode($producto);  
     }
 
-    // Editar producto
+    
     public function editarProducto()
     {
+        var_dump("e");
+        exit;
         $productoModel = new ProductoModel();
-
-        // Obtener los datos del formulario
+    
         $id = $this->request->getPost('id_producto');
         $nombre = $this->request->getPost('nombre_producto');
         $descripcion = $this->request->getPost('descripcion');
         $precio = $this->request->getPost('precio_base');
         $stock = $this->request->getPost('stock');
-
-        // Actualizar los datos del producto
+    
         $data = [
             'nombre_producto' => $nombre,
             'descripcion' => $descripcion,
             'precio_base' => $precio,
             'stock' => $stock
         ];
-
+    
         $productoModel->update($id, $data);
-
-        return $this->response->setJSON(['success' => true]);
+    
+        if ($productoModel->update($idata)) {
+            return redirect()->to('/gestion')->with('success', 'Producto eliminado correctamente');
+        } else {
+            return redirect()->to('/gestion')->with('error', 'Error al eliminar el producto');
+        }
     }
+    
 
-    // Eliminar producto
-    public function eliminarProducto($id)
+
+    public function eliminarProducto()
     {
         $productoModel = new ProductoModel();
-        $productoModel->delete($id);
-
-        return $this->response->setJSON(['success' => true]);
+        $id = $this->request->getPost('id_producto');
+    
+        if ($productoModel->delete($id)) {
+            return redirect()->to('/gestion')->with('success', 'Producto eliminado correctamente');
+        } else {
+            return redirect()->to('/gestion')->with('error', 'Error al eliminar el producto');
+        }
     }
+    
 
-    // Agregar un nuevo producto
+
     public function agregarProducto() 
     {
         $productoModel = new ProductoModel();
-
-        // Obtener los datos del formulario
+    
         $nombre = $this->request->getPost('nombre_producto');
         $descripcion = $this->request->getPost('descripcion');
         $precio = $this->request->getPost('precio_base');
+        $sabor = $this->request->getPost('sabor');
         $stock = $this->request->getPost('stock');
-
-        // Insertar el nuevo producto
+    
         $data = [
             'nombre_producto' =>  $nombre,
             'descripcion' =>  $descripcion,
+            'sabor' =>  $sabor,
             'precio_base' =>  $precio,
             'stock' =>  $stock
         ];
-
-        $productoModel->insert($data);
-
-        return $this->response->setJSON(['success' => true]);
+    
+        if ($productoModel->insert($data)) {
+            return redirect()->to('/gestion')->with('success', 'Producto agregado correctamente');
+        } else {
+            return redirect()->to('/gestion')->with('error', 'Error al agregar el producto');
+        }
     }
+    
+    
 }

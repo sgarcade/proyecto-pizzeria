@@ -240,15 +240,28 @@
                 <td><?= $producto['stock'] ?></td>
                 <td>
                     <button class="btn btn-info" onclick="verProducto(<?= $producto['id_producto'] ?>)">Ver</button>
-                    <button class="btn btn-warning" onclick="editarProducto(<?= $producto['id_producto'] ?>)">Editar</button>
-                    <button class="btn btn-danger" onclick="eliminarProducto(<?= $producto['id_producto'] ?>)">Eliminar</button>
+                    <button class="btn btn-warning btnEditarProducto" data-toggle="modal" data-target="#modalEditarProducto" data-id="<?= $producto['id_producto']; ?>" data-nombre="<?= $producto['nombre_producto']; ?>" data-descripcion="<?= $producto['descripcion']; ?>" data-precio="<?= $producto['precio_base']; ?>" data-stock="<?= $producto['stock']; ?>">
+                    Editar
+                </button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalEliminarProducto" onclick="document.getElementById('id_producto').value = <?= $producto['id_producto'] ?>;">
+                Eliminar
+            </button>
                 </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
+<?php if (session()->get('success')): ?>
+    <div class="alert alert-success">
+        <?= session()->get('success') ?>
+    </div>
+<?php elseif (session()->get('error')): ?>
+    <div class="alert alert-danger">
+        <?= session()->get('error') ?>
+    </div>
+<?php endif; ?>
 
-<!-- Modal para agregar producto -->
+
 <div class="modal fade" id="modalAgregarProducto" tabindex="-1" role="dialog" aria-labelledby="modalAgregarProductoLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -259,7 +272,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="formAgregarProducto">
+            <form id="formAgregarProducto" method="POST" action="<?= base_url('/gestion'); ?>">
                     <div class="form-group">
                         <label for="nombre_producto">Nombre:</label>
                         <input type="text" class="form-control" id="nombre_producto" name="nombre_producto" required>
@@ -268,6 +281,10 @@
                         <label for="descripcion">Descripción:</label>
                         <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
                     </div>
+                    <div class="form-group">
+                        <label for="sabor">Sabor:</label>
+                        <textarea class="form-control" id="sabor" name="sabor" required></textarea>
+                    </div>                    
                     <div class="form-group">
                         <label for="precio_base">Precio:</label>
                         <input type="number" class="form-control" id="precio_base" name="precio_base" required>
@@ -283,7 +300,7 @@
     </div>
 </div>
 
-<!-- Modal para editar producto -->
+
 <div class="modal fade" id="modalEditarProducto" tabindex="-1" role="dialog" aria-labelledby="modalEditarProductoLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -294,7 +311,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="formEditarProducto">
+            <form id="formEditarProducto" method="POST" action="<?= base_url('/gestion/editarProducto'); ?>">
                     <input type="hidden" id="id_producto_editar" name="id_producto">
                     <div class="form-group">
                         <label for="nombre_producto_editar">Nombre:</label>
@@ -318,8 +335,30 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const botonesEditar = document.querySelectorAll('.btnEditarProducto');
 
-<!-- Modal para confirmar eliminación -->
+        botonesEditar.forEach(boton => {
+            boton.addEventListener('click', function () {
+                // Obtén los datos del producto desde los atributos data- del botón
+                const id = this.getAttribute('data-id');
+                const nombre = this.getAttribute('data-nombre');
+                const descripcion = this.getAttribute('data-descripcion');
+                const precio = this.getAttribute('data-precio');
+                const stock = this.getAttribute('data-stock');
+
+                // Asigna los valores a los campos del formulario
+                document.getElementById('id_producto_editar').value = id;
+                document.getElementById('nombre_producto_editar').value = nombre;
+                document.getElementById('descripcion_editar').value = descripcion;
+                document.getElementById('precio_base_editar').value = precio;
+                document.getElementById('stock_editar').value = stock;
+            });
+        });
+    });
+</script>
+
 <div class="modal fade" id="modalEliminarProducto" tabindex="-1" role="dialog" aria-labelledby="modalEliminarProductoLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -329,16 +368,21 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <p>¿Estás seguro de que deseas eliminar este producto?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-danger" id="confirmarEliminar">Eliminar</button>
-            </div>
+            <form method="POST" action="<?= base_url('gestion/eliminarProducto'); ?>" id="formEliminarProducto">
+                <?= csrf_field() ?> 
+                <div class="modal-body">
+                    <input type="hidden" name="id_producto" id="id_producto"> <!-- Campo oculto para el ID -->
+                    <p>¿Estás seguro de que deseas eliminar este producto?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+
 
 <script src="path/to/jquery.min.js"></script>
 <script src="path/to/bootstrap.bundle.min.js"></script>
