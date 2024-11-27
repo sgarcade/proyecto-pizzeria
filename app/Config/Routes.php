@@ -44,6 +44,7 @@ $routes->post('empleados/register', 'Employee::register');
 $routes->get('empleados/lista', 'Employee::listaEmpleados');
 $routes->post('register', 'SignUp::register');
 $routes->post('login/authenticate', 'Login::authenticate');
+$routes->get('logout', 'Login::logout');
 $routes->get('/restablecer-contrasena/(:any)', 'RestablecerContrasena::index/$1'); 
 $routes->post('/restablecer-contrasena/(:any)', 'RestablecerContrasena::guardarNuevaContrasena/$1'); 
 $routes->post('/restaurar-contrasena', 'OlvidoContrasena::restaurarContrasena');
