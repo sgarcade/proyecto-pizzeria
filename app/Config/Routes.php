@@ -33,6 +33,8 @@ $routes->get('gestion', 'Gestion::index');
 $routes->get('shopcar', 'Shopcar::index');
 $routes->match(['GET', 'POST'], 'searchproducts', 'SearchProduct::searchProducts');
 $routes->get('recepcionPedidos', 'RecepcionPedidos::listarPedidos');
+$routes->post('recepcionPedidos/pedido/asignarChef/(:num)', 'RecepcionPedidos::asignarChef/$1');
+$routes->post('recepcionPedidos/pedido/asignarDomiciliario/(:num)', 'RecepcionPedidos::asignarDomiciliario/$1');
 $routes->get('preparacionPedidos', 'PreparacionPedidos::index');
 $routes->get('database_test', 'DatabaseTest::index');
 $routes->get('productos', 'ProductoController::index');

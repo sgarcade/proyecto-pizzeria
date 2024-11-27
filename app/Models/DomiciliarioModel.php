@@ -17,4 +17,14 @@ class DomiciliarioModel extends Model
     {
         return $this->where('id_usuario', $id_usuario)->first();
     }
+    public function getAllDomiciliarios()
+    {
+        return $this->db->table('domiciliario')
+        ->select('domiciliario.id_domiciliario, usuario.id_usuario, usuario.nombre')
+        ->join('usuario', 'domiciliario.id_usuario = usuario.id_usuario')
+        ->where('domiciliario.disponibilidad', 'Disponible')
+        ->get()
+        ->getResultArray();
+
+    }
 }

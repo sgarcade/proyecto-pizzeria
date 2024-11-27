@@ -12,11 +12,9 @@ class RecepcionPedidos extends BaseController
         $pedidoModel = new PedidoModel();
         $pedidos = $pedidoModel->getPedidosPendientes();
         $chefModel = new ChefModel();
-        $chefs = $chefModel->findAll();
-
+        $chefs = $chefModel->getAllChefs();
         $domiciliarioModel = new DomiciliarioModel();
-        $domiciliarios = $domiciliarioModel->findAll();
-        // Example: Debugging data from the models
+        $domiciliarios = $domiciliarioModel->getAllDomiciliarios();
 
         // Pasar datos a la vista
         return view('recepcionPedidos', [
@@ -25,6 +23,28 @@ class RecepcionPedidos extends BaseController
             'domiciliarios' => $domiciliarios
         ]);
 
-
     }
+
+        public function asignarChef($id_pedido)
+        {
+            $pedidoModel = new PedidoModel();
+
+            $chef_id = $this->request->getPost('chef');
+            $pedidoModel->asignarChef($id_pedido, $chef_id);
+
+            return redirect()->to(base_url('recepcionPedidos'))->with('success', 'Chef asignado correctamente y pedido en preparación.');
+            
+
+        }
+        public function asignarDomiciliario($id_pedido)
+        {
+            $pedidoModel = new PedidoModel();
+
+            $domiciliario_id = $this->request->getPost('domiciliario');
+            $pedidoModel->asignarDomiciliario($id_pedido, $domiciliario_id);
+            return redirect()->to(base_url('rrecepcionPedidos'))->with('success', 'Domiciliario asignado correctamente y pedido en camino.');
+
+        }
+
+
 }

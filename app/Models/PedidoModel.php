@@ -68,6 +68,36 @@ class PedidoModel extends Model
     }
 
 
+    public function asignarChef($id_pedido, $chef_id)
+    {
+
+        $this->db->table('pedido')
+            ->set('estado', 'En Preparación')
+            ->where('id_pedido', $id_pedido)
+            ->update();
+
+        $this->db->table('pedido')
+            ->set('id_chef', $chef_id)
+            ->where('id_pedido', $id_pedido)
+            ->update();
+    }
+
+
+    public function asignarDomiciliario($id_pedido, $domiciliario_id)
+    {
+
+        $this->db->table('pedido')
+            ->set('estado', 'En Camino')
+            ->where('id_pedido', $id_pedido)
+            ->update();
+
+        $this->db->table('pedido')
+            ->set('id_domiciliario', $domiciliario_id)
+            ->where('id_pedido', $id_pedido)
+            ->update();
+    }
+
+
 
 
 }
