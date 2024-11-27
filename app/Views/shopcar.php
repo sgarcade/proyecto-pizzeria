@@ -43,13 +43,13 @@
             <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: <?= esc($item['cantidad']) ?></p>
           </div>
           <div class="item-price">
-            <p style="font-size: 1rem; color: #ffcc00;">$<?= number_format($item['precio_unitario'], 3) ?></p>
+            <p style="font-size: 1rem; color: #ffcc00;"><?= number_format($item['precio_unitario'], 3) ?></p>
             <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $<?= number_format($item['subtotal'], 3) ?></p>
           </div>
-          <!-- Botón de eliminar -->
+
           <div class="item-remove" style="text-align: right;">
             <form action="shopcar" method="POST" style="display: inline-block;">
-              <input type="hidden" name="id_producto" value="<?= esc($item['id_producto']) ?>">
+            <input type="hidden" name="id_producto" value="<?= htmlspecialchars($item['id_producto'], ENT_QUOTES, 'UTF-8') ?>">
               <button type="submit" style="background-color: #e74c3c; color: white; border: none; border-radius: 5px; padding: 0.5rem 1rem; cursor: pointer;">Eliminar</button>
             </form>
           </div>

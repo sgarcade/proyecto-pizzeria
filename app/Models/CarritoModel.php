@@ -60,7 +60,9 @@ class CarritoModel extends Model
         $db = \Config\Database::connect();
         $builder = $db->table('carrito');
         $carrito = $builder->where('id_cliente', $id_usuario)->get()->getRowArray();
+        
         return $carrito ? $carrito['id_carrito'] : null;
+       
     }
 
     public function actualizarTotalCarrito($id_carrito, $nuevoTotal)
@@ -69,5 +71,20 @@ class CarritoModel extends Model
         $builder = $db->table('carrito');
         $builder->where('id_carrito', $id_carrito)
                 ->update(['total' => $nuevoTotal]);
+               
     }
+    public function eliminarProducto($id_producto, $id_carrito)
+    {
+        
+        $db = \Config\Database::connect();
+        $builder = $db->table('carrito_detalle');
+        
+        // Ejecutar la eliminación del producto del carrito
+        $builder->where('id_producto', $id_producto)
+                ->where('id_carrito', $id_carrito)
+                ->delete();
+                                         
+               
+    }
+    
 }
