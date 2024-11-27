@@ -53,17 +53,17 @@ class Filters extends BaseFilters
     ];
 
     /**
-     * Filtros globales que se aplican antes y después de todas las rutas.
+     
      *
      * @var array<string, list<string>>
      */
     public array $globals = [
         'before' => [
-            'auth' => ['except' => ['login', 'signup', 'login/*', 'signup/*']], // Aplica el filtro 'auth' a todas las rutas, excepto login y signup
-            // Otros filtros que quieras aplicar globalmente pueden ir aquí
+            'auth' => ['except' => ['login', 'signup', 'login/*', 'signup/*', 'register','SignUp/*']], 
+     
         ],
         'after' => [
-            // Filtros para después de la ejecución de las rutas
+     
         ],
     ];
     
