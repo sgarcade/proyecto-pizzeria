@@ -47,4 +47,4 @@ $routes->post('/restablecer-contrasena/(:any)', 'RestablecerContrasena::guardarN
 $routes->post('/restaurar-contrasena', 'OlvidoContrasena::restaurarContrasena');
 $routes->post('/addToCart/(:num)', 'SearchProduct::addToCart/$1');
 
-$routes->get('/carrito/eliminar/(:num)', 'Shopcar::eliminar/$1'); // Eliminar producto del carrito
+$routes->POST('/shopcar', 'Shopcar::eliminar');
