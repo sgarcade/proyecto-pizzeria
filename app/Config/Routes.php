@@ -54,5 +54,7 @@ $routes->post('gestion', 'Gestion::agregarProducto');
 $routes->post('gestion/eliminarProducto', 'Gestion::eliminarProducto');
 $routes->post('gestion/editarProducto', 'Gestion::editarProducto');
 
+$routes->post('/shopcar/confirmarPago', 'Shopcar::confirmarPago');
 
 $routes->POST('/shopcar', 'Shopcar::eliminar');
+// $routes->POST('/update-quantity', 'CarritoController::updateQuantity');
