@@ -121,7 +121,7 @@
                 <?php if ($rol === 5): ?>
                     <li class="nav-item"><a href="<?= base_url('entregarPedidos/' . $id_domiciliario); ?>" class="nav-link">Entrega de pedidos</a></li>
                 <?php endif; ?>
-        
+                <li class="nav-item"><a href="<?= base_url('perfil'); ?>" class="nav-link">Perfil</a></li>
                 <li class="nav-item"><a href="<?= base_url('logout'); ?>" class="nav-link"><i class="fas fa-sign-out-alt"></i></a> </li>
             </ul>
         </div>
