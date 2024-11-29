@@ -26,7 +26,7 @@ $routes->get('contact', 'Contacto::index');
 $routes->get('olvidoContrasena', 'OlvidoContrasena::index');
 $routes->get('blog', 'Blog::index');
 $routes->get('about', 'About::index');
-$routes->get('misPedidos', 'Pedidos::misPedidos');
+$routes->get('misPedidos/(:num)', 'Pedidos::misPedidos/$1');
 $routes->post('misPedidos/cancelarPedido/(:num)', 'Pedidos::cancelarPedido/$1');
 $routes->get('perfil', 'Perfil::index');
 $routes->get('gestion', 'Gestion::index');
