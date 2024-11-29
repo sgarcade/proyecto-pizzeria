@@ -80,6 +80,16 @@ class Shopcar extends Controller
     {
 
         $usuarioId = session()->get('usuario')['id_usuario'];
+        $barrio = $this->request->getPost('barrio');
+        if($barrio == 'El Retiro' || $barrio == 'Rosales' || $barrio == 'Chapinero Alto'){
+            $id_tienda= 1;
+        }
+        if($barrio == 'Villa Maria' || $barrio == 'Altos de Suba' || $barrio == 'Rincón de Suba'){
+            $id_tienda= 2;
+        }
+        if($barrio == 'Castilla' || $barrio == 'Timiza' || $barrio == 'El Tintal'){
+            $id_tienda= 3;
+        }
     
         if (!$usuarioId) {
             return redirect()->to('/shopcar')->with('error', 'Usuario no válido.');
@@ -98,7 +108,8 @@ class Shopcar extends Controller
             'estado' => 'Pendiente',  // Estado inicial del pedido
             'fecha' => date('Y-m-d H:i:s'),
             'total' => $carrito['total'],
-            'metodo_pago' => $this->request->getVar('payment_method')  // Método de pago recibido desde el frontend
+            'metodo_pago' => $this->request->getVar('payment_method'),
+            'id_tienda' => $id_tienda  // Método de pago recibido desde el frontend
         ];
     
         // Llamar al modelo para crear el pedido y obtener el ID

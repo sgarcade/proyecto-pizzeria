@@ -7,10 +7,10 @@ use App\Models\DomiciliarioModel;
 
 class PreparacionPedidos extends BaseController
 {
-    public function listarPedidos()
+    public function listarPedidos($id_chef)
     {
         $pedidoModel = new PedidoModel();
-        $pedidos = $pedidoModel->getPedidosEnPreparacion();        
+        $pedidos = $pedidoModel->getPedidosEnPreparacion($id_chef);        
         // Pasar datos a la vista
         return view('preparacionPedidos', [
             'pedidos' => $pedidos

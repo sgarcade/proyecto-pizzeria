@@ -90,7 +90,7 @@
   </div>
 
   <button id="proceed-payment-btn" style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;" <?php if (empty($shopcar)) echo 'disabled'; ?>>
-    Proceder al Pago
+    Generar Pedido
   </button>
 
   <!-- Modal de aviso cuando el carrito está vacío -->
@@ -110,7 +110,7 @@
     <p style="color: #fff; font-size: 1.2rem;">Total: $<span id="summary-total"><?= number_format($total , 3) ?></span></p>
 
     <h4 style="color: #ffcc00;">Productos:</h4>
-    <div id="summary-products" style="color: #fff; margin-bottom: 1rem; text-align: left;">
+    <div id="summary-products" style="color: #fff; margin-bottom: 1rem; text-align: center;">
       <?php foreach ($shopcar as $item): ?>
         <p>
           <strong><?= esc($item['nombre_producto']) ?>:</strong>
@@ -131,6 +131,21 @@
       <label>
         <input type="radio" name="payment-method" value="pse" style="margin-right: 0.5rem;"> PSE
       </label>
+    </div>
+    <h4 style="color: #ffcc00;">Seleccione el barrio:</h4>
+    <div style="color: #fff;">
+      <select id="barrio" name="barrio" required>
+       <option value="" selected>Seleccione un barrio</option>
+       <option value="El Retiro">El Retiro</option>
+       <option value="Rosales">Rosales</option>
+       <option value="Chapinero Alto">Chapinero Alto</option>       
+       <option value="Villa Maria">Villa Maria</option>
+       <option value="Altos de Suba">Altos de Suba</option>
+       <option value="Rincón de Suba">Rincón de Suba</option>
+       <option value="Castilla">Castilla</option>
+       <option value="Timiza">Timiza</option>
+       <option value="El Tintal">El Tintal</option>
+      </select>
     </div>
     <p style="font-size: 1.1rem; color: #f39c12; font-weight: bold; margin-top: 1rem;">Estado: Pendiente</p>
     <button id="confirm-payment-btn" style="margin-top: 1rem; padding: 0.7rem 1.5rem; background-color: #2ecc71; color: white; border: none; border-radius: 8px; cursor: pointer;">
