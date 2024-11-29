@@ -40,18 +40,39 @@
           <div class="item-details" style="text-align: left;">
             <p style="margin: 0; font-size: 1.2rem;">🍕 <?= esc($item['nombre_producto']) ?></p>
             <p style="margin: 0; color: #bbb; font-size: 0.9rem;">Descripción: <?= esc($item['descripcion'] ?? 'Sin descripción') ?></p>
-            <p style="margin: 0.5rem 0 0; font-weight: bold;">Cantidad: <?= esc($item['cantidad']) ?></p>
-            <input type="number" value="<?= esc($item['cantidad']) ?>" style="width: 50px; height:>
+            <div style="margin-top: 0.5rem; display: flex; align-items: center;">
+              <button 
+                class="quantity-btn decrease" 
+                data-id="<?= esc($item['id_producto']) ?>" 
+                style="background-color: #e74c3c; color: white; border: none; border-radius: 5px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-right: 5px; cursor: pointer;">
+                -
+              </button>
+
+              <span 
+                class="item-quantity" 
+                data-id="<?= esc($item['id_producto']) ?>" 
+                style="width: 40px; text-align: center; font-size: 1rem;"><?= esc($item['cantidad']) ?></span>
+
+              <button 
+                class="quantity-btn increase" 
+                data-id="<?= esc($item['id_producto']) ?>" 
+                style="background-color: #2ecc71; color: white; border: none; border-radius: 5px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; margin-left: 5px; cursor: pointer;">
+                +
+              </button>
+            </div>
           </div>
           <div class="item-price">
-            <p style="font-size: 1rem; color: #ffcc00;"><?= number_format($item['precio_unitario'], 3) ?></p>
-            <p style="font-size: 0.9rem; color: #bbb;">Subtotal: $<?= number_format($item['subtotal'], 3) ?></p>
+            <p style="font-size: 1rem; color: #ffcc00;" class="unit-price"><?= number_format($item['precio_unitario'], 3) ?></p>
+            <p style="font-size: 0.9rem; color: #bbb;" class="item-subtotal">Subtotal: $<?= number_format($item['subtotal'], 3) ?></p>
           </div>
 
           <div class="item-remove" style="text-align: right;">
             <form action="shopcar" method="POST" style="display: inline-block;">
-            <input type="hidden" name="id_producto" value="<?= htmlspecialchars($item['id_producto'], ENT_QUOTES, 'UTF-8') ?>">
-              <button type="submit" style="background-color: #e74c3c; color: white; border: none; border-radius: 5px; padding: 0.5rem 1rem; cursor: pointer;">Eliminar</button>
+              <input type="hidden" name="id_producto" value="<?= htmlspecialchars($item['id_producto'], ENT_QUOTES, 'UTF-8') ?>">
+
+              <button type="submit" style="background-color: transparent; border: none; cursor: pointer;">
+                <i class="fas fa-trash" style="color: #e74c3c; font-size: 1.5rem;"></i>
+              </button>
             </form>
           </div>
         </div>
@@ -62,16 +83,189 @@
   </div>
 
   <div class="total" style="margin-top: 1.5rem; font-size: 1.2rem;">
-    <p style="color: #ffcc00;">Subtotal: $<?= number_format($total, 3) ?></p>
+    <p style="color: #ffcc00;">Subtotal: $<span id="subtotal"><?= number_format($total, 3) ?></span></p>
     <p style="margin-top: 0.5rem; color: #ccc;">Envío: Gratis!</p>
-    <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $<?= number_format($total , 3) ?></p>
-    <p style="margin-top: 1rem; color: #bbb;">Cantidad total de productos: <?= esc($cantidad_total) ?></p>
+    <p style="margin-top: 1rem; font-weight: bold; color: #ffcc00; font-size: 1.5rem;">Total: $<span id="total"><?= number_format($total , 3) ?></span></p>
+    <p style="margin-top: 1rem; color: #bbb;">Cantidad total de productos: <span id="total-quantity"><?= esc($cantidad_total) ?></span></p>
   </div>
 
-  <button style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">
+  <button id="proceed-payment-btn" style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #007bff; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;" <?php if (empty($shopcar)) echo 'disabled'; ?>>
     Proceder al Pago
   </button>
+
+  <!-- Modal de aviso cuando el carrito está vacío -->
+  <div id="empty-cart-modal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 9999; padding: 2rem; text-align: center;">
+    <div class="modal-content" style="background-color: #333; border-radius: 8px; padding: 2rem; max-width: 400px; margin: 0 auto;">
+      <h3 style="color: #ffcc00;">¡Tu carrito está vacío!</h3>
+      <p style="color: #fff;">Añade productos al carrito para poder proceder al pago.</p>
+      <button id="close-modal-btn" style="padding: 0.5rem 1rem; background-color: #e74c3c; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; margin-top: 1rem;">
+        Cerrar
+      </button>
+    </div>
+  </div>
+
+  <!-- Resumen de pedido y opciones de pago -->
+  <div id="payment-summary" style="display: none; background-color: #333; padding: 2rem; border-radius: 8px; margin-top: 2rem; text-align: center;">
+    <h3 style="font-size: 1.6rem; color: #ffcc00;">Resumen de Pedido</h3>
+    <p style="color: #fff; font-size: 1.2rem;">Total: $<span id="summary-total"><?= number_format($total , 3) ?></span></p>
+
+    <h4 style="color: #ffcc00;">Productos:</h4>
+    <div id="summary-products" style="color: #fff; margin-bottom: 1rem; text-align: left;">
+      <?php foreach ($shopcar as $item): ?>
+        <p>
+          <strong><?= esc($item['nombre_producto']) ?>:</strong>
+          <?= esc($item['cantidad']) ?> x $<?= number_format($item['precio_unitario'], 3) ?> 
+          = $<?= number_format($item['subtotal'], 3) ?>
+        </p>
+      <?php endforeach; ?>
+    </div>
+
+    <h4 style="color: #ffcc00;">Seleccionar método de pago:</h4>
+    <div style="color: #fff;">
+      <label>
+        <input type="radio" name="payment-method" value="tarjeta" style="margin-right: 0.5rem;"> Tarjeta de Crédito
+      </label><br>
+      <label>
+        <input type="radio" name="payment-method" value="efectivo" style="margin-right: 0.5rem;"> Efectivo
+      </label><br>
+      <label>
+        <input type="radio" name="payment-method" value="pse" style="margin-right: 0.5rem;"> PSE
+      </label>
+    </div>
+    <p style="font-size: 1.1rem; color: #f39c12; font-weight: bold; margin-top: 1rem;">Estado: Pendiente</p>
+    <button id="confirm-payment-btn" style="margin-top: 1rem; padding: 0.7rem 1.5rem; background-color: #2ecc71; color: white; border: none; border-radius: 8px; cursor: pointer;">
+      Confirmar Pago
+    </button>
+  </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const decreaseButtons = document.querySelectorAll(".decrease");
+    const increaseButtons = document.querySelectorAll(".increase");
+    const subtotalElement = document.getElementById("subtotal");
+    const totalElement = document.getElementById("total");
+    const totalQuantityElement = document.getElementById("total-quantity");
+    const paymentSummary = document.getElementById("payment-summary");
+    const proceedPaymentBtn = document.getElementById("proceed-payment-btn");
+    const emptyCartModal = document.getElementById("empty-cart-modal");
+    const closeModalBtn = document.getElementById("close-modal-btn");
+
+    // Actualiza los totales y la cantidad en el resumen de pago
+    const updateTotalAndSubtotal = () => {
+      let total = 0;
+      let totalQuantity = 0;
+
+      document.querySelectorAll(".cart-item").forEach(item => {
+        const quantity = parseInt(item.querySelector(".item-quantity").textContent);
+        const price = parseFloat(item.querySelector(".unit-price").textContent);
+        total += quantity * price;
+        totalQuantity += quantity;
+      });
+
+      subtotalElement.textContent = total.toFixed(3);
+      totalElement.textContent = total.toFixed(3);
+      totalQuantityElement.textContent = totalQuantity;
+      document.getElementById("summary-total").textContent = total.toFixed(3); // Actualizar el total en el resumen de pago
+    };
+
+    // Actualiza la cantidad total de productos en el carrito
+    const updateTotalQuantity = () => {
+      let totalQuantity = 0;
+      document.querySelectorAll(".cart-item").forEach(item => {
+        totalQuantity += parseInt(item.querySelector(".item-quantity").textContent);
+      });
+      totalQuantityElement.textContent = totalQuantity;
+    };
+
+    decreaseButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const id = button.getAttribute("data-id");
+        const quantityElement = document.querySelector(`.item-quantity[data-id="${id}"]`);
+        let quantity = parseInt(quantityElement.textContent);
+
+        if (quantity > 1) {
+          quantity--;
+          quantityElement.textContent = quantity;
+          updateTotalAndSubtotal();
+          updateTotalQuantity();
+        }
+      });
+    });
+
+    increaseButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const id = button.getAttribute("data-id");
+        const quantityElement = document.querySelector(`.item-quantity[data-id="${id}"]`);
+        let quantity = parseInt(quantityElement.textContent);
+        quantity++;
+        quantityElement.textContent = quantity;
+        updateTotalAndSubtotal();
+        updateTotalQuantity();
+      });
+    });
+
+    // Mostrar el modal si el carrito está vacío
+    proceedPaymentBtn.addEventListener("click", () => {
+      if (document.querySelectorAll(".cart-item").length > 0) {
+        paymentSummary.style.display = "block";  // Mostrar el resumen
+      } else {
+        emptyCartModal.style.display = "block"; // Mostrar modal de carrito vacío
+      }
+    });
+
+    // Cerrar el modal de carrito vacío
+    closeModalBtn.addEventListener("click", () => {
+      emptyCartModal.style.display = "none"; // Cerrar el modal
+    });
+
+    document.getElementById('confirm-payment-btn').addEventListener("click", () => {
+      const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked');
+      if (selectedPaymentMethod) {
+        const paymentMethod = selectedPaymentMethod.value;
+
+        fetch('/shopcar/confirmarPago', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ payment_method: paymentMethod })  // Enviar el método de pago
+})
+.then(response => response.text())  // Cambia a .text() para ver la respuesta como texto
+.then(data => {
+  console.log(data);  // Inspecciona lo que está recibiendo
+  try {
+    const jsonData = JSON.parse(data);  // Intenta parsear manualmente
+    if (jsonData.success) {
+      alert('Pago confirmado con éxito');
+      window.location.href = '/shopcar';  // Redirigir a la página de carrito (o a otra página)
+    } else {
+      alert('Pago confirmado con éxito');
+    }
+  } catch (error) {
+    console.error('Error parsing JSON:', error);
+    alert('Hubo un error al procesar la respuesta del servidor.');
+  }
+})
+.catch(error => {
+  console.error('Error:', error);
+  alert('Hubo un error al procesar el pago.');
+});
+
+      } else {
+        alert("Por favor, selecciona un método de pago.");
+      }
+    });
+    
+  });
+</script>
+
+
+
+
+
+
+
 
 
 

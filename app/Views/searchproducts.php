@@ -72,76 +72,87 @@
     <?php include("includes/header.php"); ?>
 
     <section class="product-selection">
-        <h1 style="text-align: center; color: #ffcc00;">🛍️ Búsqueda de Productos</h1>
+    <h1 style="text-align: center; color: #ffcc00;">Búsqueda de Productos</h1>
 
+    <div class="search-container" style="text-align: center; margin: 1rem 0;">
+        <input type="text" id="search" placeholder="Buscar productos..." 
+            style="padding: 0.5rem; width: 70%; max-width: 500px; border-radius: 4px; border: 1px solid #ccc;">
+    </div>
+
+    <div class="cards-container" id="product-list">
+        <?php if (!empty($productos)) : ?>
+            <?php foreach ($productos as $producto) : ?>
+                <div class="card" data-name="<?= esc($producto['nombre_producto']) ?>">
+                    <img src="<?= base_url('uploads/' . esc($producto['imagen'] ?? 'placeholder.png')) ?>" alt="<?= esc($producto['nombre_producto']) ?>">
+                    <h3><?= esc($producto['nombre_producto']) ?></h3>
+                    <p><?= esc($producto['descripcion']) ?></p>
+                    <p><strong>Precio:</strong> $<?= number_format(esc($producto['precio_base']), 2) ?></p>
+                    <button class="add-to-cart" data-id="<?= esc($producto['id_producto']) ?>">Añadir al carrito</button>
+                </div>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <p style="text-align: center; font-size: 1.2rem;">No se encontraron productos.</p>
+        <?php endif; ?>
+    </div>
+</section>
+
+<div id="message-container"></div>
+
+<script>
+
+    document.getElementById('search').addEventListener('input', function () {
+        const searchTerm = this.value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
         
-        <div class="search-container" style="text-align: center; margin: 1rem 0;">
-            <form method="POST" action="<?= base_url('/searchProducts'); ?>">
-                <input type="text" name="search" placeholder="Buscar productos..." value="<?= esc($searchTerm ?? '') ?>" 
-                    style="padding: 0.5rem; width: 70%; max-width: 500px; border-radius: 4px; border: 1px solid #ccc;">
-                <button type="submit" style="padding: 0.5rem 1rem; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Buscar</button>
-            </form>
-        </div>
+        cards.forEach(card => {
+            const productName = card.getAttribute('data-name').toLowerCase();
+            if (productName.includes(searchTerm)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
 
-       
-        <div class="cards-container">
-            <?php if (!empty($productos)) : ?>
-                <?php foreach ($productos as $producto) : ?>
-                    <div class="card">
-                        <img src="<?= base_url('uploads/' . esc($producto['imagen'] ?? 'placeholder.png')) ?>" alt="<?= esc($producto['nombre_producto']) ?>">
-                        <h3><?= esc($producto['nombre_producto']) ?></h3>
-                        <p><?= esc($producto['descripcion']) ?></p>
-                        <p><strong>Precio:</strong> $<?= number_format(esc($producto['precio_base']), 2) ?></p>
-                        <button class="add-to-cart" data-id="<?= esc($producto['id_producto']) ?>">Añadir al carrito</button>
-                    </div>
-                <?php endforeach; ?>
-            <?php else : ?>
-                <p style="text-align: center; font-size: 1.2rem;">No se encontraron productos.</p>
-            <?php endif; ?>
-        </div>
-    </section>
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault(); 
+            const productId = this.getAttribute('data-id');
 
-    <div id="message-container"></div>
-
-    <script>
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.preventDefault(); 
-                const productId = this.getAttribute('data-id');
-
-                fetch(`<?= base_url('/addToCart') ?>/${productId}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        showMessage('Producto añadido al carrito', 'success');
-                    } else {
-                        showMessage('Error al añadir producto', 'error');
-                    }
-                })
-                .catch(() => {
+            fetch(`<?= base_url('/addToCart') ?>/${productId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
                     showMessage('Producto añadido al carrito', 'success');
-                });
+                } else {
+                    showMessage('Error al añadir producto', 'error');
+                }
+            })
+            .catch(() => {
+                showMessage('Producto añadido al carrito', 'success');
             });
         });
+    });
 
-        function showMessage(message, type) {
-            const messageContainer = document.getElementById('message-container');
-            const messageElement = document.createElement('div');
-            messageElement.className = `message ${type}`;
-            messageElement.textContent = message;
+    function showMessage(message, type) {
+        const messageContainer = document.getElementById('message-container');
+        const messageElement = document.createElement('div');
+        messageElement.className = `message ${type}`;
+        messageElement.textContent = message;
 
-            messageContainer.appendChild(messageElement);
+        messageContainer.appendChild(messageElement);
 
-            setTimeout(() => {
-                messageElement.style.opacity = '0';
-                setTimeout(() => messageElement.remove(), 500);
-            }, 3000);
-        }
-    </script>
+        setTimeout(() => {
+            messageElement.style.opacity = '0';
+            setTimeout(() => messageElement.remove(), 500);
+        }, 3000);
+    }
+</script>
+
 </body>
 </html>

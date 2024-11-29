@@ -10,7 +10,18 @@ class PedidoModel extends Model
     protected $primaryKey = 'id_pedido';
     protected $allowedFields = ['id_cliente', 'estado', 'fecha', 'total', 'metodo_pago'];
 
+    public function crearPedido($pedidoData)
+    {
 
+        // Insertar en la tabla 'pedido'
+        $this->db->table('pedido')->insert($pedidoData);
+
+        // Obtener el ID del pedido recién creado
+        $pedidoId = $this->db->insertID(); 
+
+        return $pedidoId; // Retorna el ID del pedido para usarlo en los detalles
+    }
+    
     public function getPedidosPorCliente($id_cliente)
     {
         return $this->db->table('pedido')

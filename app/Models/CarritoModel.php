@@ -85,6 +85,43 @@ class CarritoModel extends Model
                 ->delete();
                                          
                
+    }       
+
+
+    public function agregarDetallePedido($detalles)
+    {
+        // Insertar todos los detalles del pedido en la tabla 'pedido_detalle'
+        $this->db->table('pedido_detalle')->insertBatch($detalles);
     }
     
+
+    //  /**
+    //  * Crear un nuevo pedido
+    //  */
+    // public function crearPedido($dataPedido)
+    // {
+    //     $db = \Config\Database::connect();
+    //     $builder = $db->table('pedido');
+    //     return $builder->insert($dataPedido);
+    // }
+
+    // /**
+    //  * Agregar detalles del pedido
+    //  */
+    // public function agregarDetallePedido($detalles)
+    // {
+    //     $db = \Config\Database::connect();
+    //     $builder = $db->table('pedido_detalle');
+    //     return $builder->insertBatch($detalles);
+    // }
+
+    // /**
+    //  * Eliminar carrito después de confirmar el pedido
+    //  */
+    // public function eliminarCarrito($id_usuario)
+    // {
+    //     $db = \Config\Database::connect();
+    //     $builder = $db->table('carrito');
+    //     $builder->where('id_cliente', $id_usuario)->delete();
+    // }
 }

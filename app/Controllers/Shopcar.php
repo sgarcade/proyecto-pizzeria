@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\CarritoModel;
+use App\Models\PedidoModel;
 use CodeIgniter\Controller;
 
 class Shopcar extends Controller
@@ -47,7 +48,7 @@ class Shopcar extends Controller
         return $this->index(); 
     }
 
-    public function agregar()
+    public function agregar(): RedirectResponse
     {
         $usuarioId = session()->get('usuario')['id_usuario'];
         $productoId = $this->request->getPost('producto_id');
@@ -74,4 +75,59 @@ class Shopcar extends Controller
 
         return redirect()->to('/carrito')->with('success', 'Producto agregado al carrito.');
     }
+
+    public function confirmarPago()
+    {
+
+        $usuarioId = session()->get('usuario')['id_usuario'];
+    
+        if (!$usuarioId) {
+            return redirect()->to('/shopcar')->with('error', 'Usuario no válido.');
+        }
+
+        $carritoModel = new CarritoModel();
+        $carrito = $carritoModel->getProductosCarrito($usuarioId);
+
+        if (empty($carrito['productos'])) {
+            return redirect()->to('/shopcar')->with('error', 'El carrito está vacío.');
+        }
+    
+        // Crear pedido
+        $pedidoData = [
+            'id_cliente' => $usuarioId,
+            'estado' => 'Pendiente',  // Estado inicial del pedido
+            'fecha' => date('Y-m-d H:i:s'),
+            'total' => $carrito['total'],
+            'metodo_pago' => $this->request->getVar('payment_method')  // Método de pago recibido desde el frontend
+        ];
+    
+        // Llamar al modelo para crear el pedido y obtener el ID
+        $pedidoModel = new PedidoModel();
+
+        $pedidoId = $pedidoModel->crearPedido($pedidoData);
+
+        // Crear detalles del pedido
+        $detalles = [];
+        foreach ($carrito['productos'] as $producto) {
+            $detalles[] = [
+                'id_pedido' => $pedidoId,
+                'id_producto' => $producto['id_producto'],
+                'cantidad' => $producto['cantidad'],
+                'subtotal' => $producto['subtotal']
+            ];
+        }
+
+        // Insertar detalles del pedido en la tabla 'pedido_detalle'
+        $carritoModel->agregarDetallePedido($detalles);
+
+        // Vaciar el carrito
+        $carritoModel->eliminarCarrito($usuarioId);
+        var_dump($usuarioId);
+    exit;
+        return redirect()->to('/shopcar')->with('success', 'Pedido confirmado y registrado exitosamente.');
+    }
+    
+    
+
+   
 }
