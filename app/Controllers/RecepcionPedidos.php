@@ -42,7 +42,7 @@ class RecepcionPedidos extends BaseController
 
             $domiciliario_id = $this->request->getPost('domiciliario');
             $pedidoModel->asignarDomiciliario($id_pedido, $domiciliario_id);
-            return redirect()->to(base_url('rrecepcionPedidos'))->with('success', 'Domiciliario asignado correctamente y pedido en camino.');
+            return redirect()->to(base_url('recepcionPedidos'))->with('success', 'Domiciliario asignado correctamente y pedido en camino.');
 
         }
 

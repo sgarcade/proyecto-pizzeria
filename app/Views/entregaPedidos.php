@@ -361,7 +361,7 @@
 
                     <div class="pedido-details">
                         <p><strong>Estado:</strong> 
-                            <span class="label <?= $grupoPedidos[0]['estado'] === 'En Preparación' ? 'label-warning' : 'label-info' ?>">
+                            <span class="label <?= $grupoPedidos[0]['estado'] === 'En camino' ? 'label-warning' : 'label-info' ?>">
                                 <?= $grupoPedidos[0]['estado'] ?>
                             </span>
                         </p>
@@ -384,9 +384,9 @@
                     </div>
 
                     <div class="pedido-actions">
-                        <?php if ($grupoPedidos[0]['estado'] === 'En Preparación'): ?>
-                            <form action="<?= base_url('preparacionPedidos/pedido/terminarPreparacion/' . $grupoPedidos[0]['id_pedido']) ?>" method="post">
-                                <button type="submit" class="btn btn-primary mt-3">Terminar Preparación</button>
+                        <?php if ($grupoPedidos[0]['estado'] === 'En camino'): ?>
+                            <form action="<?= base_url('entregarPedidos/pedido/entregarPedido/' . $grupoPedidos[0]['id_pedido']) ?>" method="post">
+                                <button type="submit" class="btn btn-primary mt-3">Pedido Entregado</button>
                             </form>                              
                         <?php endif; ?>
                     </div>

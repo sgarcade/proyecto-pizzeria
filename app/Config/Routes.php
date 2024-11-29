@@ -37,6 +37,8 @@ $routes->post('recepcionPedidos/pedido/asignarChef/(:num)', 'RecepcionPedidos::a
 $routes->post('recepcionPedidos/pedido/asignarDomiciliario/(:num)', 'RecepcionPedidos::asignarDomiciliario/$1');
 $routes->get('preparacionPedidos', 'PreparacionPedidos::listarPedidos');
 $routes->post('preparacionPedidos/pedido/terminarPreparacion/(:num)', 'PreparacionPedidos::terminarPreparacion/$1');
+$routes->get('entregarPedidos/(:num)', 'EntregaPedidos::listarPedidos/$1');
+$routes->post('entregarPedidos/pedido/entregarPedido/(:num)', 'EntregaPedidos::entregarPedido/$1');
 $routes->get('database_test', 'DatabaseTest::index');
 $routes->get('productos', 'ProductoController::index');
 $routes->get('paymentGetaway', 'PaymentGetaway::index');

@@ -71,6 +71,20 @@ class PedidoModel extends Model
         ->getResultArray();
 
     }
+    public function getPedidosEnCamino($id_domiciliario)
+{
+    return $this->db->table('pedido')
+        ->select('pedido.id_pedido, pedido.estado, pedido.fecha, pedido.total, pedido.metodo_pago, producto.nombre_producto, pedido_detalle.cantidad, pedido_detalle.precio_unitario, usuario.nombre AS nombre_cliente')
+        ->join('pedido_detalle', 'pedido.id_pedido = pedido_detalle.id_pedido')
+        ->join('producto', 'pedido_detalle.id_producto = producto.id_producto')
+        ->join('cliente', 'pedido.id_cliente = cliente.id_cliente')
+        ->join('usuario', 'cliente.id_usuario = usuario.id_usuario')
+        ->where('pedido.id_domiciliario', $id_domiciliario) // Filtro por id_domiciliario
+        ->whereIn('pedido.estado', ['En camino']) // Filtro por estado
+        ->get()
+        ->getResultArray();
+}
+
     public function getChefsDisponibles()
     {
         return $this->db->table('chef')->where('disponibilidad', 1)->get()->getResultArray();
@@ -100,7 +114,7 @@ class PedidoModel extends Model
     {
 
         $this->db->table('pedido')
-            ->set('estado', 'En Camino')
+            ->set('estado', 'En camino')
             ->where('id_pedido', $id_pedido)
             ->update();
 
@@ -118,6 +132,15 @@ class PedidoModel extends Model
             ->where('id_pedido', $id_pedido)
             ->update();
 
+    }
+
+    public function entregarPedido($id_pedido)
+    {
+
+        $this->db->table('pedido')
+            ->set('estado', 'Entregado')
+            ->where('id_pedido', $id_pedido)
+            ->update();
 
     }
 

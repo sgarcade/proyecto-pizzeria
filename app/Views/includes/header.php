@@ -73,10 +73,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
     <div class="container">
         <?php 
+        use App\Models\DomiciliarioModel;
             $rol = intval(session()->get('usuario')['id_rol']); 
             $id_usuario = session()->get('usuario')['id_usuario']; 
-            $nombre = session()->get('usuario')['nombre']; 
+            $nombre = session()->get('usuario')['nombre'];  
+            $domiciliarioModel = new DomiciliarioModel();
+            $domiciliario = $domiciliarioModel->getDomiciliarioByUserId($id_usuario);
+            $id_domiciliario = $domiciliario ? $domiciliario['id_domiciliario'] : null;           
         ?>
+        
         <div class="bienvenido">
             <p>Bienvenid@ <?php echo $nombre; ?></p>
         </div>
@@ -110,7 +115,7 @@
                 <?php endif; ?>
 
                 <?php if ($rol === 5): ?>
-                    <li class="nav-item"><a href="<?= base_url('misPedidos'); ?>" class="nav-link">Mis Pedidos</a></li>
+                    <li class="nav-item"><a href="<?= base_url('entregarPedidos/' . $id_domiciliario); ?>" class="nav-link">Entrega de pedidos</a></li>
                 <?php endif; ?>
 
                 <li class="nav-item"><a href="<?= base_url('paymentGetaway'); ?>" class="nav-link">Pasarela de pago</a></li>
