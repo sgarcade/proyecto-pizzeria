@@ -55,7 +55,8 @@ $routes->post('/addToCart/(:num)', 'SearchProduct::addToCart/$1');
 $routes->post('gestion', 'Gestion::agregarProducto');
 $routes->post('gestion/eliminarProducto', 'Gestion::eliminarProducto');
 $routes->post('gestion/editarProducto', 'Gestion::editarProducto');
-
+$routes->get('/perfil', 'Perfil::index');
+$routes->post('/perfil/guardar', 'Perfil::guardar');
 $routes->post('/shopcar/confirmarPago', 'Shopcar::confirmarPago');
 
 $routes->POST('/shopcar', 'Shopcar::eliminar');

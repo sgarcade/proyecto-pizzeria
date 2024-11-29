@@ -11,7 +11,7 @@ class UserModel extends Model
     protected $primaryKey = 'id_usuario';
     protected $useAutoIncrement = true;
     protected $returnType= 'object';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
     protected $allowedFields = ['nombre', 'direccion', 'ciudad', 'celular','contrasena', 'id_rol', 'correo', 'token'];
     protected $useTimestamps = false;
     protected $createdField = 'created_at';
@@ -22,7 +22,11 @@ class UserModel extends Model
     protected $validationRules = [];
     protected $validationMessages = [];
     protected $skipValidation = false;
-    
+    public function getClientePorId($id_usuario)
+    {       
+
+    return $this->where('id_usuario', $id_usuario)->first();
+    }
 
     
 }

@@ -132,6 +132,19 @@
 <body>
 <?php include("includes/header.php")?>
 
+<?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success">
+        <?= session()->getFlashdata('success'); ?>
+    </div>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger">
+        <?= session()->getFlashdata('error'); ?>
+    </div>
+<?php endif; ?>
+
+
 <div class="container mt-5">
     <h2>Perfil del Cliente</h2>
     <div class="profile-card">
@@ -139,19 +152,23 @@
         <form action="<?= base_url('perfil/guardar'); ?>" method="POST">
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" value="David Galeaono" required>
+                <input type="text" id="nombre" name="nombre" value="<?= esc($cliente->nombre); ?>" required>
             </div>
             <div class="form-group">
                 <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" value="david@example.com" required>
+                <input type="email" id="email" name="email" value="<?= esc($cliente->correo); ?>" required>
+            </div>
+            <div class="form-group">
+                <label for="ciudad">Ciudad:</label>
+                <input type="ciudad" id="ciudad" name="ciudad" value="<?= esc($cliente->ciudad); ?>" required>
             </div>
             <div class="form-group">
                 <label for="telefono">Teléfono:</label>
-                <input type="text" id="telefono" name="telefono" value="3217539596" required>
+                <input type="text" id="telefono" name="telefono" value="<?= esc($cliente->celular); ?>" required>
             </div>
             <div class="form-group">
                 <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" name="direccion" value="cra 65 a 45#2" required>
+                <input type="text" id="direccion" name="direccion" value="<?= esc($cliente->direccion); ?>" required>
             </div>
 
             <button type="submit" class="btn">Guardar Cambios</button>
@@ -177,37 +194,39 @@
     </div>
 </div>
 
+
+
 <footer class="ftco-footer ftco-section img">
-    	<div class="overlay"></div>
-      <div class="container">
+    <div class="overlay"></div>
+    <div class="container">
         <div class="row mb-5">
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About Us</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-google"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">About Us</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-google"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Quick Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="<?= base_url('/'); ?>" class="py-2 d-block">Home</a></li>
-                <li><a href="<?= base_url('menu'); ?>" class="py-2 d-block">Menu</a></li>
-                <li><a href="<?= base_url('services'); ?>" class="py-2 d-block">Services</a></li>
-                <li><a href="<?= base_url('pedidos'); ?>" class="py-2 d-block">Pedidos</a></li>
-                <li><a href="<?= base_url('about'); ?>" class="py-2 d-block">About Us</a></li>
-                <li><a href="<?= base_url('contact'); ?>" class="py-2 d-block">Contact</a></li>
-              </ul>
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Quick Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="<?= base_url('/'); ?>" class="py-2 d-block">Home</a></li>
+                        <li><a href="<?= base_url('menu'); ?>" class="py-2 d-block">Menu</a></li>
+                        <li><a href="<?= base_url('services'); ?>" class="py-2 d-block">Services</a></li>
+                        <li><a href="<?= base_url('pedidos'); ?>" class="py-2 d-block">Pedidos</a></li>
+                        <li><a href="<?= base_url('about'); ?>" class="py-2 d-block">About Us</a></li>
+                        <li><a href="<?= base_url('contact'); ?>" class="py-2 d-block">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
 </footer>
 </body>
 </html>
