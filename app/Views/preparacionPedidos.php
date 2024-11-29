@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Nostra</title>
-
-    <!-- Google Fonts -->
+    
+    <!-- Fuentes y Estilos -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- CSS Styles -->
     <link rel="stylesheet" href="<?php echo base_url('css/open-iconic-bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/animate.css'); ?>">
@@ -24,309 +27,382 @@
     <link rel="stylesheet" href="<?php echo base_url('css/icomoon.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
 
-    <style>        
-        body {
+    <style>
+        
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card-main {
+            background-color: #343a40;
+            color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);            
+        }
+
+        .card-main h2 {
+            color: #e0a800;  /* Color de fondo del filtro */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            background-color: #fff;
+            color: #343a40;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        .card p {
+            font-size: 1em;
+            margin: 5px 0;
+            color: #6c757d;
+        }
+
+        .card strong {
+            font-weight: bold;
+        }
+
+        .btn-card {
+          background-color: red;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          margin-left: auto;  
+          display: block; 
+      }
+
+      .btn-card:hover {
+          background-color: lightcoral;
+          transform: translateY(-2px);
+      }
+
+
+        .filter-container {
+            margin-bottom: 20px;
+            background-color: #e0a800; 
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .filter-container select {
+            padding: 10px;
+            margin-left: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .filter-container label {
+            font-size: 18px;
+            font-weight: bold;
             color: #fff;
         }
-        nav {
-            background-color: #343a40; /* Dark navigation background */
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-out;
         }
 
-        h2 {
-            color: #ffc107; /* Amber color for headings */
-            margin-bottom: 30px;
-            text-align: center;
-            font-size: 2.5em;
-            font-weight: 600;
-        }
 
-        .container2 {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #fff; /* White table background */
-            border-radius: 8px; /* Rounded corners for the table */
-            overflow: hidden; /* Hide overflow for rounded corners */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #ffc107; /* Amber header background */
-            color: #fff; /* White text for header */
-            font-weight: 500;
-            text-transform: uppercase; /* Uppercase for better visibility */
-        }
-
-        .status-select {
-            padding: 5px;
-            border-radius: 4px;
-            background-color: #fff;
-            cursor: pointer;
-            transition: border-color 0.3s ease;
-            width: 100%;
-        }
-
-        .status-select:hover {
-            border-color: #ffc107; /* Highlight border on hover */
-        }
-
-        .btn {
-            background-color: #ffc107; /* Amber button color */
-            border: none;
-            color: #fff; /* White text for buttons */
-            padding: 12px 24px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: 500;
-            text-transform: uppercase; /* Uppercase for emphasis */
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .btn:hover {
-            background-color: #e0a800; /* Darker amber on hover */
-            transform: translateY(-2px); /* Slight lift effect */
-        }
-
-        .pagination {
+        .card-container {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
             margin-top: 20px;
         }
 
-        .pagination button {
-            background-color: #343a40; /* Dark background for pagination */
-            color: #fff; /* White text for pagination */
+        .card {
+            width: 100%;
+            max-width: 380px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            font-size: 1.3em;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-body {
+            padding: 15px;
+            font-size: 0.95em;
+        }
+
+        .pedido-header {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .pedido-details {
+            margin-top: 10px;
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .pedido-details p {
+            margin: 5px 0;
+        }
+
+        .pedido-actions {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn-cancelar {
+            background-color: #f44336;
+            color: white;
             border: none;
             padding: 12px 20px;
             border-radius: 5px;
+            font-weight: bold;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.3s;
+            font-size: 1.1em;
         }
 
-        .pagination button:hover {
-            background-color: #495057; /* Darker shade on hover */
-            transform: translateY(-2px); /* Slight lift effect */
+        .btn-cancelar:hover {
+            background-color: #d32f2f;
         }
 
-        footer {
-            background-color: #343a40; /* Dark footer background */
-            color: #fff; /* White text in footer */
-            padding: 40px 0;
+        .label {
+            font-size: 0.9em;
+            padding: 6px 12px;
+            border-radius: 15px;
         }
 
-        footer h2 {
-            color: #ffc107; /* Amber color for footer heading */
+        .label-warning {
+            background-color: #ff9800;
+            color: white;
         }
 
-        footer a {
-            color: #ffc107; /* Amber color for footer links */
-            transition: color 0.3s ease;
+        .label-info {
+            background-color: #2196f3;
+            color: white;
         }
 
-        footer a:hover {
-            color: #e0a800; /* Darker amber on hover */
+        .pedido-productos {
+            margin-top: 20px;
+            padding-left: 15px;
         }
+
+        .pedido-productos p {
+            font-size: 1em;
+            margin: 8px 0;
+        }
+
+        .pedido-productos strong {
+            font-weight: 600;
+        }
+
+        .total-acumulado {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        
+
+    /* Estilo para los botones */
+    .btn-primary {
+        background-color: #e0a800;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #e0a800;
+    }
+
+    /* Estilo para los contenedores de los formularios */
+    .pedido-actions {
+        margin-top: 20px;
+        text-align: center;
+    }
+        .btn-primary {
+            background-color: #e0a800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e0a800;
+        }
+        label {
+            font-size: 1.1em;
+            color: #343a40;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Estilo para el select */
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 1em;
+            color: #343a40; /* Texto negro */
+            background-color: #f9f9f9; /* Fondo claro */
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Efectos al interactuar */
+        select:focus {
+            border-color: #e0a800; /* Color azul al tener foco */
+            box-shadow: 0 0 8px rgba(185, 150, 2, 0.5); /* Sombra suave */
+            background-color: #fff;
+        }
+
+        /* Estilo para hover */
+        select:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+        option{
+            color: #333;
+        }
+        select:selected{
+            color: #333;
+        }
+    
+
     </style>
 
 </head>
 <body>
 <?php include("includes/header.php")?>
 
-<div class="container mt-5">
-    <h2>Órdenes a Preparar</h2>
-    <table class="table table-striped">
-        <thead class="table-header">
-            <tr>
-                <th># Pedido</th>
-                <th>Cliente</th>
-                <th>Dirección</th>
-                <th>Teléfono</th>
-                <th>Notas</th>
-                <th>Productos</th> <!-- New column added -->
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr>
-                <td>1026</td>
-                <td>Ana Gómez</td>
-                <td>Carrera 15, Bogotá</td>
-                <td>3001234567</td>
-                <td>Sin mayonesa en la ensalada</td>
-                <td>Pizza BBQ, Ensalada Mixta</td> <!-- Product details added -->
-                <td>
-                    <select class="status-select" onchange="updateOrderStatus(1028, this.value)">
-                        <option value="">Seleccionar Estado</option>
-                        <option value="cocina">En cola</option>
-                        <option value="entregado">En preparación</option>
-                        <option value="cancelado">Preparado</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>1027</td>
-                <td>Luis Martínez</td>
-                <td>Avenida 30, Cartagena</td>
-                <td>3107654321</td>
-                <td>Pizza sin champiñones</td>
-                <td>Pizza Margarita, Bebida</td> <!-- Product details added -->
-                <td>
-                    <select class="status-select" onchange="updateOrderStatus(1027, this.value)">
-                        <option value="">Seleccionar Estado</option>
-                        <option value="cocina">En cola</option>
-                        <option value="entregado">En preparación</option>
-                        <option value="cancelado">Preparado</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>1028</td>
-                <td>María López</td>
-                <td>Calle 45, Bogotá</td>
-                <td>3101234567</td>
-                <td>Sin cebolla</td>
-                <td>Pizza Hawaiana, Postre</td> <!-- Product details added -->
-                <td>
-                    <select class="status-select" onchange="updateOrderStatus(1028, this.value)">
-                        <option value="">Seleccionar Estado</option>
-                        <option value="cocina">En cola</option>
-                        <option value="entregado">En preparación</option>
-                        <option value="cancelado">Preparado</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>1029</td>
-                <td>Sofía Rodríguez</td>
-                <td>Calle 8, Cartagena</td>
-                <td>3212345678</td>
-                <td>Sin cebolla en la pizza</td>
-                <td>Pizza Pepperoni, ensalada de frutas</td> <!-- Product details added -->
-                <td>
-                    <select class="status-select" onchange="updateOrderStatus(1027, this.value)">
-                        <option value="">Seleccionar Estado</option>
-                        <option value="cocina">En cola</option>
-                        <option value="entregado">En preparación</option>
-                        <option value="cancelado">Preparado</option>
-                    </select>
-                </td>
-            </tr>
-            
-        </tbody>
-    </table>
+    <h1 class="text-center mb-4">Gestión de Pedidos - Recepcionista</h1>
 
-    <div class="pagination">
-        <button onclick="prevPage()">Anterior</button>
-        <button onclick="nextPage()">Siguiente</button>
+    <?php if (session()->getFlashdata('message')): ?>
+        <p class="alert alert-success"><?= session()->getFlashdata('message') ?></p>
+    <?php elseif (session()->getFlashdata('error')): ?>
+        <p class="alert alert-danger"><?= session()->getFlashdata('error') ?></p>
+    <?php endif; ?>
+
+    <?php 
+
+        $pedidosAgrupados = [];
+        foreach ($pedidos as $pedido) {
+            $pedidosAgrupados[$pedido['id_pedido']][] = $pedido;
+        }
+    ?>
+
+    <div class="card-container">
+        <?php foreach ($pedidosAgrupados as $idPedido => $grupoPedidos): ?>
+            <div class="card">
+                <div class="card-header">
+                    <strong>ID Pedido: <?= $idPedido ?></strong>
+                </div>
+                <div class="card-body">
+
+                    <div class="pedido-header">
+                        <strong>Cliente:</strong> <?= $grupoPedidos[0]['nombre_cliente'] ?>
+                    </div>
+
+                    <div class="pedido-details">
+                        <p><strong>Estado:</strong> 
+                            <span class="label <?= $grupoPedidos[0]['estado'] === 'En Preparación' ? 'label-warning' : 'label-info' ?>">
+                                <?= $grupoPedidos[0]['estado'] ?>
+                            </span>
+                        </p>
+                        <p><strong>Fecha:</strong> <?= $grupoPedidos[0]['fecha'] ?></p>
+                    </div>
+
+                    <div class="pedido-productos">
+                        <?php 
+                            $totalPedido = 0;
+                            foreach ($grupoPedidos as $pedido):
+                                $totalPedido += $pedido['total'];
+                        ?>
+                            <p><strong>Producto:</strong> <?= $pedido['nombre_producto'] ?></p>
+                            <p><strong>Cantidad:</strong> <?= $pedido['cantidad'] ?></p>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <div class="total-acumulado">
+                        <strong>Total del Pedido:</strong> $<?= number_format($totalPedido, 2) ?>
+                    </div>
+
+                    <div class="pedido-actions">
+                        <?php if ($grupoPedidos[0]['estado'] === 'En Preparación'): ?>
+                            <form action="<?= base_url('preparacionPedidos/pedido/terminarPreparacion/' . $grupoPedidos[0]['id_pedido']) ?>" method="post">
+                                <button type="submit" class="btn btn-primary mt-3">Terminar Preparación</button>
+                            </form>                              
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
-</div>
 
-<footer class="ftco-footer ftco-section img">
-    	<div class="overlay"></div>
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About Us</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
+    <footer class="ftco-footer ftco-section img">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row mb-5">
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
-             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Cooked</a></li>
-                <li><a href="#" class="py-2 d-block">Deliver</a></li>
-                <li><a href="#" class="py-2 d-block">Quality Foods</a></li>
-                <li><a href="#" class="py-2 d-block">Mixed</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
-      </div>
     </footer>
-
-<script>
-    function updateOrderStatus(orderId, status) {
-        // Add your AJAX request logic to update order status
-        console.log('Updating order ' + orderId + ' to status: ' + status);
-    }
-
-    function prevPage() {
-        // Add your logic for previous page
-        console.log('Previous page');
-    }
-
-    function nextPage() {
-        // Add your logic for next page
-        console.log('Next page');
-    }
-</script>
 
 </body>
 </html>

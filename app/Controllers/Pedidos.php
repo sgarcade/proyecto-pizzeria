@@ -8,12 +8,11 @@ use CodeIgniter\Controller;
 class Pedidos extends Controller
 {
 
-    public function misPedidos()
+    public function misPedidos($id)
     {
         $pedidoModel = new PedidoModel();
-
-
-        $pedidos = $pedidoModel->getPedidosPorCliente(1);  
+        $id=session()->get('usuario')['id_usuario'];
+        $pedidos = $pedidoModel->getPedidosPorCliente($id);  
 
 
         return view('pedidos', [
