@@ -69,7 +69,7 @@ class PedidoModel extends Model
         ->getResultArray();
 
     }
-    public function getPedidosEnPreparacion()
+    public function getPedidosEnPreparacion($id_chef)
     {
         return $this->db->table('pedido')
         ->select('pedido.id_pedido, pedido.estado, pedido.fecha, pedido.total, pedido.metodo_pago, producto.nombre_producto, pedido_detalle.cantidad, pedido_detalle.precio_unitario, usuario.nombre AS nombre_cliente')
@@ -77,6 +77,7 @@ class PedidoModel extends Model
         ->join('producto', 'pedido_detalle.id_producto = producto.id_producto')
         ->join('cliente', 'pedido.id_cliente = cliente.id_cliente')
         ->join('usuario', 'cliente.id_usuario = usuario.id_usuario')
+        ->where('pedido.id_chef', $id_chef)
         ->whereIn('pedido.estado', ['En Preparación'])
         ->get()
         ->getResultArray();

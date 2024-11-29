@@ -1,6 +1,6 @@
 <style>
 .navbar {
-    padding-left: 0; /* Elimina el padding por defecto a la izquierda */
+    padding-left: 350px; /* Elimina el padding por defecto a la izquierda */
     padding-right: 350px; /* Elimina el padding por defecto a la derecha */
 }
 
@@ -9,7 +9,7 @@
     flex-wrap: nowrap;
     justify-content: flex-start; /* Alinea todo a la izquierda */
     width: 100%;
-    padding-left: 0; /* Elimina el padding */
+    padding-left: 120px; /* Elimina el padding */
     margin-left: 0; /* Elimina el margen */
 }
 
@@ -74,12 +74,16 @@
     <div class="container">
         <?php 
         use App\Models\DomiciliarioModel;
+        use App\Models\ChefModel;
             $rol = intval(session()->get('usuario')['id_rol']); 
             $id_usuario = session()->get('usuario')['id_usuario']; 
             $nombre = session()->get('usuario')['nombre'];  
             $domiciliarioModel = new DomiciliarioModel();
             $domiciliario = $domiciliarioModel->getDomiciliarioByUserId($id_usuario);
             $id_domiciliario = $domiciliario ? $domiciliario['id_domiciliario'] : null;           
+            $chefModel = new ChefModel();
+            $chef = $chefModel->getChefByUserId($id_usuario);
+            $id_chef = $chef ? $chef['id_chef'] : null;           
         ?>
         
         <div class="bienvenido">
@@ -93,10 +97,11 @@
             <ul class="navbar-nav ml-auto">
                 
 
-                <li class="nav-item"><a href="<?= base_url('shopcar'); ?>" class="nav-link">Carrito de compra</a></li>
-                <li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de producto</a></li>
+                
 
                 <?php if ($rol === 1): ?>
+                    <li class="nav-item"><a href="<?= base_url('shopcar'); ?>" class="nav-link">Carrito de compra</a></li>
+                    <li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de producto</a></li>
                     <li class="nav-item"><a href="<?= base_url('misPedidos/' . $id_usuario); ?>" class="nav-link">Mis Pedidos</a></li>
                 <?php endif; ?>
 
@@ -106,19 +111,17 @@
                 <?php endif; ?>
 
                 <?php if ($rol === 3): ?>
-                    <li class="nav-item"><a href="<?= base_url('recepcionPedidos'); ?>" class="nav-link">Recepción de pedidos</a></li>
-                    <li class="nav-item"><a href="<?= base_url('preparacionPedidos'); ?>" class="nav-link">Preparación de ordenes</a></li>
+                    <li class="nav-item"><a href="<?= base_url('recepcionPedidos'); ?>" class="nav-link">Recepción de pedidos</a></li>                    
                 <?php endif; ?>
 
                 <?php if ($rol === 4): ?>
-                    <li class="nav-item"><a href="<?= base_url('preparacionPedidos'); ?>" class="nav-link">Preparación de ordenes</a></li>
+                    <li class="nav-item"><a href="<?= base_url('preparacionPedidos/' . $id_chef); ?>" class="nav-link">Preparación de ordenes</a></li>
                 <?php endif; ?>
 
                 <?php if ($rol === 5): ?>
                     <li class="nav-item"><a href="<?= base_url('entregarPedidos/' . $id_domiciliario); ?>" class="nav-link">Entrega de pedidos</a></li>
                 <?php endif; ?>
-
-                <li class="nav-item"><a href="<?= base_url('paymentGetaway'); ?>" class="nav-link">Pasarela de pago</a></li>
+        
                 <li class="nav-item"><a href="<?= base_url('logout'); ?>" class="nav-link"><i class="fas fa-sign-out-alt"></i></a> </li>
             </ul>
         </div>

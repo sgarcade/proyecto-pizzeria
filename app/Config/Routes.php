@@ -35,7 +35,7 @@ $routes->match(['GET', 'POST'], 'searchproducts', 'SearchProduct::searchProducts
 $routes->get('recepcionPedidos', 'RecepcionPedidos::listarPedidos');
 $routes->post('recepcionPedidos/pedido/asignarChef/(:num)', 'RecepcionPedidos::asignarChef/$1');
 $routes->post('recepcionPedidos/pedido/asignarDomiciliario/(:num)', 'RecepcionPedidos::asignarDomiciliario/$1');
-$routes->get('preparacionPedidos', 'PreparacionPedidos::listarPedidos');
+$routes->get('preparacionPedidos/(:num)', 'PreparacionPedidos::listarPedidos/$1');
 $routes->post('preparacionPedidos/pedido/terminarPreparacion/(:num)', 'PreparacionPedidos::terminarPreparacion/$1');
 $routes->get('entregarPedidos/(:num)', 'EntregaPedidos::listarPedidos/$1');
 $routes->post('entregarPedidos/pedido/entregarPedido/(:num)', 'EntregaPedidos::entregarPedido/$1');

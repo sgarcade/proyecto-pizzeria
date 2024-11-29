@@ -331,7 +331,7 @@
 <body>
 <?php include("includes/header.php")?>
 
-    <h1 class="text-center mb-4">Gestión de Pedidos - Recepcionista</h1>
+    <h1 class="text-center mb-4">Preparación de pedidos - Chef</h1>
 
     <?php if (session()->getFlashdata('message')): ?>
         <p class="alert alert-success"><?= session()->getFlashdata('message') ?></p>
