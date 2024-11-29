@@ -92,7 +92,7 @@
                 <li class="nav-item"><a href="<?= base_url('searchproducts'); ?>" class="nav-link">Búsqueda de producto</a></li>
 
                 <?php if ($rol === 1): ?>
-                    <li class="nav-item"><a href="<?= base_url('misPedidos'); ?>" class="nav-link">Mis Pedidos</a></li>
+                    <li class="nav-item"><a href="<?= base_url('misPedidos/' . $id_usuario); ?>" class="nav-link">Mis Pedidos</a></li>
                 <?php endif; ?>
 
                 <?php if ($rol === 2): ?>

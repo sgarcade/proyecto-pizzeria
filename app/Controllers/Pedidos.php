@@ -10,8 +10,7 @@ class Pedidos extends Controller
 
     public function misPedidos($id)
     {
-        $pedidoModel = new PedidoModel();
-        $id=session()->get('usuario')['id_usuario'];
+        $pedidoModel = new PedidoModel();        
         $pedidos = $pedidoModel->getPedidosPorCliente($id);  
 
 
