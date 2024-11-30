@@ -9,6 +9,7 @@ use App\Models\ChefModel;
 use App\Models\DomiciliarioModel;
 use App\Models\RecepcionistaModel;
 use App\Models\AdministradorModel;
+use CodeIgniter\HTTP\RedirectResponse;
 
 class Employee extends Controller
 {
@@ -16,7 +17,7 @@ class Employee extends Controller
     {
         return view('registroEmpleados');
     }
-    public function register(): string
+    public function register(): RedirectResponse
     {
         try {
             $administradorModel = new AdministradorModel();
@@ -36,7 +37,7 @@ class Employee extends Controller
             // Validación de contraseñas
             if ($contrasena !== $confirm_password) {
                 $data['error'] = 'Las contraseñas no coinciden.';
-                return view('registroEmpleados', $data);
+                return redirect()->to(base_url('empleados/lista'))->with('success', 'Usuario agregado correctamente');
             }
             $data = [
                 'nombre' => $nombre,
@@ -54,26 +55,26 @@ class Employee extends Controller
                 if ($id_rol == 2) {
                     $adminData = ['id_usuario' => $userModel->getInsertID()];
                     $administradorModel->insert($adminData);
-                    return view('registroEmpelados');
+                    return redirect()->to(base_url('empleados/lista'))->with('success', 'Usuario agregado correctamente');
                 } elseif ($id_rol == 3) {
                     $recepcionistaData = ['id_usuario' => $userModel->getInsertID()];
                     $recepcionistaModel->insert($recepcionistaData);
-                    return view('registroEmpelados');
+                    return redirect()->to(base_url('empleados/lista'))->with('success', 'Usuario agregado correctamente');
                 } elseif ($id_rol == 4) {
                     $chefData = ['id_usuario' => $userModel->getInsertID()];
                     $chefModel->insert($chefData);
-                    return view('registroEmpelados');
+                    return redirect()->to(base_url('empleados/lista'))->with('success', 'Usuario agregado correctamente');
                 } elseif ($id_rol == 5) {
                     $domiciliarioData = ['id_usuario' => $userModel->getInsertID()];
                     $domiciliarioModel->insert($domiciliarioData);
-                    return view('registroEmpelados');
+                    return redirect()->to(base_url('empleados/lista'))->with('success', 'Usuario agregado correctamente');
                 }
             } else {
-                return view('registroEmpelados');
+                return redirect()->to(base_url('empleados/lista'))->with('error', 'No se pudo agregar el usuario');
             }
         } catch (\Exception $e) {
             
-            return view('registroEmpelados');
+            return redirect()->to(base_url('empleados/lista'))->with('error', 'No se pudo agregar el usuario');
         }
     }
     public function listaEmpleados()
