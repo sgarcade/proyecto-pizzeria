@@ -57,6 +57,11 @@ $routes->post('gestion', 'Gestion::agregarProducto');
 $routes->post('gestion/eliminarProducto', 'Gestion::eliminarProducto');
 $routes->post('gestion/editarProducto', 'Gestion::editarProducto');
 $routes->get('/perfil', 'Perfil::index');
+$routes->get('/feedback/formulario', 'FeedbackController::formularioComentario');
+$routes->post('/feedback/guardar', 'FeedbackController::guardarComentario');
+$routes->get('/feedback/ver/(:num)', 'FeedbackController::verComentarios/$1');
+$routes->get('/feedback/todos', 'FeedbackController::verTodosComentarios');
+
 $routes->post('/perfil/guardar', 'Perfil::guardar');
 $routes->post('/shopcar/confirmarPago', 'Shopcar::confirmarPago');
 
