@@ -25,7 +25,7 @@ class Gestion extends BaseController
 
     public function editarProducto()
     {    
-        var_dump($this->request->getPost());
+        var_dump("asdasdasds");
         exit;
         $productoModel = new ProductoModel();
         
@@ -41,7 +41,7 @@ class Gestion extends BaseController
             'precio_base' => $precio,
             'stock' => $stock
         ];
-        
+  
         if ($productoModel->update($id, $data)) {
             return redirect()->to('/gestion')->with('success', 'Producto actualizado correctamente');
         } else {
@@ -74,13 +74,11 @@ class Gestion extends BaseController
         $nombre = $this->request->getPost('nombre_producto');
         $descripcion = $this->request->getPost('descripcion');
         $precio = $this->request->getPost('precio_base');
-        $sabor = $this->request->getPost('sabor');
         $stock = $this->request->getPost('stock');
     
         $data = [
             'nombre_producto' =>  $nombre,
             'descripcion' =>  $descripcion,
-            'sabor' =>  $sabor,
             'precio_base' =>  $precio,
             'stock' =>  $stock
         ];

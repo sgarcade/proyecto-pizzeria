@@ -226,7 +226,6 @@
             <th>Nombre</th>
             <th>Descripción</th>
             <th>Precio</th>
-            <th>Sabor</th>
             <th>Stock</th>
             <th>Acciones</th>
         </tr>
@@ -238,7 +237,6 @@
         <td><?= esc($producto['nombre_producto']) ?></td>
         <td><?= esc($producto['descripcion']) ?></td>
         <td><?= esc($producto['precio_base']) ?></td>
-        <td><?= esc($producto['sabor']) ?></td>
         <td><?= esc($producto['stock']) ?></td>
         <td>
         
@@ -249,7 +247,6 @@
                 data-id="<?= esc($producto['id_producto']); ?>"
                 data-nombre="<?= esc($producto['nombre_producto']); ?>"
                 data-descripcion="<?= esc($producto['descripcion']); ?>"
-                data-sabor="<?= esc($producto['sabor']); ?>"
                 data-precio="<?= esc($producto['precio_base']); ?>"
                 data-stock="<?= esc($producto['stock']); ?>">
                 Editar
@@ -295,11 +292,7 @@
                     <div class="form-group">
                         <label for="descripcion">Descripción:</label>
                         <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="sabor">Sabor:</label>
-                        <textarea class="form-control" id="sabor" name="sabor" required></textarea>
-                    </div>                    
+                    </div>                  
                     <div class="form-group">
                         <label for="precio_base">Precio:</label>
                         <input type="number" class="form-control" id="precio_base" name="precio_base" required>
@@ -337,10 +330,6 @@
                         <textarea class="form-control" id="descripcion_editar" name="descripcion" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="sabor">Sabor:</label>
-                        <input type="text" class="form-control" id="sabore" name="sabore" required>
-                    </div>
-                    <div class="form-group">
                         <label for="precio_base_editar">Precio:</label>
                         <input type="number" class="form-control" id="precio_base_editar" name="precio_base" required>
                     </div>
@@ -366,14 +355,12 @@
                 const descripcion = this.getAttribute('data-descripcion');
                 const precio = this.getAttribute('data-precio');
                 const stock = this.getAttribute('data-stock');
-                const sabor = this.getAttribute('data-sabor');
                 
                 document.getElementById('id_producto_editar').value = id;
                 document.getElementById('nombre_producto_editar').value = nombre;
                 document.getElementById('descripcion_editar').value = descripcion;
                 document.getElementById('precio_base_editar').value = precio;
                 document.getElementById('stock_editar').value = stock;
-                document.getElementById('sabore').value = sabor;
             });
         });
     });
