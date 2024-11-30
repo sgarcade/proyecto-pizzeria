@@ -89,3 +89,253 @@ INFO - 2024-11-30 00:36:32 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-11-30 00:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-30 00:40:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-30 00:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:21:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-30 05:21:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "feedback/formulario.php"
+[Method: GET, Route: comentarios]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('feedback/formulario.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('feedback/formulario', [], true)
+ 3 APPPATH\Controllers\FeedbackController.php(19): view('feedback/formulario')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FeedbackController->formularioComentario()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeedbackController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:22:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:22:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:27:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-30 05:27:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "feedback/formulario.php"
+[Method: GET, Route: feedback/formulario]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('feedback/formulario.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('feedback/formulario', [], true)
+ 3 APPPATH\Controllers\FeedbackController.php(19): view('feedback/formulario')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FeedbackController->formularioComentario()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeedbackController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:27:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:28:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:28:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:28:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:28:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:28:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:28:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:28:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:28:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:28:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:29:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:29:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+CRITICAL - 2024-11-30 05:29:59 --> Error: Call to undefined function App\Controllers\verTodosComentarios()
+[Method: GET, Route: feedback/formulario]
+in APPPATH\Controllers\FeedbackController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FeedbackController->formularioComentario()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FeedbackController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:31:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:32:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:32:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-30 05:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:32:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:34:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-30 05:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-11-30 05:34:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\FeedbackController::$feedbackModel is deprecated in APPPATH\Controllers\FeedbackController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\FeedbackController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\david\\Desktop\\Poryecto Pizzeria Actual\\proyecto-pizzeria\\public\\index.php')
