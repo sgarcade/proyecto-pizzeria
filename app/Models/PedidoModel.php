@@ -12,33 +12,33 @@ class PedidoModel extends Model
 
     public function crearPedido($pedidoData)
     {
-        // Iniciar la transacción
+        
         $db = \Config\Database::connect();
-        $db->transStart(); // Comienza la transacción
+        $db->transStart();
     
         try {
-            // Insertar en la tabla 'pedido'
+            
             $this->db->table('pedido')->insert($pedidoData);
-            $pedidoId = $this->db->insertID(); // Obtener el ID del último pedido insertado
+            $pedidoId = $this->db->insertID(); 
 
             if (!$pedidoId) {
                 throw new \Exception('No se pudo obtener el ID del pedido.');
             }
-            // Completar la transacción
-            $db->transComplete(); // Completa la transacción
+          
+            $db->transComplete();
             
 
-            // Verificar si la transacción fue exitosa
+            
             if ($db->transStatus() === FALSE) {
                 throw new \Exception('Error en la transacción de base de datos');
             }
     
-            return $pedidoId; // Retornar el ID del pedido creado
+            return $pedidoId;
         } catch (\Exception $e) {
-            // Si ocurre un error, hacer rollback
-            $db->transRollback(); // Revierte cualquier cambio en caso de error
+            
+            $db->transRollback(); 
             log_message('error', 'Error al crear el pedido: ' . $e->getMessage());
-            return false; // O manejar el error según tu necesidad
+            return false; 
         }
     }
     
