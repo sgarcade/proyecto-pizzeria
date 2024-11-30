@@ -110,7 +110,7 @@ class Shopcar extends Controller
         if (!$metodo_pago) {
             return redirect()->to('/shopcar')->with('error', 'Debe seleccionar un método de pago.');
         }
-    
+
         $carritoModel = new CarritoModel();
         $pedidoModel = new PedidoModel();
     
@@ -126,6 +126,7 @@ class Shopcar extends Controller
             'fecha' => date('Y-m-d H:i:s'),
             'total' => $carrito['total'],
             'metodo_pago' => $metodo_pago,
+            'id_tienda' => $id_tienda
         ];
     
        
@@ -148,7 +149,7 @@ class Shopcar extends Controller
         $carritoModel->eliminarCarrito($usuarioId);
     
         return redirect()->to('shopcar')->with('message', 'Producto agregado al carrito.');
-      //  return redirect()->to('/shopcar')->with('success', 'Pedido confirmado y registrado exitosamente.');
+      
     }
     
     

@@ -138,7 +138,7 @@
     <div class="form-group">
         <label for="payment_method">Método de pagoo:</label>
         <select name="payment_method" required class="select-input">
-            <option value="Tarjeta">Tarjeta</option>
+            <option value="Tarjeta de Crédito">Tarjeta</option>
             <option value="Efectivo">Efectivo</option>
             <option value="PSE">PSE</option>
         </select>
