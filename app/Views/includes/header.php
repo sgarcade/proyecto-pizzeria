@@ -108,6 +108,7 @@
                 <?php if ($rol === 2): ?>
                     <li class="nav-item"><a href="<?= base_url('gestion'); ?>" class="nav-link">Gestión de productos</a></li>
                     <li class="nav-item"><a href="<?= base_url('empleados/lista'); ?>" class="nav-link">Empleados</a></li>
+                    <li class="nav-item"><a href="<?= base_url('historial'); ?>" class="nav-link">Historial Pedidos</a></li>
                 <?php endif; ?>
 
                 <?php if ($rol === 3): ?>

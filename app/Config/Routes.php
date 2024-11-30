@@ -43,6 +43,7 @@ $routes->get('database_test', 'DatabaseTest::index');
 $routes->get('productos', 'ProductoController::index');
 $routes->get('paymentGetaway', 'PaymentGetaway::index');
 $routes->get('empleados', 'Employee::index');
+$routes->get('historial', 'Historial::index');
 $routes->post('empleados/register', 'Employee::register');
 $routes->get('empleados/lista', 'Employee::listaEmpleados');
 $routes->post('register', 'SignUp::register');
