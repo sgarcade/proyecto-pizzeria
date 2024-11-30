@@ -61,11 +61,11 @@ class Employee extends Controller
                     $recepcionistaModel->insert($recepcionistaData);
                     return redirect()->to(base_url('empleados/lista'))->with('success', 'Usuario agregado correctamente');
                 } elseif ($id_rol == 4) {
-                    $chefData = ['id_usuario' => $userModel->getInsertID()];
+                    $chefData = ['id_usuario' => $userModel->getInsertID(),'disponibilidad' => 'Disponible'];
                     $chefModel->insert($chefData);
                     return redirect()->to(base_url('empleados/lista'))->with('success', 'Usuario agregado correctamente');
                 } elseif ($id_rol == 5) {
-                    $domiciliarioData = ['id_usuario' => $userModel->getInsertID()];
+                    $domiciliarioData = ['id_usuario' => $userModel->getInsertID(),'disponibilidad' => 'Disponible'];
                     $domiciliarioModel->insert($domiciliarioData);
                     return redirect()->to(base_url('empleados/lista'))->with('success', 'Usuario agregado correctamente');
                 }

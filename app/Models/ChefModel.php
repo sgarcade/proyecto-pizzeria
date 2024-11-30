@@ -8,7 +8,7 @@ class ChefModel extends Model
 {
     protected $table = 'chef';
     protected $primaryKey = 'id_chef';
-    protected $allowedFields = ['id_usuario'];
+    protected $allowedFields = ['id_usuario','disponibilidad'];
     protected $useTimestamps = false;
     protected $returnType = 'array';
 
