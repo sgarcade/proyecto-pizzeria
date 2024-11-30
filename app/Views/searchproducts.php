@@ -126,7 +126,8 @@
                 }
             })
             .then(response => response.json())
-            .then(data => {
+            .then(data => 
+            {
                 if (data.success) {
                     showMessage('Producto añadido al carrito', 'success');
                 } else {

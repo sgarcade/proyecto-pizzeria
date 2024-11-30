@@ -3490,3 +3490,157 @@ INFO - 2024-11-29 19:57:09 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-11-29 19:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 19:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 19:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:46:47 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 20:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:47:22 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 20:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:48:11 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 20:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:48:37 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 20:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:48:54 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 20:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:50:02 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 20:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:50:38 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 20:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:51:25 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 20:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:51:37 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 20:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:52:33 --> ErrorException: Undefined variable $id_tienda
+[Method: POST, Route: shopcar/confirmarPago]
+in APPPATH\Controllers\Shopcar.php on line 112.
+ 1 APPPATH\Controllers\Shopcar.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_tienda', 'C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\app\\Controllers\\Shopcar.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Shopcar->confirmarPago()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Shopcar))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Andres Cortez\\Desktop\\Nostra Pizza Actual\\proyecto-pizzeria\\public\\index.php')
+INFO - 2024-11-29 21:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 21:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 21:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 22:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 23:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use App\Models\ClienteModel;
 
 class CarritoModel extends Model
 {
     protected $table = 'carrito';
     protected $primaryKey = 'id_carrito';
-    protected $allowedFields = ['id_cliente', 'total', 'fecha'];
+        protected $allowedFields = ['id_cliente', 'total', 'fecha'];
 
     public function getProductosCarrito($id_usuario)
     {
@@ -37,13 +38,11 @@ class CarritoModel extends Model
         $db = \Config\Database::connect();
         $builder = $db->table('carrito_detalle');
     
-        // Selección con join para obtener información de productos
         $builder->select('carrito_detalle.*, producto.nombre_producto as nombre_producto, producto.precio_base as precio_unitario');
         $builder->join('producto', 'carrito_detalle.id_producto = producto.id_producto');
         $builder->where('id_carrito', $id_carrito);
         $productos = $builder->get()->getResultArray();
     
-        // Obtener totales
         $builder->selectSum('cantidad', 'cantidad_total');
         $builder->selectSum('subtotal', 'total');
         $builder->where('id_carrito', $id_carrito);
@@ -79,7 +78,6 @@ class CarritoModel extends Model
         $db = \Config\Database::connect();
         $builder = $db->table('carrito_detalle');
         
-        // Ejecutar la eliminación del producto del carrito
         $builder->where('id_producto', $id_producto)
                 ->where('id_carrito', $id_carrito)
                 ->delete();
@@ -90,38 +88,114 @@ class CarritoModel extends Model
 
     public function agregarDetallePedido($detalles)
     {
-        // Insertar todos los detalles del pedido en la tabla 'pedido_detalle'
         $this->db->table('pedido_detalle')->insertBatch($detalles);
     }
     
 
-    //  /**
-    //  * Crear un nuevo pedido
-    //  */
-    // public function crearPedido($dataPedido)
-    // {
-    //     $db = \Config\Database::connect();
-    //     $builder = $db->table('pedido');
-    //     return $builder->insert($dataPedido);
-    // }
+    public function confirmarPago()
+{
+    $usuarioId = session()->get('usuario')['id_usuario'];
+    
+    $barrio = $this->request->getPost('barrio');
+    $id_tienda = null;
+    
+    switch($barrio) {
+        case 'El Retiro':
+        case 'Rosales':
+        case 'Chapinero Alto':
+            $id_tienda = 1;
+            break;
+        case 'Villa Maria':
+        case 'Altos de Suba':
+        case 'Rincón de Suba':
+            $id_tienda = 2;
+            break;
+        case 'Castilla':
+        case 'Timiza':
+        case 'El Tintal':
+            $id_tienda = 3;
+            break;
+    }
 
-    // /**
-    //  * Agregar detalles del pedido
-    //  */
-    // public function agregarDetallePedido($detalles)
-    // {
-    //     $db = \Config\Database::connect();
-    //     $builder = $db->table('pedido_detalle');
-    //     return $builder->insertBatch($detalles);
-    // }
+    if (!$usuarioId || !$id_tienda) {
+        return redirect()->to('/shopcar')->with('error', 'Datos inválidos.');
+    }
 
-    // /**
-    //  * Eliminar carrito después de confirmar el pedido
-    //  */
-    // public function eliminarCarrito($id_usuario)
-    // {
-    //     $db = \Config\Database::connect();
-    //     $builder = $db->table('carrito');
-    //     $builder->where('id_cliente', $id_usuario)->delete();
-    // }
+    $carritoModel = new CarritoModel();
+    $pedidoModel = new PedidoModel();
+
+    $carrito = $carritoModel->getProductosCarrito($usuarioId);
+
+    if (empty($carrito['productos'])) {
+        return redirect()->to('/shopcar')->with('error', 'El carrito está vacío.');
+    }
+
+    $pedidoData = [
+        'id_cliente' => $usuarioId,
+        'estado' => 'Pendiente',
+        'fecha' => date('Y-m-d H:i:s'),
+        'total' => $carrito['total'],
+        'metodo_pago' => $this->request->getPost('payment_method'),
+        'id_tienda' => $id_tienda
+    ];
+
+    $this->db->transStart();
+
+    try {
+        $pedidoId = $pedidoModel->crearPedido($pedidoData);
+
+        $detalles = [];
+        foreach ($carrito['productos'] as $producto) {
+            $detalles[] = [
+                'id_pedido' => $pedidoId,
+                'id_producto' => $producto['id_producto'],
+                'cantidad' => $producto['cantidad'],
+                'subtotal' => $producto['subtotal']
+            ];
+        }
+
+        $pedidoModel->agregarDetallePedido($detalles);
+
+        $carritoModel->eliminarCarrito($usuarioId);
+
+        $this->db->transComplete();
+
+        return redirect()->to('/shopcar')->with('success', 'Pedido confirmado y registrado exitosamente.');
+    
+    } catch (\Exception $e) {
+        $this->db->transRollback();
+        log_message('error', 'Error al confirmar pago: ' . $e->getMessage());
+        return redirect()->to('/shopcar')->with('error', 'Ocurrió un error al procesar el pedido.');
+    }
+}
+public function eliminarCarrito($usuarioId)
+{
+    $db = \Config\Database::connect();
+    $ClientModel = new ClienteModel();
+
+    $Cliente = $ClientModel->getClientbyUserId($usuarioId);
+
+    if (!$Cliente || !isset($Cliente['id_cliente'])) {
+        log_message('error', 'Cliente no encontrado: ' . json_encode($Cliente));
+        return false;
+    }
+
+    $IdCliente = $Cliente['id_cliente'];
+
+    try {
+        $query = "DELETE FROM carrito WHERE id_cliente = ?";
+        $result = $db->query($query, [$IdCliente]);
+
+        if (!$result) {
+            throw new \Exception('Error al ejecutar la consulta SQL.');
+        }
+
+        log_message('info', 'Carrito eliminado para id_cliente: ' . $IdCliente);
+        return true;
+    } catch (\Exception $e) {
+        log_message('error', 'Error en eliminarCarrito: ' . $e->getMessage());
+        return false;
+    }
+}
+
 }

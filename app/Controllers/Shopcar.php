@@ -78,65 +78,79 @@ class Shopcar extends Controller
 
     public function confirmarPago()
     {
-
-        $usuarioId = session()->get('usuario')['id_usuario'];
-        $barrio = $this->request->getPost('barrio');
-        if($barrio == 'El Retiro' || $barrio == 'Rosales' || $barrio == 'Chapinero Alto'){
-            $id_tienda= 1;
-        }
-        if($barrio == 'Villa Maria' || $barrio == 'Altos de Suba' || $barrio == 'Rincón de Suba'){
-            $id_tienda= 2;
-        }
-        if($barrio == 'Castilla' || $barrio == 'Timiza' || $barrio == 'El Tintal'){
-            $id_tienda= 3;
+        if (!session()->has('usuario')) {
+            return redirect()->to('/login')->with('error', 'Debes iniciar sesión primero.');
         }
     
-        if (!$usuarioId) {
-            return redirect()->to('/shopcar')->with('error', 'Usuario no válido.');
+        $usuarioId = session()->get('usuario')['id_usuario'];
+        $barrio = $this->request->getPost('barrio');
+        $id_tienda = null;
+    
+        switch($barrio) {
+            case 'El Retiro':
+            case 'Rosales':
+            case 'Chapinero Alto':
+                $id_tienda = 1;
+                break;
+            case 'Villa Maria':
+            case 'Altos de Suba':
+            case 'Rincón de Suba':
+                $id_tienda = 2;
+                break;
+            case 'Castilla':
+            case 'Timiza':
+            case 'El Tintal':
+                $id_tienda = 3;
+                break;
+            default:
+                return redirect()->to('/shopcar')->with('error', 'Barrio no válido.');
         }
-
+    
+        $metodo_pago = $this->request->getPost('payment_method');
+        if (!$metodo_pago) {
+            return redirect()->to('/shopcar')->with('error', 'Debe seleccionar un método de pago.');
+        }
+    
         $carritoModel = new CarritoModel();
+        $pedidoModel = new PedidoModel();
+    
         $carrito = $carritoModel->getProductosCarrito($usuarioId);
-
+    
         if (empty($carrito['productos'])) {
             return redirect()->to('/shopcar')->with('error', 'El carrito está vacío.');
         }
     
-        // Crear pedido
         $pedidoData = [
             'id_cliente' => $usuarioId,
-            'estado' => 'Pendiente',  // Estado inicial del pedido
+            'estado' => 'Pendiente',
             'fecha' => date('Y-m-d H:i:s'),
             'total' => $carrito['total'],
-            'metodo_pago' => $this->request->getVar('payment_method'),
-            'id_tienda' => $id_tienda  // Método de pago recibido desde el frontend
+            'metodo_pago' => $metodo_pago,
         ];
     
-        // Llamar al modelo para crear el pedido y obtener el ID
-        $pedidoModel = new PedidoModel();
+       
+            $pedidoId = $pedidoModel->crearPedido($pedidoData);
 
-        $pedidoId = $pedidoModel->crearPedido($pedidoData);
+            $detalles = [];
+            foreach ($carrito['productos'] as $producto) {
+                $detalles[] = [
+                    'id_producto' => $producto['id_producto'],
+                    'cantidad' => $producto['cantidad'],
+                    'precio_unitario' => $producto['subtotal']
+                ];
+            }
 
-        // Crear detalles del pedido
-        $detalles = [];
-        foreach ($carrito['productos'] as $producto) {
-            $detalles[] = [
-                'id_pedido' => $pedidoId,
-                'id_producto' => $producto['id_producto'],
-                'cantidad' => $producto['cantidad'],
-                'subtotal' => $producto['subtotal']
-            ];
-        }
 
-        // Insertar detalles del pedido en la tabla 'pedido_detalle'
-        $carritoModel->agregarDetallePedido($detalles);
+        $pedidoModel->agregarDetallePedido($detalles, $pedidoId);
+        
 
-        // Vaciar el carrito
+
         $carritoModel->eliminarCarrito($usuarioId);
-        var_dump($usuarioId);
-    exit;
-        return redirect()->to('/shopcar')->with('success', 'Pedido confirmado y registrado exitosamente.');
+    
+        return redirect()->to('shopcar')->with('message', 'Producto agregado al carrito.');
+      //  return redirect()->to('/shopcar')->with('success', 'Pedido confirmado y registrado exitosamente.');
     }
+    
     
     
 

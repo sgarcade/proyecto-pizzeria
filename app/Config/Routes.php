@@ -61,3 +61,5 @@ $routes->post('/shopcar/confirmarPago', 'Shopcar::confirmarPago');
 
 $routes->POST('/shopcar', 'Shopcar::eliminar');
 // $routes->POST('/update-quantity', 'CarritoController::updateQuantity');
+
+$routes->POST('/shopcar', 'Shopcar::eliminarCarrito');

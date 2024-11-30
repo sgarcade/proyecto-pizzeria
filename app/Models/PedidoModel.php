@@ -12,15 +12,74 @@ class PedidoModel extends Model
 
     public function crearPedido($pedidoData)
     {
+        // Iniciar la transacción
+        $db = \Config\Database::connect();
+        $db->transStart(); // Comienza la transacción
+    
+        try {
+            // Insertar en la tabla 'pedido'
+            $this->db->table('pedido')->insert($pedidoData);
+            $pedidoId = $this->db->insertID(); // Obtener el ID del último pedido insertado
 
-        // Insertar en la tabla 'pedido'
-        $this->db->table('pedido')->insert($pedidoData);
+            if (!$pedidoId) {
+                throw new \Exception('No se pudo obtener el ID del pedido.');
+            }
+            // Completar la transacción
+            $db->transComplete(); // Completa la transacción
+            
 
-        // Obtener el ID del pedido recién creado
-        $pedidoId = $this->db->insertID(); 
-
-        return $pedidoId; // Retorna el ID del pedido para usarlo en los detalles
+            // Verificar si la transacción fue exitosa
+            if ($db->transStatus() === FALSE) {
+                throw new \Exception('Error en la transacción de base de datos');
+            }
+    
+            return $pedidoId; // Retornar el ID del pedido creado
+        } catch (\Exception $e) {
+            // Si ocurre un error, hacer rollback
+            $db->transRollback(); // Revierte cualquier cambio en caso de error
+            log_message('error', 'Error al crear el pedido: ' . $e->getMessage());
+            return false; // O manejar el error según tu necesidad
+        }
     }
+    
+    
+    
+
+    public function agregarDetallePedido($detalles, $pedidoId)
+{
+    
+    $db = \Config\Database::connect();
+    $db->transStart();
+
+    try {
+        
+        foreach ($detalles as $detalle) {
+        
+            $detalle['id_pedido'] = $pedidoId;
+            
+            $this->db->table('pedido_detalle')->insert($detalle);
+        }
+
+       
+        $db->transComplete(); 
+
+        // Verificar si la transacción fue exitosa
+        if ($db->transStatus() === FALSE) {
+            throw new \Exception('Error en la transacción de base de datos');
+        }
+
+        // Si la transacción es exitosa, retorna verdadero o el número de filas afectadas
+        return true; 
+
+    } catch (\Exception $e) {
+        // Si ocurre un error, hacer rollback
+        $db->transRollback(); // Revierte cualquier cambio en caso de error
+        log_message('error', 'Error al agregar los detalles del pedido: ' . $e->getMessage());
+        return false; // O manejar el error según tu necesidad
+    }
+}
+
+    
     
     public function getPedidosPorCliente($id_cliente)
     {
