@@ -93,7 +93,6 @@
     Generar Pedido
   </button>
 
-  <!-- Modal de aviso cuando el carrito está vacío -->
   <div id="empty-cart-modal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 9999; padding: 2rem; text-align: center;">
     <div class="modal-content" style="background-color: #333; border-radius: 8px; padding: 2rem; max-width: 400px; margin: 0 auto;">
       <h3 style="color: #ffcc00;">¡Tu carrito está vacío!</h3>
@@ -104,7 +103,6 @@
     </div>
   </div>
 
-  <!-- Resumen de pedido y opciones de pago -->
   <div id="payment-summary" style="display: none; background-color: #333; padding: 2rem; border-radius: 8px; margin-top: 2rem; text-align: center;">
     <h3 style="font-size: 1.6rem; color: #ffcc00;">Resumen de Pedido</h3>
     <p style="color: #fff; font-size: 1.2rem;">Total: $<span id="summary-total"><?= number_format($total , 3) ?></span></p>
@@ -120,37 +118,43 @@
       <?php endforeach; ?>
     </div>
 
-    <h4 style="color: #ffcc00;">Seleccionar método de pago:</h4>
-    <div style="color: #fff;">
-      <label>
-        <input type="radio" name="payment-method" value="tarjeta" style="margin-right: 0.5rem;"> Tarjeta de Crédito
-      </label><br>
-      <label>
-        <input type="radio" name="payment-method" value="efectivo" style="margin-right: 0.5rem;"> Efectivo
-      </label><br>
-      <label>
-        <input type="radio" name="payment-method" value="pse" style="margin-right: 0.5rem;"> PSE
-      </label>
-    </div>
     <h4 style="color: #ffcc00;">Seleccione el barrio:</h4>
-    <div style="color: #fff;">
-      <select id="barrio" name="barrio" required>
-       <option value="" selected>Seleccione un barrio</option>
-       <option value="El Retiro">El Retiro</option>
-       <option value="Rosales">Rosales</option>
-       <option value="Chapinero Alto">Chapinero Alto</option>       
-       <option value="Villa Maria">Villa Maria</option>
-       <option value="Altos de Suba">Altos de Suba</option>
-       <option value="Rincón de Suba">Rincón de Suba</option>
-       <option value="Castilla">Castilla</option>
-       <option value="Timiza">Timiza</option>
-       <option value="El Tintal">El Tintal</option>
-      </select>
+    <form action="<?= base_url('shopcar/confirmarPago') ?>" method="POST" class="form-pago">
+    <div class="form-group">
+        <label for="barrio">Selecciona tu barrio:</label>
+        <select name="barrio" required class="select-input">
+            <option value="El Retiro">El Retiro</option>
+            <option value="Rosales">Rosales</option>
+            <option value="Chapinero Alto">Chapinero Alto</option>
+            <option value="Villa Maria">Villa Maria</option>
+            <option value="Altos de Suba">Altos de Suba</option>
+            <option value="Rincón de Suba">Rincón de Suba</option>
+            <option value="Castilla">Castilla</option>
+            <option value="Timiza">Timiza</option>
+            <option value="El Tintal">El Tintal</option>
+        </select>
     </div>
+
+    <div class="form-group">
+        <label for="payment_method">Método de pagoo:</label>
+        <select name="payment_method" required class="select-input">
+            <option value="Tarjeta">Tarjeta</option>
+            <option value="Efectivo">Efectivo</option>
+            <option value="PSE">PSE</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn-submit">Confirmar Pago</button>
+    </div>
+</form>
+
+
+
     <p style="font-size: 1.1rem; color: #f39c12; font-weight: bold; margin-top: 1rem;">Estado: Pendiente</p>
-    <button id="confirm-payment-btn" style="margin-top: 1rem; padding: 0.7rem 1.5rem; background-color: #2ecc71; color: white; border: none; border-radius: 8px; cursor: pointer;">
+    <!-- <button id="confirm-payment-btn" style="margin-top: 1rem; padding: 0.7rem 1.5rem; background-color: #2ecc71; color: white; border: none; border-radius: 8px; cursor: pointer;">
       Confirmar Pago
-    </button>
+    </button> -->
   </div>
 </section>
 
@@ -166,7 +170,14 @@
     const emptyCartModal = document.getElementById("empty-cart-modal");
     const closeModalBtn = document.getElementById("close-modal-btn");
 
-    // Actualiza los totales y la cantidad en el resumen de pago
+
+
+
+
+
+
+
+    
     const updateTotalAndSubtotal = () => {
       let total = 0;
       let totalQuantity = 0;
@@ -273,16 +284,21 @@
     });
     
   });
+  
+  function showMessage(message, type) {
+        const messageContainer = document.getElementById('message-container');
+        const messageElement = document.createElement('div');
+        messageElement.className = `message ${type}`;
+        messageElement.textContent = message;
+
+        messageContainer.appendChild(messageElement);
+
+        setTimeout(() => {
+            messageElement.style.opacity = '0';
+            setTimeout(() => messageElement.remove(), 500);
+        }, 3000);
+    }
 </script>
-
-
-
-
-
-
-
-
-
 
     <footer class="ftco-footer ftco-section img">
       <div class="overlay"></div>

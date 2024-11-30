@@ -12,9 +12,10 @@ class ClienteModel extends Model
     protected $useTimestamps = false;
     protected $returnType = 'array';
 
-    // Relación con la tabla usuario
-    public function getAdministradorByUserId($id_usuario)
+
+    public function getClientbyUserId($id_usuario)
     {
         return $this->where('id_usuario', $id_usuario)->first();
     }
+
 }
