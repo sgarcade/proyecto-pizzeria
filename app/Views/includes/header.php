@@ -108,6 +108,7 @@
                 <?php if ($rol === 2): ?>
                     <li class="nav-item"><a href="<?= base_url('gestion'); ?>" class="nav-link">Gestión de productos</a></li>
                     <li class="nav-item"><a href="<?= base_url('empleados/lista'); ?>" class="nav-link">Empleados</a></li>
+                    <li class="nav-item"><a href="<?= base_url('historial'); ?>" class="nav-link">Historial Pedidos</a></li>
                 <?php endif; ?>
 
                 <?php if ($rol === 3): ?>
@@ -121,6 +122,7 @@
                 <?php if ($rol === 5): ?>
                     <li class="nav-item"><a href="<?= base_url('entregarPedidos/' . $id_domiciliario); ?>" class="nav-link">Entrega de pedidos</a></li>
                 <?php endif; ?>
+                <li class="nav-item"><a href="<?= base_url('feedback/formulario'); ?>" class="nav-link">Comentarios</a></li>
                 <li class="nav-item"><a href="<?= base_url('perfil'); ?>" class="nav-link">Perfil</a></li>
                 <li class="nav-item"><a href="<?= base_url('logout'); ?>" class="nav-link"><i class="fas fa-sign-out-alt"></i></a> </li>
             </ul>

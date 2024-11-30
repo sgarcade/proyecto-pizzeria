@@ -105,9 +105,19 @@
 <div class="table-container">
     <h1 class="header-title">Lista de Empleados</h1>
 
-    <?php if (isset($error)): ?>
-        <p style="color: red;"><?= esc($error); ?></p>
+
+    <?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success">
+        <?= session()->getFlashdata('success'); ?>
+    </div>
     <?php endif; ?>
+
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger">
+            <?= session()->getFlashdata('error'); ?>
+        </div>
+    <?php endif; ?>
+
     <div class="text-end">
         <a href="<?= base_url('empleados'); ?>" class="btn add-button">
             <i class="oi oi-plus"></i> Agregar Empleado
