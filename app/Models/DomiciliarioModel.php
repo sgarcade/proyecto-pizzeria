@@ -8,7 +8,7 @@ class DomiciliarioModel extends Model
 {
     protected $table = 'domiciliario';
     protected $primaryKey = 'id_domiciliario';
-    protected $allowedFields = ['id_usuario'];
+    protected $allowedFields = ['id_usuario','disponibilidad'];
     protected $useTimestamps = false;
     protected $returnType = 'array';
 
